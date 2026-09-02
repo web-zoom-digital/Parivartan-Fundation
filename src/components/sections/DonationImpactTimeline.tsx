@@ -34,8 +34,8 @@ const steps = [
     title: "Planning & Verification",
     desc: "Our team carefully plans distribution based on verified needs, priority areas, and field reports.",
     gradient: "from-blue-600 to-blue-400",
-    softBg: "bg-blue-50",
-    border: "border-blue-200",
+    softBg: "bg-[#eef2eb]",
+    border: "border-[rgba(35,54,29,0.2)]",
     glow: "shadow-blue-200",
     image: "/images/programs/program2.png",
     alt: "PWS team planning and verifying community support programs",
@@ -58,7 +58,7 @@ const steps = [
     title: "Distribution",
     desc: "Volunteers and field teams deliver assistance directly to beneficiaries with dignity, care, and no middlemen.",
     gradient: "from-emerald-600 to-emerald-400",
-    softBg: "bg-emerald-50",
+    softBg: "bg-[#f0f2ef]",
     border: "border-emerald-200",
     glow: "shadow-emerald-200",
     image: "/images/programs/community-event.png",
@@ -99,8 +99,8 @@ export function DonationImpactTimeline() {
   return (
     <section className="section-spacing bg-white relative overflow-hidden">
       {/* Subtle background circles */}
-      <div className="absolute top-0 right-0 w-[260px] sm:w-[420px] h-[260px] sm:h-[420px] bg-blue-50/60 rounded-full -translate-y-1/3 translate-x-1/3 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[220px] sm:w-[340px] h-[220px] sm:h-[340px] bg-emerald-50/60 rounded-full translate-y-1/3 -translate-x-1/3 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[260px] sm:w-[420px] h-[260px] sm:h-[420px] bg-[#eef2eb]/60 rounded-full -translate-y-1/3 translate-x-1/3 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[220px] sm:w-[340px] h-[220px] sm:h-[340px] bg-[#f0f2ef]/60 rounded-full translate-y-1/3 -translate-x-1/3 blur-[100px] pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <SectionHeader
@@ -114,7 +114,7 @@ export function DonationImpactTimeline() {
         {/* ── DESKTOP: Horizontal timeline ── */}
         <div className="hidden lg:flex relative mb-20 w-full px-2">
           {/* Continuous line behind the cards */}
-          <div className="absolute top-[48px] left-[10%] right-[10%] h-[3px] bg-slate-100 z-0 rounded-full overflow-hidden">
+          <div className="absolute top-[48px] left-[10%] right-[10%] h-[3px] bg-[#F6F2E8] z-0 rounded-full overflow-hidden">
              <motion.div 
                className="absolute inset-y-0 left-0 bg-gradient-to-r from-rose-400 via-orange-400 to-purple-400"
                initial={{ width: "0%" }}
@@ -148,10 +148,10 @@ export function DonationImpactTimeline() {
                 </div>
 
                 {/* Text */}
-                <h3 className="font-extrabold text-slate-900 text-base lg:text-lg mb-3 relative z-10 leading-snug">
+                <h3 className="font-extrabold text-[#273029] text-base lg:text-lg mb-3 relative z-10 leading-snug">
                   {step.title}
                 </h3>
-                <p className="text-slate-500 text-xs lg:text-sm leading-relaxed relative z-10">
+                <p className="text-[#798576] text-xs lg:text-sm leading-relaxed relative z-10">
                   {step.desc}
                 </p>
                 
@@ -191,8 +191,8 @@ export function DonationImpactTimeline() {
                 <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center text-2xl mb-4 shadow-md`}>
                   {step.emoji}
                 </div>
-                <h3 className="font-extrabold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="font-extrabold text-[#273029] mb-2">{step.title}</h3>
+                <p className="text-[#798576] text-sm leading-relaxed">{step.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -201,11 +201,11 @@ export function DonationImpactTimeline() {
         {/* ── TRUST BAR ── */}
         <motion.div
           variants={fadeUp} initial="hidden" whileInView="show" custom={0.5} viewport={{ once: true }}
-          className="bg-slate-50 border border-slate-100 rounded-2xl p-5 mb-12">
+          className="bg-[#F6F2E8] border border-slate-100 rounded-2xl p-5 mb-12">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
             {trustItems.map((item) => (
-              <div key={item} className="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+              <div key={item} className="flex items-center gap-2 text-sm font-semibold text-[#273029]">
+                <CheckCircle2 className="w-4 h-4 text-[#C37C24] shrink-0" />
                 {item}
               </div>
             ))}

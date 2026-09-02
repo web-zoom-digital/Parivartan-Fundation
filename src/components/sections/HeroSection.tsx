@@ -49,7 +49,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative w-full bg-slate-950 overflow-hidden mt-[4.25rem] sm:mt-[5rem] md:mt-[7.25rem]"
+      className="relative w-full bg-[#1b2916] overflow-hidden mt-[4.25rem] sm:mt-[5rem] md:mt-[7.25rem]"
       aria-label="Parivartan Welfare Society hero"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -64,7 +64,7 @@ export function HeroSection() {
         <img
           src={heroImages[currentSlide].src}
           alt={heroImages[currentSlide].alt}
-          className="w-full h-auto block max-h-[78vh] object-cover bg-slate-950 mx-auto"
+          className="w-full h-auto block max-h-[78vh] object-cover bg-[#1b2916] mx-auto"
           draggable={false}
         />
 

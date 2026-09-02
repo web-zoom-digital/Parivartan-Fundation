@@ -36,14 +36,14 @@ export function CategorySubGallery({
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#273029] mb-4 tracking-tight">
               {title}
             </h2>
-            <p className="text-slate-600 text-lg">
+            <p className="text-[#798576] text-lg">
               {description}
             </p>
           </div>
-          <button className="inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700 transition-colors whitespace-nowrap">
+          <button className="inline-flex items-center gap-2 font-semibold text-[#23361D] hover:text-[#1b2916] transition-colors whitespace-nowrap">
             View All <ArrowRight className="w-4 h-4" />
           </button>
         </div>

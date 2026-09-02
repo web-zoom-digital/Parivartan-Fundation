@@ -29,17 +29,17 @@ export function SectionHeader({
     >
       {badge && (
         <span className={cn(
-          "inline-flex items-center rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider border",
-          lightText 
-            ? "bg-blue-900/50 text-blue-300 border-blue-800" 
-            : "bg-blue-50 text-blue-600 border-blue-100"
+          "inline-flex items-center rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider border",
+          lightText
+            ? "bg-white/10 text-white/90 border-white/20"
+            : "bg-[#eef2eb] text-[#23361D] border-[rgba(35,54,29,0.15)]"
         )}>
           {badge}
         </span>
       )}
       <h2 className={cn("section-title", lightText && "!text-white")}>
         {title.split(" ").map((word, i) => {
-          if (["Foundation", "Mission", "Premium", "Difference", "Action", "Trust"].includes(word)) {
+          if (["Change", "Progress", "Lives", "Difference", "Action", "Together", "Society", "Parivartan", "Community", "Welfare", "People", "Nature"].includes(word)) {
             return (
               <span key={i} className="text-gradient-primary">
                 {word}{" "}
@@ -54,7 +54,7 @@ export function SectionHeader({
           className={cn(
             "section-subtitle",
             align === "center" ? "max-w-2xl" : "max-w-xl",
-            lightText && "!text-slate-300"
+            lightText && "!text-white/80"
           )}
         >
           {subtitle}

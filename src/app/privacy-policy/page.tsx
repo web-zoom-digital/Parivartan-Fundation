@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
     <div className="bg-white min-h-screen">
       <div className="bg-gradient-to-br from-blue-900 to-blue-700 pt-28 sm:pt-36 lg:pt-56 pb-20">
         <div className="container-custom">
-          <nav className="flex items-center gap-2 text-sm text-blue-300 mb-6">
+          <nav className="flex items-center gap-2 text-sm text-white/80 mb-6">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-white font-semibold">Privacy Policy</span>
@@ -66,25 +66,25 @@ export default function PrivacyPolicyPage() {
 
       <div className="container-custom py-20 max-w-3xl">
         <div className="prose prose-slate max-w-none">
-          <p className="text-slate-600 text-lg leading-relaxed mb-12 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+          <p className="text-[#798576] text-lg leading-relaxed mb-12 p-6 bg-[#eef2eb] rounded-2xl border border-[rgba(35,54,29,0.15)]">
             Parivartan Welfare Society is committed to protecting your privacy. This Privacy Policy explains how we collect, use and safeguard your personal information when you interact with our website, donate to our cause or participate in our programmes.
           </p>
 
           <div className="space-y-10">
             {sections.map((s, i) => (
               <div key={i}>
-                <h2 className="text-xl font-extrabold text-slate-900 mb-3 flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-black flex items-center justify-center shrink-0">{i + 1}</span>
+                <h2 className="text-xl font-extrabold text-[#273029] mb-3 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-full bg-[#23361D] text-white text-sm font-black flex items-center justify-center shrink-0">{i + 1}</span>
                   {s.title}
                 </h2>
-                <p className="text-slate-600 leading-relaxed pl-11">{s.content}</p>
+                <p className="text-[#798576] leading-relaxed pl-11">{s.content}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 p-8 bg-slate-50 rounded-2xl text-center">
-            <p className="text-slate-600 mb-4">Have questions about how we protect your data?</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+          <div className="mt-16 p-8 bg-[#F6F2E8] rounded-2xl text-center">
+            <p className="text-[#798576] mb-4">Have questions about how we protect your data?</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-[#23361D] text-white font-bold px-8 py-3 rounded-full hover:bg-[#1b2916] transition-colors">
               Contact Our Team
             </Link>
           </div>

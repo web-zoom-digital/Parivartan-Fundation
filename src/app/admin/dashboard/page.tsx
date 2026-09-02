@@ -43,9 +43,9 @@ function formatDate(ts?: number) {
 
 function StatusBadge({ status }: { status: string }) {
   const map: Record<string, { label: string; cls: string; icon: React.ReactNode }> = {
-    PAID: { label: "Paid", cls: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30", icon: <CheckCircle className="w-3 h-3" /> },
+    PAID: { label: "Paid", cls: "bg-[#798576]/15 text-[#C37C24] border-emerald-500/30", icon: <CheckCircle className="w-3 h-3" /> },
     PENDING_PAYMENT: { label: "Pending Payment", cls: "bg-amber-500/15 text-amber-400 border-amber-500/30", icon: <Clock className="w-3 h-3" /> },
-    FORM_FILLED: { label: "Form Filled", cls: "bg-blue-500/15 text-blue-400 border-blue-500/30", icon: <AlertCircle className="w-3 h-3" /> },
+    FORM_FILLED: { label: "Form Filled", cls: "bg-[#2e4626]/15 text-[#C37C24] border-blue-500/30", icon: <AlertCircle className="w-3 h-3" /> },
     FAILED: { label: "Failed", cls: "bg-rose-500/15 text-rose-400 border-rose-500/30", icon: <X className="w-3 h-3" /> },
   }
   const s = map[status] || { label: status, cls: "bg-slate-700 text-slate-300 border-slate-600", icon: null }
@@ -62,14 +62,14 @@ function StatCard({ icon: Icon, label, value, sub, color }: {
   icon: React.ElementType; label: string; value: string; sub?: string; color: string
 }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex items-start gap-4">
+    <div className="bg-[#23361D] border border-white/10 rounded-2xl p-5 flex items-start gap-4">
       <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${color}`}>
         <Icon className="w-6 h-6 text-white" />
       </div>
       <div>
         <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">{label}</p>
         <p className="text-2xl font-extrabold text-white">{value}</p>
-        {sub && <p className="text-slate-500 text-xs mt-0.5">{sub}</p>}
+        {sub && <p className="text-[#798576] text-xs mt-0.5">{sub}</p>}
       </div>
     </div>
   )
@@ -160,9 +160,9 @@ export default function AdminDashboard() {
   if (!token) return null
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-[#1b2916]">
       {/* Top Nav */}
-      <nav className="bg-slate-900 border-b border-slate-800 px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+      <nav className="bg-[#23361D] border-b border-white/10 px-6 py-3 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <Image
             src="/images/logo.png"
@@ -172,7 +172,7 @@ export default function AdminDashboard() {
             className="h-10 w-auto object-contain"
             priority
           />
-          <span className="text-slate-500 text-xs hidden sm:inline border-l border-slate-700 pl-3">Admin Panel</span>
+          <span className="text-[#798576] text-xs hidden sm:inline border-l border-slate-700 pl-3">Admin Panel</span>
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -205,17 +205,17 @@ export default function AdminDashboard() {
         {loading && !stats ? (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="bg-slate-900 border border-slate-800 rounded-2xl p-5 h-24 animate-pulse" />
+              <div key={i} className="bg-[#23361D] border border-white/10 rounded-2xl p-5 h-24 animate-pulse" />
             ))}
           </div>
         ) : stats && (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <StatCard icon={IndianRupee} label="Total Revenue" value={formatINR(stats.totalRevenue)}
-              sub={`${stats.totalDonors} donors`} color="bg-emerald-600" />
+              sub={`${stats.totalDonors} donors`} color="bg-[#798576]" />
             <StatCard icon={Users} label="Pending Leads" value={String(stats.pendingLeads)}
               sub="Form filled, not paid" color="bg-amber-600" />
             <StatCard icon={TrendingUp} label="Conversion Rate" value={`${stats.conversionRate}%`}
-              sub="Form → Payment" color="bg-blue-600" />
+              sub="Form → Payment" color="bg-[#23361D]" />
             <StatCard icon={Eye} label="Page Visits" value={stats.totalPageVisits.toLocaleString("en-IN")}
               sub="Total tracked visits" color="bg-violet-600" />
           </div>
@@ -226,12 +226,12 @@ export default function AdminDashboard() {
           <DailyRevenueChart data={stats.dailyRevenue} loading={loading} />
         )}
         {loading && !stats && (
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8 h-52 animate-pulse" />
+          <div className="bg-[#23361D] border border-white/10 rounded-2xl p-6 mb-8 h-52 animate-pulse" />
         )}
 
         {/* Tabs + Export */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-          <div className="flex gap-1 bg-slate-900 border border-slate-800 rounded-xl p-1">
+          <div className="flex gap-1 bg-[#23361D] border border-white/10 rounded-xl p-1">
             {([
               { id: "payments" as Tab, label: "✅ Payments", count: leads.filter(l => l.status === "PAID").length },
               { id: "leads" as Tab, label: "📋 Form Leads", count: leads.filter(l => l.status !== "PAID").length },
@@ -242,7 +242,7 @@ export default function AdminDashboard() {
                 id={`tab-${id}`}
                 onClick={() => setActiveTab(id)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${activeTab === id
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-900/40"
+                  ? "bg-[#23361D] text-white shadow-lg shadow-blue-900/40"
                   : "text-slate-400 hover:text-white"
                 }`}
               >
@@ -296,16 +296,16 @@ export default function AdminDashboard() {
 
 function PaymentsTable({ leads, loading }: { leads: FormLead[]; loading: boolean }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-      <div className="px-6 py-4 border-b border-slate-800 flex items-center gap-2">
-        <CheckCircle className="w-4 h-4 text-emerald-400" />
+    <div className="bg-[#23361D] border border-white/10 rounded-2xl overflow-hidden">
+      <div className="px-6 py-4 border-b border-white/10 flex items-center gap-2">
+        <CheckCircle className="w-4 h-4 text-[#C37C24]" />
         <h2 className="font-bold text-white">Successful Payments</h2>
-        <span className="ml-auto text-slate-500 text-sm">{leads.length} records</span>
+        <span className="ml-auto text-[#798576] text-sm">{leads.length} records</span>
       </div>
       {loading ? (
-        <div className="p-8 text-center text-slate-500">Loading...</div>
+        <div className="p-8 text-center text-[#798576]">Loading...</div>
       ) : leads.length === 0 ? (
-        <div className="p-8 text-center text-slate-500">
+        <div className="p-8 text-center text-[#798576]">
           <IndianRupee className="w-10 h-10 mx-auto mb-3 opacity-30" />
           <p>Koi payment record nahi hai abhi.</p>
         </div>
@@ -325,11 +325,11 @@ function PaymentsTable({ leads, loading }: { leads: FormLead[]; loading: boolean
                   <td className="px-4 py-3 font-semibold text-white whitespace-nowrap">{l.name}</td>
                   <td className="px-4 py-3 text-slate-300 text-xs">{l.email}</td>
                   <td className="px-4 py-3 text-slate-300">{l.phone}</td>
-                  <td className="px-4 py-3 font-bold text-emerald-400 whitespace-nowrap">{formatINR(l.amount)}</td>
-                  <td className="px-4 py-3 text-slate-500 text-xs font-mono">{l.orderId || "—"}</td>
+                  <td className="px-4 py-3 font-bold text-[#C37C24] whitespace-nowrap">{formatINR(l.amount)}</td>
+                  <td className="px-4 py-3 text-[#798576] text-xs font-mono">{l.orderId || "—"}</td>
                   <td className="px-4 py-3 text-slate-400 text-xs">{l.sourcePage}</td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-0.5 rounded text-xs font-bold ${l.want80G ? "text-emerald-400" : "text-slate-500"}`}>
+                    <span className={`px-2 py-0.5 rounded text-xs font-bold ${l.want80G ? "text-[#C37C24]" : "text-[#798576]"}`}>
                       {l.want80G ? "Yes" : "No"}
                     </span>
                   </td>
@@ -350,8 +350,8 @@ function LeadsTable({ leads, loading, statusFilter, onFilterChange }: {
   leads: FormLead[]; loading: boolean; statusFilter: string; onFilterChange: (s: string) => void
 }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-      <div className="px-6 py-4 border-b border-slate-800 flex flex-wrap items-center gap-3">
+    <div className="bg-[#23361D] border border-white/10 rounded-2xl overflow-hidden">
+      <div className="px-6 py-4 border-b border-white/10 flex flex-wrap items-center gap-3">
         <Clock className="w-4 h-4 text-amber-400" />
         <h2 className="font-bold text-white">Form Leads (Not Paid)</h2>
         <div className="ml-auto flex gap-2 flex-wrap">
@@ -360,7 +360,7 @@ function LeadsTable({ leads, loading, statusFilter, onFilterChange }: {
               key={s}
               onClick={() => onFilterChange(s)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${statusFilter === s
-                ? "bg-blue-600 text-white"
+                ? "bg-[#23361D] text-white"
                 : "bg-slate-800 text-slate-400 hover:text-white"
               }`}
             >
@@ -368,12 +368,12 @@ function LeadsTable({ leads, loading, statusFilter, onFilterChange }: {
             </button>
           ))}
         </div>
-        <span className="text-slate-500 text-sm">{leads.length} records</span>
+        <span className="text-[#798576] text-sm">{leads.length} records</span>
       </div>
       {loading ? (
-        <div className="p-8 text-center text-slate-500">Loading...</div>
+        <div className="p-8 text-center text-[#798576]">Loading...</div>
       ) : leads.length === 0 ? (
-        <div className="p-8 text-center text-slate-500">
+        <div className="p-8 text-center text-[#798576]">
           <Users className="w-10 h-10 mx-auto mb-3 opacity-30" />
           <p>Is category mein koi lead nahi hai.</p>
         </div>
@@ -397,7 +397,7 @@ function LeadsTable({ leads, loading, statusFilter, onFilterChange }: {
                   <td className="px-4 py-3"><StatusBadge status={l.status} /></td>
                   <td className="px-4 py-3 text-slate-400 text-xs">{l.sourcePage}</td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-0.5 rounded text-xs font-bold ${l.want80G ? "text-emerald-400" : "text-slate-500"}`}>
+                    <span className={`px-2 py-0.5 rounded text-xs font-bold ${l.want80G ? "text-[#C37C24]" : "text-[#798576]"}`}>
                       {l.want80G ? "Yes" : "No"}
                     </span>
                   </td>
@@ -416,16 +416,16 @@ function LeadsTable({ leads, loading, statusFilter, onFilterChange }: {
 
 function PageStatsTable({ pages, loading }: { pages: PageVisit[]; loading: boolean }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-      <div className="px-6 py-4 border-b border-slate-800 flex items-center gap-2">
+    <div className="bg-[#23361D] border border-white/10 rounded-2xl overflow-hidden">
+      <div className="px-6 py-4 border-b border-white/10 flex items-center gap-2">
         <BarChart3 className="w-4 h-4 text-violet-400" />
         <h2 className="font-bold text-white">Page Visitor Analytics</h2>
-        <span className="ml-auto text-slate-500 text-sm">{pages.length} pages tracked</span>
+        <span className="ml-auto text-[#798576] text-sm">{pages.length} pages tracked</span>
       </div>
       {loading ? (
-        <div className="p-8 text-center text-slate-500">Loading...</div>
+        <div className="p-8 text-center text-[#798576]">Loading...</div>
       ) : pages.length === 0 ? (
-        <div className="p-8 text-center text-slate-500">
+        <div className="p-8 text-center text-[#798576]">
           <Eye className="w-10 h-10 mx-auto mb-3 opacity-30" />
           <p>Abhi koi page visit data nahi hai.</p>
         </div>
@@ -438,7 +438,7 @@ function PageStatsTable({ pages, loading }: { pages: PageVisit[]; loading: boole
               <div key={p.page}>
                 <div className="flex justify-between items-center mb-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-slate-500 text-xs w-5 text-right">{i + 1}.</span>
+                    <span className="text-[#798576] text-xs w-5 text-right">{i + 1}.</span>
                     <span className="text-white font-medium text-sm">{p.page}</span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -472,7 +472,7 @@ function DailyRevenueChart({ data, loading }: { data: DailyRevenue[]; loading: b
   const totalWeekRevenue = data.reduce((s, d) => s + d.amount, 0)
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 mb-8">
+    <div className="bg-[#23361D] border border-white/10 rounded-2xl p-6 mb-8">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
@@ -481,12 +481,12 @@ function DailyRevenueChart({ data, loading }: { data: DailyRevenue[]; loading: b
           </div>
           <div>
             <h2 className="font-bold text-white text-sm">Daily Revenue</h2>
-            <p className="text-slate-500 text-xs">Last 7 days</p>
+            <p className="text-[#798576] text-xs">Last 7 days</p>
           </div>
         </div>
         <div className="text-right">
-          <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold mb-0.5">Week Total</p>
-          <p className="text-lg font-extrabold text-emerald-400">{formatINR(totalWeekRevenue)}</p>
+          <p className="text-xs text-[#798576] uppercase tracking-wider font-semibold mb-0.5">Week Total</p>
+          <p className="text-lg font-extrabold text-[#C37C24]">{formatINR(totalWeekRevenue)}</p>
         </div>
       </div>
 
@@ -497,7 +497,7 @@ function DailyRevenueChart({ data, loading }: { data: DailyRevenue[]; loading: b
           ))}
         </div>
       ) : data.length === 0 ? (
-        <div className="flex flex-col items-center justify-center h-36 text-slate-600">
+        <div className="flex flex-col items-center justify-center h-36 text-[#798576]">
           <TrendingUp className="w-10 h-10 mb-2 opacity-30" />
           <p className="text-sm">Abhi tak koi payment nahi aayi.</p>
         </div>
@@ -507,10 +507,10 @@ function DailyRevenueChart({ data, loading }: { data: DailyRevenue[]; loading: b
           <div className="absolute inset-0 flex flex-col justify-between pointer-events-none" style={{ bottom: 28 }}>
             {[100, 75, 50, 25, 0].map((pct) => (
               <div key={pct} className="flex items-center gap-2">
-                <span className="text-slate-700 text-xs w-14 text-right shrink-0 font-mono">
+                <span className="text-[#273029] text-xs w-14 text-right shrink-0 font-mono">
                   {pct > 0 ? formatINR(Math.round((maxAmount * pct) / 100)) : "₹0"}
                 </span>
-                <div className="flex-1 border-t border-slate-800/60" />
+                <div className="flex-1 border-t border-white/10/60" />
               </div>
             ))}
           </div>
@@ -535,7 +535,7 @@ function DailyRevenueChart({ data, loading }: { data: DailyRevenue[]; loading: b
                       animate={{ opacity: 1, y: 0 }}
                       className="absolute bottom-full mb-2 z-10 bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 shadow-xl text-center whitespace-nowrap"
                     >
-                      <p className="text-emerald-400 font-extrabold text-sm">{formatINR(d.amount)}</p>
+                      <p className="text-[#C37C24] font-extrabold text-sm">{formatINR(d.amount)}</p>
                       <p className="text-slate-400 text-xs">{d.date}</p>
                     </motion.div>
                   )}
@@ -557,7 +557,7 @@ function DailyRevenueChart({ data, loading }: { data: DailyRevenue[]; loading: b
                   />
 
                   {/* Date label */}
-                  <span className="text-slate-500 text-xs font-medium mt-1 whitespace-nowrap absolute -bottom-0.5">
+                  <span className="text-[#798576] text-xs font-medium mt-1 whitespace-nowrap absolute -bottom-0.5">
                     {d.date}
                   </span>
                 </div>

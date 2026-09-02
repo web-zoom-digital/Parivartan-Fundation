@@ -61,14 +61,14 @@ export function FeaturedCauses() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-[#23361D] text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
                   {cause.focus}
                 </div>
               </div>
 
               <div className="p-6 sm:p-8 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{cause.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">{cause.desc}</p>
+                <h3 className="text-xl font-bold text-[#273029] mb-3">{cause.title}</h3>
+                <p className="text-[#798576] text-sm leading-relaxed mb-6 flex-1">{cause.desc}</p>
 
                 <Button variant="primary" className="w-full" asChild>
                   <Link href={cause.href}>

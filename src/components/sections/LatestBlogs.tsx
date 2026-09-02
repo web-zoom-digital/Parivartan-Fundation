@@ -39,7 +39,7 @@ const stories = [
 
 export function LatestBlogs() {
   return (
-    <section className="section-spacing bg-slate-50" aria-labelledby="ground-stories-heading">
+    <section className="section-spacing bg-[#F6F2E8]" aria-labelledby="ground-stories-heading">
       <div className="container-custom">
         <SectionHeader
           align="center"
@@ -69,18 +69,18 @@ export function LatestBlogs() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-blue-600">
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[#23361D]">
                   {story.category}
                 </div>
               </Link>
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-[#273029] mb-3 group-hover:text-[#23361D] transition-colors">
                   {story.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-5 flex-1">{story.summary}</p>
+                <p className="text-[#798576] text-sm leading-relaxed mb-5 flex-1">{story.summary}</p>
                 <Link
                   href={story.href}
-                  className="inline-flex items-center text-sm font-bold text-blue-700 hover:text-blue-800 transition-colors"
+                  className="inline-flex items-center text-sm font-bold text-[#1b2916] hover:text-[#23361D] transition-colors"
                 >
                   {story.cta}
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />

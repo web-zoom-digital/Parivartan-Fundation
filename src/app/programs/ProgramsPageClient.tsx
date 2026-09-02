@@ -45,8 +45,8 @@ const programs = [
     id: "education",
     icon: BookOpen,
     color: "from-blue-600 to-blue-400",
-    bgLight: "bg-blue-50",
-    textColor: "text-blue-600",
+    bgLight: "bg-[#eef2eb]",
+    textColor: "text-[#23361D]",
     title: "Education Support",
     tagline: "Books, Bags, and a Brighter Future",
     desc: "Every child deserves to walk into a classroom ready to learn. We distribute school stationery kits, textbooks, uniforms and bags directly to children from families that cannot afford them. We also run awareness sessions at government schools to keep children engaged and motivated.",
@@ -73,8 +73,8 @@ const programs = [
     id: "outreach",
     icon: Users,
     color: "from-emerald-600 to-teal-400",
-    bgLight: "bg-emerald-50",
-    textColor: "text-emerald-600",
+    bgLight: "bg-[#f0f2ef]",
+    textColor: "text-[#C37C24]",
     title: "Community Outreach",
     tagline: "Celebrations, Visits & Neighbourhood Drives",
     desc: "From ashram celebrations with children to neighbourhood gatherings under our banner, outreach is how we stay close to the communities we serve — listening, celebrating and showing up together.",
@@ -147,29 +147,29 @@ export function ProgramsPageClient() {
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden gradient-hero">
-        <motion.div className="absolute top-20 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-blue-100 rounded-full blur-3xl opacity-40 translate-x-1/3"
+        <motion.div className="absolute top-20 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-[#eef2eb] rounded-full blur-3xl opacity-40 translate-x-1/3"
           animate={{ x: [0, 16, 0], scale: [1, 1.05, 1] }} transition={{ duration: 10, repeat: Infinity }} />
         <div className="container-custom relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm text-[#798576] mb-8">
+            <Link href="/" className="hover:text-[#23361D] transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-blue-600 font-semibold">Our Programs</span>
+            <span className="text-[#23361D] font-semibold">Our Programs</span>
           </nav>
           
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6">
-                <Utensils className="w-4 h-4 text-emerald-600" />
-                <span className="text-sm font-semibold text-emerald-800">6 Life-Changing Programs</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f0f2ef] border border-[rgba(121,133,118,0.2)] mb-6">
+                <Utensils className="w-4 h-4 text-[#C37C24]" />
+                <span className="text-sm font-semibold text-[#23361D]">6 Life-Changing Programs</span>
               </div>
-              <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-5xl sm:text-6xl font-extrabold text-[#273029] leading-[1.1] mb-6 tracking-tight">
                 Programs That <span className="text-gradient-warm">Transform</span><br />
                 Lives Every Single Day
               </h1>
-              <p className="text-lg text-slate-600 leading-relaxed max-w-xl mb-4">
+              <p className="text-lg text-[#798576] leading-relaxed max-w-xl mb-4">
                 <strong>Parivartan Welfare Society programmes</strong> cover free food distribution, education support, cow welfare / Gau Seva, medical outreach, clothing drives and emergency meal support across Delhi NCR and Uttar Pradesh.
               </p>
-              <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-xl text-[#798576] leading-relaxed max-w-2xl">
                 From serving hot, nutritious meals to setting up mobile medical camps — our programs are designed with a single goal: to address the deepest needs of our most vulnerable communities with love, efficiency, and full transparency.
               </p>
             </motion.div>
@@ -207,14 +207,14 @@ export function ProgramsPageClient() {
                   aria-label="Previous image"
                   className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/80 hover:bg-white shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                 >
-                  <ChevronLeft className="w-5 h-5 text-slate-700" />
+                  <ChevronLeft className="w-5 h-5 text-[#273029]" />
                 </button>
                 <button
                   onClick={goNext}
                   aria-label="Next image"
                   className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/80 hover:bg-white shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                 >
-                  <ChevronRight className="w-5 h-5 text-slate-700" />
+                  <ChevronRight className="w-5 h-5 text-[#273029]" />
                 </button>
 
                 {/* Slide counter badge */}
@@ -232,7 +232,7 @@ export function ProgramsPageClient() {
                     aria-label={`Go to slide ${i + 1}`}
                     className={`transition-all duration-300 rounded-full ${
                       i === currentSlide
-                        ? "w-6 h-2.5 bg-emerald-500"
+                        ? "w-6 h-2.5 bg-[#798576]"
                         : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
                     }`}
                   />
@@ -244,7 +244,7 @@ export function ProgramsPageClient() {
       </section>
 
       {/* Program Tabs */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom">
           {/* Tab Nav */}
           <div className="flex flex-wrap gap-3 mb-14 justify-center">
@@ -253,7 +253,7 @@ export function ProgramsPageClient() {
               const isActive = activeProgram === p.id
               return (
                 <button key={p.id} onClick={() => setActiveProgram(p.id)}
-                  className={`flex items-center gap-2 px-5 py-3 rounded-full font-bold text-sm transition-all duration-300 ${isActive ? `bg-gradient-to-r ${p.color} text-white shadow-lg scale-105` : "bg-white text-slate-600 border border-slate-200 hover:border-blue-200 hover:text-blue-600"}`}>
+                  className={`flex items-center gap-2 px-5 py-3 rounded-full font-bold text-sm transition-all duration-300 ${isActive ? `bg-gradient-to-r ${p.color} text-white shadow-lg scale-105` : "bg-white text-[#798576] border border-[#ddd9d0] hover:border-[rgba(35,54,29,0.2)] hover:text-[#23361D]"}`}>
                   <Icon className="w-4 h-4" />
                   {p.title.split(" ")[0]} {p.title.split(" ")[1]}
                 </button>
@@ -269,21 +269,21 @@ export function ProgramsPageClient() {
                 <active.icon className="w-5 h-5" />
                 {active.title}
               </div>
-              <h2 className="text-4xl font-extrabold text-slate-900 mb-3 leading-tight">{active.tagline}</h2>
+              <h2 className="text-4xl font-extrabold text-[#273029] mb-3 leading-tight">{active.tagline}</h2>
               <div className={`w-16 h-1.5 rounded-full bg-gradient-to-r ${active.color} mb-6`} />
-              <p className="text-slate-600 leading-relaxed text-[1.05rem] mb-8">{active.desc}</p>
+              <p className="text-[#798576] leading-relaxed text-[1.05rem] mb-8">{active.desc}</p>
 
               <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-6 mb-8">
                 <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-1">Cumulative Impact</p>
                 <p className="text-2xl font-black text-orange-400">{active.impact}</p>
               </div>
 
-              <h3 className="font-bold text-slate-900 mb-4">Key Highlights</h3>
+              <h3 className="font-bold text-[#273029] mb-4">Key Highlights</h3>
               <ul className="space-y-3 mb-8">
                 {active.highlights.map((h, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className={`w-5 h-5 shrink-0 mt-0.5 ${active.textColor}`} />
-                    <span className="text-slate-700 font-medium">{h}</span>
+                    <span className="text-[#273029] font-medium">{h}</span>
                   </li>
                 ))}
               </ul>
@@ -307,12 +307,12 @@ export function ProgramsPageClient() {
                 <img src={active.image} alt={active.title} className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="premium-card rounded-2xl p-6">
-                <h3 className="font-bold text-slate-900 mb-4">Who We Serve</h3>
+                <h3 className="font-bold text-[#273029] mb-4">Who We Serve</h3>
                 <ul className="space-y-2.5">
                   {active.who.map((w, i) => (
                     <li key={i} className="flex items-center gap-3">
                       <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${active.color} shrink-0`} />
-                      <span className="text-slate-600 text-sm font-medium">{w}</span>
+                      <span className="text-[#798576] text-sm font-medium">{w}</span>
                     </li>
                   ))}
                 </ul>
@@ -339,8 +339,8 @@ export function ProgramsPageClient() {
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-lg font-extrabold text-slate-900 mb-2">{p.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">{p.desc}</p>
+                  <h3 className="text-lg font-extrabold text-[#273029] mb-2">{p.title}</h3>
+                  <p className="text-[#798576] text-sm leading-relaxed mb-4 line-clamp-3 flex-1">{p.desc}</p>
                   <span className={`text-xs font-bold ${p.textColor} flex items-center gap-1 mt-auto`}>
                     {p.impact} <ArrowRight className="w-3 h-3" />
                   </span>
@@ -352,7 +352,7 @@ export function ProgramsPageClient() {
       </section>
 
       {/* CTA */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom text-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
             className="bg-gradient-to-br from-blue-700 to-blue-900 rounded-3xl p-14 text-white shadow-2xl shadow-blue-900/25">

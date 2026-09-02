@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/Button"
 
 export function WhyChooseNCF() {
   return (
-    <section className="section-spacing bg-slate-900 text-white relative overflow-hidden">
+    <section className="section-spacing bg-[#23361D] text-white relative overflow-hidden">
       {/* Decorative Orbs */}
-      <div className="absolute top-0 left-0 w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] bg-blue-600/20 rounded-full blur-[100px] -translate-x-1/3 -translate-y-1/4" />
-      <div className="absolute bottom-0 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-emerald-600/20 rounded-full blur-[100px] translate-x-1/3 translate-y-1/4" />
+      <div className="absolute top-0 left-0 w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] bg-[#23361D]/20 rounded-full blur-[100px] -translate-x-1/3 -translate-y-1/4" />
+      <div className="absolute bottom-0 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-[#798576]/20 rounded-full blur-[100px] translate-x-1/3 translate-y-1/4" />
       
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -39,7 +39,7 @@ export function WhyChooseNCF() {
                 "Annual Financial Audits Published Online"
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
-                  <CheckCircle className="w-6 h-6 text-emerald-400 shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-[#C37C24] shrink-0" />
                   <span className="font-semibold text-slate-100">{item}</span>
                 </div>
               ))}

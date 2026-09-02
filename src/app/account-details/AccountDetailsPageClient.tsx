@@ -28,19 +28,19 @@ const bankDetails = [
 
 const paymentMethods = [
   {
-    icon: Building2, title: "Bank Transfer", color: "text-blue-600 bg-blue-50 border-blue-100",
+    icon: Building2, title: "Bank Transfer", color: "text-[#23361D] bg-[#eef2eb] border-[rgba(35,54,29,0.15)]",
     how: "Log into your net banking or mobile banking app, add PWS as a beneficiary using the account number and IFSC code, and transfer any amount.",
     processing: "Credited within same day (IMPS) or 1 working day (NEFT/RTGS).",
     note: "Ideal for larger donations and corporate contributions.",
   },
   {
-    icon: Smartphone, title: "UPI / QR Code", color: "text-emerald-600 bg-emerald-50 border-emerald-100",
+    icon: Smartphone, title: "UPI / QR Code", color: "text-[#C37C24] bg-[#f0f2ef] border-[rgba(121,133,118,0.2)]",
     how: "Open any UPI app (PhonePe, Google Pay, Paytm, BHIM), enter our UPI ID or scan the QR code, and complete payment in seconds.",
     processing: "Instant credit. Available 24/7.",
     note: "Simplest and fastest donation method.",
   },
   {
-    icon: CreditCard, title: "NEFT", color: "text-orange-500 bg-orange-50 border-orange-100",
+    icon: CreditCard, title: "NEFT", color: "text-[#C37C24] bg-orange-50 border-orange-100",
     how: "National Electronic Funds Transfer. Transfer funds from any bank branch or internet banking using our IFSC code and account number.",
     processing: "Processed in batches. Typically credited within 2 hours on working days.",
     note: "Available Monday–Saturday, 8 AM to 7 PM.",
@@ -102,7 +102,7 @@ export function AccountDetailsPageClient() {
           animate={{ x: [0, 16, 0] }} transition={{ duration: 12, repeat: Infinity }} />
 
         <div className="container-custom relative z-10 max-w-2xl">
-          <motion.nav className="flex items-center gap-1.5 text-xs sm:text-sm text-blue-300 mb-5 sm:mb-8 flex-wrap" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <motion.nav className="flex items-center gap-1.5 text-xs sm:text-sm text-white/80 mb-5 sm:mb-8 flex-wrap" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link href="/donate" className="hover:text-white transition-colors">Donate</Link>
@@ -112,7 +112,7 @@ export function AccountDetailsPageClient() {
 
           <motion.div variants={fadeUp} initial="hidden" animate="show">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 border border-white/20 mb-4 sm:mb-6 max-w-full">
-              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
+              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C37C24] shrink-0" />
               <span className="text-xs sm:text-sm font-semibold text-white leading-snug">100% Secure · 80G Tax Exempt · Verified NGO</span>
             </div>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-4 sm:mb-6 tracking-tight">
@@ -151,9 +151,9 @@ export function AccountDetailsPageClient() {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {[
-              { icon: Shield, label: "Secure Donations", sub: "256-bit SSL encrypted", color: "text-blue-600 bg-blue-50 border-blue-100" },
-              { icon: CheckCircle2, label: "Verified NGO", sub: "Ministry of Social Justice", color: "text-emerald-600 bg-emerald-50 border-emerald-100" },
-              { icon: Star, label: "80G Tax Exempt", sub: "Save up to 50% on taxes", color: "text-orange-500 bg-orange-50 border-orange-100" },
+              { icon: Shield, label: "Secure Donations", sub: "256-bit SSL encrypted", color: "text-[#23361D] bg-[#eef2eb] border-[rgba(35,54,29,0.15)]" },
+              { icon: CheckCircle2, label: "Verified NGO", sub: "Ministry of Social Justice", color: "text-[#C37C24] bg-[#f0f2ef] border-[rgba(121,133,118,0.2)]" },
+              { icon: Star, label: "80G Tax Exempt", sub: "Save up to 50% on taxes", color: "text-[#C37C24] bg-orange-50 border-orange-100" },
               { icon: Globe, label: "100% Transparent", sub: "Annual public audits", color: "text-purple-600 bg-purple-50 border-purple-100" },
             ].map((b, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
@@ -162,8 +162,8 @@ export function AccountDetailsPageClient() {
                   <b.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <p className="font-bold text-slate-900 text-xs sm:text-sm">{b.label}</p>
-                  <p className="text-slate-500 text-[10px] sm:text-xs">{b.sub}</p>
+                  <p className="font-bold text-[#273029] text-xs sm:text-sm">{b.label}</p>
+                  <p className="text-[#798576] text-[10px] sm:text-xs">{b.sub}</p>
                 </div>
               </motion.div>
             ))}
@@ -194,29 +194,29 @@ export function AccountDetailsPageClient() {
                 <div className="p-4 sm:p-8 space-y-3 sm:space-y-4">
                   {bankDetails.map((field, i) => (
                     <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.06} viewport={{ once: true }}
-                      className="flex items-start justify-between gap-2 p-3 sm:p-4 bg-slate-50 rounded-2xl border border-slate-100 group hover:border-blue-200 hover:bg-blue-50/50 transition-all">
+                      className="flex items-start justify-between gap-2 p-3 sm:p-4 bg-[#F6F2E8] rounded-2xl border border-slate-100 group hover:border-[rgba(35,54,29,0.2)] hover:bg-[#eef2eb]/50 transition-all">
                       <div className="flex items-start gap-2 sm:gap-3 min-w-0 flex-1">
-                        <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm mt-0.5">
-                          <field.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
+                        <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white border border-[#ddd9d0] flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+                          <field.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#23361D]" />
                         </div>
                         <div className="min-w-0 flex-1">
-                          <p className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wide">{field.label}</p>
-                          <p className="font-bold text-slate-900 text-xs sm:text-sm break-all leading-snug mt-0.5">{field.value}</p>
+                          <p className="text-[10px] sm:text-xs font-semibold text-[#798576] uppercase tracking-wide">{field.label}</p>
+                          <p className="font-bold text-[#273029] text-xs sm:text-sm break-all leading-snug mt-0.5">{field.value}</p>
                         </div>
                       </div>
                       <button
                         onClick={() => handleCopy(field.value, field.label)}
                         aria-label={`Copy ${field.label}`}
-                        className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:border-blue-300 hover:bg-blue-50 transition-all shadow-sm">
+                        className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white border border-[#ddd9d0] flex items-center justify-center text-[#798576] hover:text-[#23361D] hover:border-blue-300 hover:bg-[#eef2eb] transition-all shadow-sm">
                         {copied === field.label
-                          ? <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500" />
+                          ? <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C37C24]" />
                           : <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
                       </button>
                     </motion.div>
                   ))}
                   <div className="bg-amber-50 border border-amber-200 rounded-2xl p-3 sm:p-4 mt-4">
                     <p className="text-amber-800 text-xs font-semibold flex items-start gap-2">
-                      <Shield className="w-3.5 h-3.5 shrink-0 mt-0.5 fill-amber-500 text-amber-500" />
+                      <Shield className="w-3.5 h-3.5 shrink-0 mt-0.5 fill-amber-500 text-[#C37C24]" />
                       These are the official bank details. Contact us on WhatsApp for immediate assistance.
                     </p>
                   </div>
@@ -228,10 +228,10 @@ export function AccountDetailsPageClient() {
             <div className="space-y-5 sm:space-y-6 min-w-0 w-full">
               <motion.div variants={fadeUp} initial="hidden" whileInView="show" custom={0.2} viewport={{ once: true }}
                 className="premium-card rounded-2xl sm:rounded-3xl p-5 sm:p-7 text-center w-full min-w-0 overflow-hidden">
-                <p className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">
+                <p className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#23361D] mb-4">
                   Scan &amp; Pay via UPI
                 </p>
-                <div className="mx-auto mb-5 w-full max-w-[220px] sm:max-w-[240px] rounded-2xl border border-slate-200 bg-white p-2.5 shadow-sm overflow-hidden">
+                <div className="mx-auto mb-5 w-full max-w-[220px] sm:max-w-[240px] rounded-2xl border border-[#ddd9d0] bg-white p-2.5 shadow-sm overflow-hidden">
                   <img
                     src="/images/upi-qr.png"
                     alt="Parivartan Welfare Society UPI QR Code — nabinchandrafoundation2506@aubank"
@@ -244,8 +244,8 @@ export function AccountDetailsPageClient() {
                     }}
                   />
                 </div>
-                <p className="font-bold text-slate-900 text-sm mb-1">Scan with any UPI app</p>
-                <p className="text-slate-500 text-xs mb-1 break-all px-1">
+                <p className="font-bold text-[#273029] text-sm mb-1">Scan with any UPI app</p>
+                <p className="text-[#798576] text-xs mb-1 break-all px-1">
                   UPI ID: nabinchandrafoundation2506@aubank
                 </p>
                 <p className="text-slate-400 text-[11px] sm:text-xs">PhonePe · Google Pay · Paytm · BHIM</p>
@@ -253,7 +253,7 @@ export function AccountDetailsPageClient() {
                   {["PhonePe", "GPay", "Paytm", "BHIM"].map((app) => (
                     <span
                       key={app}
-                      className="bg-slate-100 text-slate-600 text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-full"
+                      className="bg-[#F6F2E8] text-[#798576] text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-full"
                     >
                       {app}
                     </span>
@@ -267,7 +267,7 @@ export function AccountDetailsPageClient() {
                 <p className="font-extrabold text-lg mb-2">After Donating?</p>
                 <p className="text-emerald-100 text-sm mb-5 leading-relaxed">Share your transaction ID with us and receive your 80G receipt within 24 hours.</p>
                 <a href="https://wa.me/919315814894?text=Hi%2C%20I%20just%20donated%20to%20Nabin%20Chandra%20Foundation.%20My%20transaction%20ID%20is%3A%20" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-white text-emerald-700 hover:bg-emerald-50 font-bold rounded-full h-11 text-sm border-0 shadow-lg">
+                  <Button className="w-full bg-white text-[#23361D] hover:bg-[#f0f2ef] font-bold rounded-full h-11 text-sm border-0 shadow-lg">
                     Share via WhatsApp
                   </Button>
                 </a>
@@ -288,14 +288,14 @@ export function AccountDetailsPageClient() {
                 <div className={`w-12 h-12 rounded-2xl ${m.color} border flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
                   <m.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-extrabold text-slate-900 text-lg mb-3">{m.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">{m.how}</p>
+                <h3 className="font-extrabold text-[#273029] text-lg mb-3">{m.title}</h3>
+                <p className="text-[#798576] text-sm leading-relaxed mb-4">{m.how}</p>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
+                  <div className="flex items-center gap-2 text-xs text-[#798576] font-medium">
                     <Clock className="w-3.5 h-3.5" />
                     <span>{m.processing}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-blue-600 font-semibold">
+                  <div className="flex items-center gap-2 text-xs text-[#23361D] font-semibold">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     <span>{m.note}</span>
                   </div>
@@ -316,15 +316,15 @@ export function AccountDetailsPageClient() {
                 className="premium-card rounded-2xl p-7 relative group">
                 <span className="absolute top-5 right-5 text-4xl font-black text-slate-100">{step.num}</span>
                 <div className="text-3xl mb-4">{step.icon}</div>
-                <h3 className="font-extrabold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="font-extrabold text-[#273029] mb-2">{step.title}</h3>
+                <p className="text-[#798576] text-sm leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" custom={0.5} viewport={{ once: true }}
             className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://wa.me/919315814894" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="rounded-full px-10 h-13 font-bold text-base shadow-lg shadow-blue-500/25">
+              <Button variant="primary" className="rounded-full px-10 h-13 font-bold text-base shadow-lg shadow-[rgba(35,54,29,0.25)]">
                 Share Transaction ID on WhatsApp
               </Button>
             </a>
@@ -345,13 +345,13 @@ export function AccountDetailsPageClient() {
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.08} viewport={{ once: true }}
                 className="premium-card rounded-2xl overflow-hidden">
-                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}>
                   {faq.q}
-                  <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180 text-blue-600" : ""}`} />
+                  <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180 text-[#23361D]" : ""}`} />
                 </button>
                 {openFaq === i && (
-                  <div className="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
+                  <div className="px-6 pb-6 text-[#798576] text-sm leading-relaxed border-t border-slate-100 pt-4">{faq.a}</div>
                 )}
               </motion.div>
             ))}
@@ -407,8 +407,8 @@ export function AccountDetailsPageClient() {
       {/* ── TOAST NOTIFICATION ── */}
       {copied && (
         <motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 50 }}
-          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[300] bg-slate-900 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 text-sm font-bold">
-          <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[300] bg-[#23361D] text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 text-sm font-bold">
+          <CheckCircle2 className="w-4 h-4 text-[#C37C24]" />
           {copied} — Copied Successfully!
         </motion.div>
       )}

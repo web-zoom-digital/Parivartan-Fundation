@@ -47,8 +47,8 @@ export function NewsletterContact() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl font-extrabold text-slate-900 mb-4">Stay Updated</h3>
-            <p className="text-slate-600 mb-8 leading-relaxed">
+            <h3 className="text-3xl font-extrabold text-[#273029] mb-4">Stay Updated</h3>
+            <p className="text-[#798576] mb-8 leading-relaxed">
               Subscribe to our newsletter to receive weekly updates on our impact, upcoming events, and stories from the ground.
             </p>
             
@@ -58,10 +58,10 @@ export function NewsletterContact() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3"
+                  className="mb-6 p-4 bg-[#f0f2ef] border border-emerald-200 rounded-xl flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <p className="text-sm font-medium text-emerald-800">
+                  <CheckCircle2 className="w-5 h-5 text-[#C37C24] shrink-0 mt-0.5" />
+                  <p className="text-sm font-medium text-[#23361D]">
                     Successfully subscribed! Welcome to the community.
                   </p>
                 </motion.div>
@@ -82,7 +82,7 @@ export function NewsletterContact() {
                   type="text" 
                   {...register("name")}
                   placeholder="Your Name"
-                  className={`w-full h-14 pl-6 pr-4 rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 transition-all ${errors.name ? 'border-red-300 focus:ring-red-500/30' : 'border-slate-200 focus:ring-blue-500/30'}`}
+                  className={`w-full h-14 pl-6 pr-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all ${errors.name ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'}`}
                 />
                 {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>}
               </div>
@@ -91,7 +91,7 @@ export function NewsletterContact() {
                   type="email" 
                   {...register("email")}
                   placeholder="Email Address"
-                  className={`w-full h-14 pl-6 pr-4 rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 transition-all ${errors.email ? 'border-red-300 focus:ring-red-500/30' : 'border-slate-200 focus:ring-blue-500/30'}`}
+                  className={`w-full h-14 pl-6 pr-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all ${errors.email ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'}`}
                 />
                 {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>}
               </div>
@@ -110,44 +110,44 @@ export function NewsletterContact() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div>
-              <h3 className="text-3xl font-extrabold text-slate-900 mb-4">Get in Touch</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-3xl font-extrabold text-[#273029] mb-4">Get in Touch</h3>
+              <p className="text-[#798576] leading-relaxed">
                 Have questions about our programs, or want to collaborate on a CSR initiative? Our team is available 24/7.
               </p>
             </div>
             
             <div className="flex flex-col gap-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-orange-500" />
+                <div className="w-12 h-12 rounded-xl bg-[#fdf3e3] flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-[#C37C24]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 mb-1">Head Office</h5>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <h5 className="font-bold text-[#273029] mb-1">Head Office</h5>
+                  <p className="text-sm text-[#798576] leading-relaxed">
                     House Number - 242, Govindgarh, <br /> Gautam Buddha Nagar, Jewar, UP 203135
                   </p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-blue-600" />
+                <div className="w-12 h-12 rounded-xl bg-[#eef2eb] flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-[#23361D]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 mb-1">Helpline Number</h5>
-                  <p className="text-sm text-slate-600">
+                  <h5 className="font-bold text-[#273029] mb-1">Helpline Number</h5>
+                  <p className="text-sm text-[#798576]">
                     +91 93158 14894 (Toll Free)
                   </p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-emerald-500" />
+                <div className="w-12 h-12 rounded-xl bg-[#eef2eb] flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-[#C37C24]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 mb-1">Email Us</h5>
-                  <p className="text-sm text-slate-600">
+                  <h5 className="font-bold text-[#273029] mb-1">Email Us</h5>
+                  <p className="text-sm text-[#798576]">
                     hello@nabinchandrafoundation.org
                   </p>
                 </div>

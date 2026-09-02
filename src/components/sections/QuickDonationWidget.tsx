@@ -101,26 +101,26 @@ export function QuickDonationWidget() {
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Heart className="w-4 h-4 text-orange-500 fill-orange-500" />
+              <Heart className="w-4 h-4 text-[#C37C24] fill-orange-500" />
               <span className="text-sm font-bold text-orange-700">Make an Impact Today</span>
             </motion.div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-4 sm:mb-5 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#273029] leading-[1.1] mb-4 sm:mb-5 tracking-tight">
               Feed Hope.
               <br />
               <span className="bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
                 Change Lives.
               </span>
             </h2>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-md">
+            <p className="text-[#798576] text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-md">
               Choose an amount below. Every rupee supports hot meals, medical care or education — and you will see the same impact numbers on our Donate and Impact pages.
             </p>
 
             <div className="space-y-3">
               {[
-                { icon: Shield, text: "100% Secure Donation", color: "text-blue-600" },
-                { icon: CheckCircle2, text: "Verified & Transparent NGO", color: "text-emerald-600" },
-                { icon: Star, text: "80G Tax Receipt by Email", color: "text-orange-500" },
+                { icon: Shield, text: "100% Secure Donation", color: "text-[#23361D]" },
+                { icon: CheckCircle2, text: "Verified & Transparent NGO", color: "text-[#C37C24]" },
+                { icon: Star, text: "80G Tax Receipt by Email", color: "text-[#C37C24]" },
               ].map((b, i) => (
                 <motion.div
                   key={b.text}
@@ -134,7 +134,7 @@ export function QuickDonationWidget() {
                   <div className="w-8 h-8 rounded-lg bg-white shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
                     <b.icon className={`w-4 h-4 ${b.color}`} />
                   </div>
-                  <span className="text-slate-700 font-semibold text-sm">{b.text}</span>
+                  <span className="text-[#273029] font-semibold text-sm">{b.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -147,7 +147,7 @@ export function QuickDonationWidget() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-8 inline-flex items-start gap-3 bg-emerald-600 text-white px-5 py-3 rounded-2xl shadow-lg shadow-emerald-600/25 max-w-md"
+                  className="mt-8 inline-flex items-start gap-3 bg-[#798576] text-white px-5 py-3 rounded-2xl shadow-lg shadow-[rgba(121,133,118,0.25)] max-w-md"
                 >
                   <Sparkles className="w-5 h-5 fill-white shrink-0 mt-0.5" />
                   <span className="font-bold text-sm leading-snug">
@@ -169,8 +169,8 @@ export function QuickDonationWidget() {
 
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Donate Securely</p>
-                  <p className="text-xl font-extrabold text-slate-900">Choose Your Contribution</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#798576] mb-1">Donate Securely</p>
+                  <p className="text-xl font-extrabold text-[#273029]">Choose Your Contribution</p>
                 </div>
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
                   <Heart className="w-6 h-6 text-white fill-white" />
@@ -178,15 +178,15 @@ export function QuickDonationWidget() {
               </div>
 
               <div className="relative mb-6">
-                <div className="flex items-center bg-slate-50 border-2 border-slate-200 rounded-2xl px-5 py-4 focus-within:border-emerald-400 focus-within:bg-white transition-all">
-                  <span className="text-2xl font-black text-emerald-600 mr-3">₹</span>
+                <div className="flex items-center bg-[#F6F2E8] border-2 border-[#ddd9d0] rounded-2xl px-5 py-4 focus-within:border-emerald-400 focus-within:bg-white transition-all">
+                  <span className="text-2xl font-black text-[#C37C24] mr-3">₹</span>
                   <input
                     type="text"
                     value={isCustom ? customAmount : formatInr(displayAmount)}
                     onChange={(e) => handleCustom(e.target.value)}
                     onFocus={() => setIsCustom(true)}
                     aria-label="Donation amount in rupees"
-                    className="flex-1 text-2xl sm:text-3xl font-black text-slate-900 bg-transparent outline-none w-full min-w-0"
+                    className="flex-1 text-2xl sm:text-3xl font-black text-[#273029] bg-transparent outline-none w-full min-w-0"
                     placeholder="501"
                   />
                   <span className="text-slate-400 text-sm font-semibold ml-2">INR</span>
@@ -206,20 +206,20 @@ export function QuickDonationWidget() {
                       className={`relative flex flex-col items-center justify-center p-3 rounded-2xl border-2 text-center cursor-pointer transition-all duration-200 overflow-hidden
                         ${
                           isActive
-                            ? "border-emerald-500 bg-emerald-50 shadow-md shadow-emerald-500/20"
-                            : "border-slate-200 bg-white hover:border-emerald-300 hover:bg-emerald-50/50 hover:shadow-sm"
+                            ? "border-emerald-500 bg-[#f0f2ef] shadow-md shadow-emerald-500/20"
+                            : "border-[#ddd9d0] bg-white hover:border-emerald-300 hover:bg-[#f0f2ef]/50 hover:shadow-sm"
                         }`}
                       aria-pressed={isActive}
                     >
                       {isActive && (
-                        <span className="absolute top-2 right-2 w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center">
+                        <span className="absolute top-2 right-2 w-4 h-4 rounded-full bg-[#798576] flex items-center justify-center">
                           <CheckCircle2 className="w-3 h-3 text-white" />
                         </span>
                       )}
-                      <span className={`text-lg font-black ${isActive ? "text-emerald-700" : "text-slate-900"}`}>
+                      <span className={`text-lg font-black ${isActive ? "text-[#23361D]" : "text-[#273029]"}`}>
                         ₹{formatInr(chip.amount)}
                       </span>
-                      <span className={`text-xs font-semibold mt-0.5 ${isActive ? "text-emerald-600" : "text-slate-500"}`}>
+                      <span className={`text-xs font-semibold mt-0.5 ${isActive ? "text-[#C37C24]" : "text-[#798576]"}`}>
                         {chip.label}
                       </span>
                     </motion.button>
@@ -228,7 +228,7 @@ export function QuickDonationWidget() {
               </div>
 
               {isCustom && customAmount && (
-                <p className="text-emerald-700 text-xs font-semibold mb-4 text-center">
+                <p className="text-[#23361D] text-xs font-semibold mb-4 text-center">
                   Custom amount: ₹{formatInr(parseInt(customAmount) || 0)} — thank you for giving.
                 </p>
               )}
@@ -256,9 +256,9 @@ export function QuickDonationWidget() {
               )}
 
               {paymentSuccess && (
-                <div className="bg-emerald-50 border border-emerald-300 rounded-2xl p-4 mb-4">
+                <div className="bg-[#f0f2ef] border border-emerald-300 rounded-2xl p-4 mb-4">
                   <p className="text-emerald-900 font-bold text-sm mb-1">Thank you</p>
-                  <p className="text-emerald-800 text-sm leading-relaxed">{paymentSuccess}</p>
+                  <p className="text-[#23361D] text-sm leading-relaxed">{paymentSuccess}</p>
                 </div>
               )}
 
@@ -302,13 +302,13 @@ export function QuickDonationWidget() {
                 </span>
               </motion.button>
 
-              <p className="text-center text-slate-500 text-xs mt-4 leading-relaxed px-2">
+              <p className="text-center text-[#798576] text-xs mt-4 leading-relaxed px-2">
                 Same amounts as on our Donate & Impact pages. 80G receipt by email after payment.
               </p>
 
               <div className="flex justify-center gap-3 mt-4">
                 {["UPI", "NEFT", "IMPS", "Card", "Net Banking"].map((m) => (
-                  <span key={m} className="bg-slate-100 text-slate-500 text-[10px] font-bold px-2 py-1 rounded-md">
+                  <span key={m} className="bg-[#F6F2E8] text-[#798576] text-[10px] font-bold px-2 py-1 rounded-md">
                     {m}
                   </span>
                 ))}

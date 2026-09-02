@@ -9,17 +9,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-blue-600 text-white hover:bg-blue-700 shadow-[0_4px_15px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5",
+          "bg-[#23361D] text-white hover:bg-[#1b2916] shadow-[0_4px_15px_rgba(35,54,29,0.3)] hover:shadow-[0_8px_25px_rgba(35,54,29,0.4)] hover:-translate-y-0.5",
         primary:
-          "bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 shadow-[0_4px_15px_rgba(37,99,235,0.3)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5",
+          "bg-[#23361D] text-white hover:bg-[#2e4626] shadow-[0_4px_15px_rgba(35,54,29,0.3)] hover:shadow-[0_8px_25px_rgba(35,54,29,0.4)] hover:-translate-y-0.5",
         secondary:
-          "bg-emerald-500 text-white hover:bg-emerald-600 shadow-[0_4px_15px_rgba(16,185,129,0.3)] hover:shadow-[0_8px_25px_rgba(16,185,129,0.4)] hover:-translate-y-0.5",
+          "bg-[#798576] text-white hover:bg-[#5a6558] shadow-[0_4px_15px_rgba(121,133,118,0.3)] hover:shadow-[0_8px_25px_rgba(121,133,118,0.4)] hover:-translate-y-0.5",
         warm:
-          "bg-gradient-to-r from-orange-500 to-amber-500 text-white hover:from-orange-600 hover:to-amber-600 shadow-[0_4px_15px_rgba(249,115,22,0.3)] hover:shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:-translate-y-0.5",
+          "bg-[#C37C24] text-white hover:bg-[#995f19] shadow-[0_4px_15px_rgba(195,124,36,0.3)] hover:shadow-[0_8px_25px_rgba(195,124,36,0.4)] hover:-translate-y-0.5",
         outline:
-          "border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:-translate-y-0.5",
-        ghost: "hover:bg-slate-100 text-slate-600 hover:text-slate-900",
-        link: "text-blue-600 underline-offset-4 hover:underline",
+          "border-2 border-[#23361D] text-[#23361D] bg-transparent hover:bg-[#23361D] hover:text-white hover:-translate-y-0.5",
+        ghost: "hover:bg-[#eef2eb] text-[#273029] hover:text-[#23361D]",
+        link: "text-[#23361D] underline-offset-4 hover:underline",
         whatsapp: "bg-[#25D366] text-white hover:bg-[#128C7E] shadow-[0_4px_15px_rgba(37,211,102,0.3)] hover:shadow-[0_8px_25px_rgba(37,211,102,0.4)] hover:-translate-y-0.5",
       },
       size: {

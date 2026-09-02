@@ -230,13 +230,13 @@ const whyCards = [
   },
   {
     icon: Stethoscope,
-    color: "text-blue-600 bg-blue-50",
+    color: "text-[#23361D] bg-[#eef2eb]",
     title: "Injuries Need Real Treatment",
     desc: "Road accidents leave open wounds and broken limbs. We bring veterinarians, antiseptics and dressings to the animal — not just a temporary bandage.",
   },
   {
     icon: Leaf,
-    color: "text-emerald-600 bg-emerald-50",
+    color: "text-[#C37C24] bg-[#f0f2ef]",
     title: "Hunger Is Daily Work",
     desc: "A gaushala runs on fodder, not slogans. Fresh greens, dry grass and clean water must arrive every morning — rain or shine.",
   },
@@ -505,7 +505,7 @@ export function CowDonationPageClient() {
         <div className="container-custom w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left z-10 order-2 lg:order-1">
-              <nav className="flex items-center justify-center lg:justify-start gap-2 text-sm text-blue-300 mb-4 sm:mb-6">
+              <nav className="flex items-center justify-center lg:justify-start gap-2 text-sm text-white/80 mb-4 sm:mb-6">
                 <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
@@ -523,7 +523,7 @@ export function CowDonationPageClient() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.12] mb-4 sm:mb-5 tracking-tight">
                   {slide.title}
                   <br />
-                  <span className="text-emerald-400">{slide.highlight}</span>
+                  <span className="text-[#C37C24]">{slide.highlight}</span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-blue-100/85 mb-6 sm:mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0">
                   {slide.desc}
@@ -537,7 +537,7 @@ export function CowDonationPageClient() {
                       key={badge}
                       className="inline-flex items-center gap-1.5 bg-white/10 border border-blue-400/30 text-white text-xs font-bold px-3 py-1.5 rounded-full"
                     >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#C37C24]" />
                       {badge}
                     </span>
                   ),
@@ -548,7 +548,7 @@ export function CowDonationPageClient() {
                 <a href="#donate-widget" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto rounded-full h-14 px-8 text-base font-bold bg-emerald-600 hover:bg-emerald-500 border-0 shadow-2xl shadow-emerald-600/40 text-white"
+                    className="w-full sm:w-auto rounded-full h-14 px-8 text-base font-bold bg-[#798576] hover:bg-[#798576] border-0 shadow-2xl shadow-emerald-600/40 text-white"
                   >
                     Support Cow Care <HandCoins className="w-4 h-4 ml-2" />
                   </Button>
@@ -644,7 +644,7 @@ export function CowDonationPageClient() {
           >
             <div className="grid lg:grid-cols-5">
               {/* Left: original photo + Selected Seva below (no green overlay) */}
-              <div className="lg:col-span-2 flex flex-col bg-slate-50 border-b lg:border-b-0 lg:border-r border-green-100">
+              <div className="lg:col-span-2 flex flex-col bg-[#F6F2E8] border-b lg:border-b-0 lg:border-r border-green-100">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-200">
                   <img
                     src={selectedSeva.img}
@@ -653,13 +653,13 @@ export function CowDonationPageClient() {
                   />
                 </div>
                 <div className="p-5 sm:p-6">
-                  <p className="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-1">
+                  <p className="text-[#23361D] text-xs font-bold uppercase tracking-wider mb-1">
                     Selected Seva
                   </p>
                   <h2 className="text-xl sm:text-2xl font-extrabold text-green-950 mb-1">
                     {selectedSeva.icon} {selectedSeva.title}
                   </h2>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-[#798576] text-sm leading-relaxed">
                     {selectedSeva.detail || selectedSeva.impact}
                   </p>
                 </div>
@@ -672,7 +672,7 @@ export function CowDonationPageClient() {
                     <h2 className="text-xl sm:text-2xl font-extrabold text-green-950">
                       Choose Your Gau Seva
                     </h2>
-                    <p className="text-slate-500 text-xs sm:text-sm mt-1">
+                    <p className="text-[#798576] text-xs sm:text-sm mt-1">
                       Pick a package below, or enter any amount. Most donors
                       choose ₹251 or ₹501.
                     </p>
@@ -680,7 +680,7 @@ export function CowDonationPageClient() {
                 </div>
 
                 {/* Frequency */}
-                <div className="flex gap-2 p-1 bg-slate-100 rounded-full mb-6 max-w-xs">
+                <div className="flex gap-2 p-1 bg-[#F6F2E8] rounded-full mb-6 max-w-xs">
                   {(["one-time", "monthly"] as const).map((f) => (
                     <button
                       key={f}
@@ -689,7 +689,7 @@ export function CowDonationPageClient() {
                       className={`flex-1 py-2.5 rounded-full text-sm font-bold transition-all ${
                         frequency === f
                           ? "bg-green-700 text-white shadow-md"
-                          : "text-slate-900 hover:text-slate-900"
+                          : "text-[#273029] hover:text-[#273029]"
                       }`}
                       style={frequency !== f ? { color: "black" } : {}}
                     >
@@ -712,7 +712,7 @@ export function CowDonationPageClient() {
                         className={`relative py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-base transition-all border-2 ${
                           active
                             ? "bg-green-700 text-white border-green-700 shadow-lg shadow-green-700/25 scale-[1.02]"
-                            : "bg-white text-slate-800 border-slate-200 hover:border-green-400"
+                            : "bg-white text-[#273029] border-[#ddd9d0] hover:border-green-400"
                         }`}
                         style={!active ? { color: "black" } : {}}
                       >
@@ -729,11 +729,11 @@ export function CowDonationPageClient() {
 
                 {/* Custom + stepper */}
                 <div className="flex gap-3 mb-5">
-                  <div className="flex items-center gap-1 bg-slate-50 border-2 border-slate-200 rounded-2xl px-2">
+                  <div className="flex items-center gap-1 bg-[#F6F2E8] border-2 border-[#ddd9d0] rounded-2xl px-2">
                     <button
                       type="button"
                       aria-label="Decrease amount"
-                      className="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-green-700"
+                      className="w-10 h-10 flex items-center justify-center text-[#798576] hover:text-green-700"
                       onClick={() => {
                         const next = Math.max(51, finalAmount - 50);
                         selectAmount(next);
@@ -744,14 +744,14 @@ export function CowDonationPageClient() {
                     <button
                       type="button"
                       aria-label="Increase amount"
-                      className="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-green-700"
+                      className="w-10 h-10 flex items-center justify-center text-[#798576] hover:text-green-700"
                       onClick={() => selectAmount(finalAmount + 50)}
                     >
                       <Plus className="w-4 h-4" />
                     </button>
                   </div>
                   <div className="relative flex-1">
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 font-bold">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#798576] font-bold">
                       ₹
                     </span>
                     <input
@@ -769,13 +769,13 @@ export function CowDonationPageClient() {
                           if (match) setSelectedSeva(match);
                         }
                       }}
-                      className="w-full pl-9 pr-4 py-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-900 font-bold focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
+                      className="w-full pl-9 pr-4 py-3 rounded-2xl border-2 border-[#ddd9d0] bg-white text-[#273029] font-bold focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
                     />
                   </div>
                 </div>
 
                 {/* Impact preview */}
-                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 mb-6 flex gap-3 items-start">
+                <div className="bg-[#f0f2ef] border border-emerald-200 rounded-2xl p-4 mb-6 flex gap-3 items-start">
                   <div className="text-2xl shrink-0">{selectedSeva.icon}</div>
                   <div>
                     <p className="text-emerald-900 font-bold text-sm">
@@ -785,7 +785,7 @@ export function CowDonationPageClient() {
                         : "—"}
                       {frequency === "monthly" ? " / month" : ""} will help:
                     </p>
-                    <p className="text-emerald-700 text-sm mt-0.5">
+                    <p className="text-[#23361D] text-sm mt-0.5">
                       {activeImpact}
                     </p>
                   </div>
@@ -827,7 +827,7 @@ export function CowDonationPageClient() {
                           आप Donation पेज तक आए, ये आपके{" "}
                           <span className="font-extrabold text-orange-600">दयालु दिल</span> को दर्शाता है।
                         </p>
-                        <p className="text-slate-700 text-sm leading-relaxed mb-3">
+                        <p className="text-[#273029] text-sm leading-relaxed mb-3">
                           शायद दान पूरा नहीं हो पाया, लेकिन देर नहीं हुई है। तो आइए,{" "}
                           <span className="font-bold text-green-700">इस बार बिना रुके</span> मदद का हाथ बढ़ाइए।
                         </p>
@@ -863,11 +863,11 @@ export function CowDonationPageClient() {
 
 
                 {paymentSuccess && (
-                  <div className="bg-emerald-50 border border-emerald-300 rounded-2xl p-4 mb-4">
+                  <div className="bg-[#f0f2ef] border border-emerald-300 rounded-2xl p-4 mb-4">
                     <p className="text-emerald-900 font-bold text-sm mb-1">
                       Thank you
                     </p>
-                    <p className="text-emerald-800 text-sm leading-relaxed">
+                    <p className="text-[#23361D] text-sm leading-relaxed">
                       {paymentSuccess}
                     </p>
                   </div>
@@ -984,10 +984,10 @@ export function CowDonationPageClient() {
                       </span>
                     </div>
                     <div className="p-4 pb-2">
-                      <h3 className="font-extrabold text-slate-900 text-sm mb-1">
+                      <h3 className="font-extrabold text-[#273029] text-sm mb-1">
                         {item.icon} {item.title}
                       </h3>
-                      <p className="text-slate-500 text-xs leading-relaxed">
+                      <p className="text-[#798576] text-xs leading-relaxed">
                         {item.impact}
                       </p>
                     </div>
@@ -997,7 +997,7 @@ export function CowDonationPageClient() {
                       type="button"
                       onClick={() => donateSevaDirect(item)}
                       disabled={isProcessing}
-                      className="w-full rounded-xl h-11 font-bold bg-emerald-600 hover:bg-emerald-500 text-white border-0 shadow-md shadow-emerald-600/20"
+                      className="w-full rounded-xl h-11 font-bold bg-[#798576] hover:bg-[#798576] text-white border-0 shadow-md shadow-emerald-600/20"
                     >
                       {isProcessing && selectedSeva.id === item.id
                         ? "Processing..."
@@ -1037,10 +1037,10 @@ export function CowDonationPageClient() {
                 >
                   <card.icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-extrabold text-slate-900 mb-2">
+                <h3 className="text-base font-extrabold text-[#273029] mb-2">
                   {card.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-[#798576] text-sm leading-relaxed">
                   {card.desc}
                 </p>
               </motion.div>
@@ -1154,7 +1154,7 @@ export function CowDonationPageClient() {
                   <h3 className="text-base font-extrabold text-green-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-[#798576] text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -1204,7 +1204,7 @@ export function CowDonationPageClient() {
                     <div className="w-9 h-9 rounded-xl bg-green-50 border border-green-200 flex items-center justify-center shrink-0">
                       <item.icon className="w-4 h-4 text-green-700" />
                     </div>
-                    <span className="text-slate-700 font-medium text-sm">
+                    <span className="text-[#273029] font-medium text-sm">
                       {item.text}
                     </span>
                   </li>
@@ -1230,7 +1230,7 @@ export function CowDonationPageClient() {
                   <p className="text-green-900 font-extrabold text-lg">
                     Fed by hand. Watched with care.
                   </p>
-                  <p className="text-slate-600 text-sm mt-1">
+                  <p className="text-[#798576] text-sm mt-1">
                     A volunteer offers food while a calf rests nearby — the
                     everyday rhythm of our gaushala work.
                   </p>
@@ -1268,7 +1268,7 @@ export function CowDonationPageClient() {
                 <h3 className="font-extrabold text-green-900 mb-2">
                   {step.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-[#798576] text-sm leading-relaxed">
                   {step.desc}
                 </p>
               </motion.div>
@@ -1306,7 +1306,7 @@ export function CowDonationPageClient() {
                   />
                 </button>
                 {openFaq === i && (
-                  <div className="px-5 pb-5 text-slate-600 leading-relaxed text-sm border-t border-green-100 pt-3">
+                  <div className="px-5 pb-5 text-[#798576] leading-relaxed text-sm border-t border-green-100 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -1382,7 +1382,7 @@ export function CowDonationPageClient() {
                 <p className="font-extrabold text-green-900 text-sm">
                   {item.title}
                 </p>
-                <p className="text-slate-500 text-xs mt-1">{item.sub}</p>
+                <p className="text-[#798576] text-xs mt-1">{item.sub}</p>
               </a>
             ))}
           </div>
@@ -1411,7 +1411,7 @@ export function CowDonationPageClient() {
               <Button
                 onClick={goDonate}
                 disabled={finalAmount <= 0 || isProcessing}
-                className="rounded-xl h-11 px-5 font-bold bg-emerald-500 hover:bg-emerald-400 text-white border-0 shrink-0"
+                className="rounded-xl h-11 px-5 font-bold bg-[#798576] hover:bg-emerald-400 text-white border-0 shrink-0"
               >
                 {isProcessing ? "Processing..." : "Donate Now"}
               </Button>

@@ -27,7 +27,7 @@ export function GalleryHero() {
       </div>
 
       <div className="container-custom relative z-10 max-w-3xl">
-        <motion.nav className="flex items-center gap-2 text-sm text-blue-300 mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+        <motion.nav className="flex items-center gap-2 text-sm text-white/80 mb-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <span>/</span>
           <span className="text-white font-semibold">Impact Gallery</span>
@@ -51,7 +51,7 @@ export function GalleryHero() {
 
         <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="flex flex-wrap items-center gap-4">
           <Link href="/donate">
-            <Button variant="primary" size="lg" className="rounded-full h-14 px-8 font-bold text-base shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all">
+            <Button variant="primary" size="lg" className="rounded-full h-14 px-8 font-bold text-base shadow-2xl shadow-[rgba(35,54,29,0.25)] hover:shadow-blue-500/40 hover:-translate-y-1 transition-all">
               Donate Now <HandCoins className="w-4 h-4 ml-2" />
             </Button>
           </Link>
@@ -60,7 +60,7 @@ export function GalleryHero() {
               Become Volunteer
             </Button>
           </Link>
-          <a href="#gallery" className="hidden sm:flex items-center gap-2 text-white font-semibold hover:text-blue-400 transition-colors ml-4">
+          <a href="#gallery" className="hidden sm:flex items-center gap-2 text-white font-semibold hover:text-[#C37C24] transition-colors ml-4">
             View Impact <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>

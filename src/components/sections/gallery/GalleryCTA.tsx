@@ -55,7 +55,7 @@ export function GalleryCTA() {
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <Link href="/donate">
-            <Button variant="default" size="lg" className="rounded-full h-14 px-8 font-bold text-base bg-white text-blue-600 hover:bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition-all">
+            <Button variant="default" size="lg" className="rounded-full h-14 px-8 font-bold text-base bg-white text-[#23361D] hover:bg-[#F6F2E8] hover:shadow-xl hover:-translate-y-1 transition-all">
               Donate Now <HandCoins className="w-4 h-4 ml-2" />
             </Button>
           </Link>

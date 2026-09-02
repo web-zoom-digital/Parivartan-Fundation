@@ -6,10 +6,10 @@ import { motion, useInView } from "framer-motion"
 import { Users, Utensils, HeartHandshake, MapPin } from "lucide-react"
 
 const stats = [
-  { label: "Meals Served", value: "5,000,000+", icon: Utensils, color: "text-orange-500", bg: "bg-orange-100" },
-  { label: "Active Volunteers", value: "15,000+", icon: Users, color: "text-blue-500", bg: "bg-blue-100" },
-  { label: "Families Helped", value: "250,000+", icon: HeartHandshake, color: "text-emerald-500", bg: "bg-emerald-100" },
-  { label: "Cities Covered", value: "120+", icon: MapPin, color: "text-amber-500", bg: "bg-amber-100" },
+  { label: "Meals Served", value: "5,000,000+", icon: Utensils, color: "text-[#C37C24]", bg: "bg-[#fdf3e3]" },
+  { label: "Active Volunteers", value: "15,000+", icon: Users, color: "text-[#2e4626]", bg: "bg-[#eef2eb]" },
+  { label: "Families Helped", value: "250,000+", icon: HeartHandshake, color: "text-[#C37C24]", bg: "bg-[#eef2eb]" },
+  { label: "Cities Covered", value: "120+", icon: MapPin, color: "text-[#C37C24]", bg: "bg-[#fdf3e3]" },
 ]
 
 export function ImpactCounters() {
@@ -35,10 +35,10 @@ export function ImpactCounters() {
                     <Icon className={`w-8 h-8 ${stat.color}`} />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900">
+                    <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#273029]">
                       {stat.value}
                     </span>
-                    <span className="text-[10px] sm:text-xs md:text-sm font-semibold text-slate-500 uppercase tracking-wider">
+                    <span className="text-[10px] sm:text-xs md:text-sm font-semibold text-[#798576] uppercase tracking-wider">
                       {stat.label}
                     </span>
                   </div>
@@ -46,10 +46,10 @@ export function ImpactCounters() {
               )
             })}
           </div>
-          <p className="mt-8 text-center text-xs sm:text-sm text-slate-500 leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-8 text-center text-xs sm:text-sm text-[#798576] leading-relaxed max-w-3xl mx-auto">
             Figures are cumulative programme estimates maintained by Parivartan Welfare Society since
             2015 across food, volunteer engagement, family support and outreach locations.{" "}
-            <Link href="/impact" className="text-blue-600 font-semibold hover:underline">
+            <Link href="/impact" className="text-[#23361D] font-semibold hover:underline">
               See impact notes
             </Link>
             .

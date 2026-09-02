@@ -59,10 +59,10 @@ export function MasonryGallery() {
     <section id="gallery" className="py-24 bg-white relative">
       <div className="container-custom">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Our <span className="text-emerald-600">Impact</span> Gallery
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#273029] mb-6 tracking-tight">
+            Our <span className="text-[#C37C24]">Impact</span> Gallery
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-[#798576] text-lg">
             Explore moments of change, community service, and our ongoing mission to make the world a better place.
           </p>
         </div>
@@ -75,8 +75,8 @@ export function MasonryGallery() {
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeCategory === category
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30 scale-105"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
+                  ? "bg-[#23361D] text-white shadow-lg shadow-blue-500/30 scale-105"
+                  : "bg-[#F6F2E8] text-[#798576] hover:bg-slate-200 hover:text-[#273029]"
               }`}
             >
               {category}
@@ -113,12 +113,12 @@ export function MasonryGallery() {
                     <h4 className="text-white font-bold text-lg leading-tight mb-1">{image.title}</h4>
                     <p className="text-slate-200 text-sm line-clamp-2">{image.description}</p>
                     <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
-                      <span className="text-xs font-semibold text-blue-300 uppercase tracking-wider">{image.categories[1] || image.categories[0]}</span>
+                      <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">{image.categories[1] || image.categories[0]}</span>
                       <div className="flex gap-2">
-                        <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white hover:text-blue-600 transition-colors" title="View Full">
+                        <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#23361D] transition-colors" title="View Full">
                           <Maximize2 className="w-4 h-4" />
                         </button>
-                        <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white hover:text-blue-600 transition-colors" title="Share" onClick={(e) => { e.stopPropagation(); /* share logic */ }}>
+                        <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#23361D] transition-colors" title="Share" onClick={(e) => { e.stopPropagation(); /* share logic */ }}>
                           <Share2 className="w-4 h-4" />
                         </button>
                       </div>
@@ -132,7 +132,7 @@ export function MasonryGallery() {
 
         {filteredImages.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-slate-500 text-lg">No images found for this category.</p>
+            <p className="text-[#798576] text-lg">No images found for this category.</p>
           </div>
         )}
       </div>
@@ -144,7 +144,7 @@ export function MasonryGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl flex flex-col"
+            className="fixed inset-0 z-[100] bg-[#1b2916]/95 backdrop-blur-xl flex flex-col"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 md:p-6 text-white absolute top-0 left-0 right-0 z-10">

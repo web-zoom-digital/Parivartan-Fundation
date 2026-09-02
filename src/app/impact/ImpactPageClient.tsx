@@ -38,8 +38,8 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 const stats = [
   { icon: Heart, number: 5000000, suffix: "+", label: "Meals Served", sublabel: "Hot meals since 2015 (programme estimate)", color: "from-orange-500 to-amber-400", bg: "bg-orange-50", text: "text-orange-600" },
-  { icon: Users, number: 120000, suffix: "+", label: "Families Supported", sublabel: "Across districts we serve in NCR & UP", color: "from-blue-600 to-blue-400", bg: "bg-blue-50", text: "text-blue-600" },
-  { icon: BookOpen, number: 3200, suffix: "+", label: "Children Supported", sublabel: "School kits and education drives", color: "from-emerald-600 to-teal-400", bg: "bg-emerald-50", text: "text-emerald-600" },
+  { icon: Users, number: 120000, suffix: "+", label: "Families Supported", sublabel: "Across districts we serve in NCR & UP", color: "from-blue-600 to-blue-400", bg: "bg-[#eef2eb]", text: "text-[#23361D]" },
+  { icon: BookOpen, number: 3200, suffix: "+", label: "Children Supported", sublabel: "School kits and education drives", color: "from-emerald-600 to-teal-400", bg: "bg-[#f0f2ef]", text: "text-[#C37C24]" },
   { icon: Stethoscope, number: 25000, suffix: "+", label: "Medical Beneficiaries", sublabel: "Camps, consultations and medicines", color: "from-rose-500 to-pink-400", bg: "bg-rose-50", text: "text-rose-600" },
   { icon: MapPin, number: 200, suffix: "+", label: "Communities Reached", sublabel: "Urban and rural outreach points", color: "from-purple-600 to-violet-400", bg: "bg-purple-50", text: "text-purple-600" },
   { icon: Star, number: 500, suffix: "+", label: "Active Volunteers", sublabel: "People who show up for seva", color: "from-yellow-500 to-orange-400", bg: "bg-yellow-50", text: "text-yellow-600" },
@@ -86,26 +86,26 @@ export function ImpactPageClient() {
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden gradient-hero">
-        <motion.div className="absolute top-10 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-emerald-100 rounded-full blur-3xl opacity-40 translate-x-1/3"
+        <motion.div className="absolute top-10 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-[#eef2eb] rounded-full blur-3xl opacity-40 translate-x-1/3"
           animate={{ x: [0, 30, 0], scale: [1, 1.1, 1] }} transition={{ duration: 10, repeat: Infinity }} />
         <div className="container-custom relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm text-[#798576] mb-8">
+            <Link href="/" className="hover:text-[#23361D] transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-blue-600 font-semibold">Our Impact</span>
+            <span className="text-[#23361D] font-semibold">Our Impact</span>
           </nav>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6">
-                <Star className="w-4 h-4 text-emerald-600 fill-emerald-600" />
-                <span className="text-sm font-semibold text-emerald-800">9 Years of Measurable Impact</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f0f2ef] border border-[rgba(121,133,118,0.2)] mb-6">
+                <Star className="w-4 h-4 text-[#C37C24] fill-emerald-600" />
+                <span className="text-sm font-semibold text-[#23361D]">9 Years of Measurable Impact</span>
               </div>
-              <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-5xl sm:text-6xl font-extrabold text-[#273029] leading-[1.1] mb-6 tracking-tight">
                 Real Numbers.<br />
                 Real <span className="text-gradient-warm">Lives Changed.</span><br />
                 Real <span className="text-gradient-primary">Accountability.</span>
               </h1>
-              <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-xl text-[#798576] leading-relaxed max-w-2xl">
                 We track meals, school support, medical outreach and cow welfare across the communities we serve.
                 Below are cumulative programme estimates since 2015 — with notes on how to read them.
               </p>
@@ -132,7 +132,7 @@ export function ImpactPageClient() {
       </section>
 
       {/* Stats */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom">
           <SectionHeader badge="Impact Numbers" title="The Numbers Behind Our Mission" subtitle="Cumulative programme estimates maintained by our team since 2015. Contact us if you need a detailed breakdown for a specific year or programme." align="center" className="mb-14" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -142,15 +142,15 @@ export function ImpactPageClient() {
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.color} flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform shadow-lg`}>
                   <s.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-4xl font-black text-slate-900 mb-1">
+                <p className="text-4xl font-black text-[#273029] mb-1">
                   <AnimatedCounter target={s.number} suffix={s.suffix} />
                 </p>
-                <p className="font-bold text-slate-800 mb-1">{s.label}</p>
-                <p className="text-slate-500 text-sm">{s.sublabel}</p>
+                <p className="font-bold text-[#273029] mb-1">{s.label}</p>
+                <p className="text-[#798576] text-sm">{s.sublabel}</p>
               </motion.div>
             ))}
           </div>
-          <p className="mt-10 text-center text-sm text-slate-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-10 text-center text-sm text-[#798576] max-w-3xl mx-auto leading-relaxed">
             Methodology note: totals combine food drives, education kits, medical camps, volunteer engagement and outreach locations recorded in our programme logs. They are directional scale indicators, not a substitute for a formal audited annual report.
           </p>
         </div>
@@ -167,14 +167,14 @@ export function ImpactPageClient() {
                 <div className={`h-2 bg-gradient-to-r ${s.color}`} />
                 <div className="p-8">
                   <Quote className="w-8 h-8 text-slate-200 mb-4" />
-                  <p className="text-slate-600 leading-relaxed italic mb-6 text-sm">"{s.story}"</p>
+                  <p className="text-[#798576] leading-relaxed italic mb-6 text-sm">"{s.story}"</p>
                   <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
                     <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${s.color} flex items-center justify-center text-white font-bold text-lg`}>
                       {s.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-slate-900 text-sm">{s.name}</p>
-                      <p className="text-slate-500 text-xs">{s.location} · {s.program}</p>
+                      <p className="font-bold text-[#273029] text-sm">{s.name}</p>
+                      <p className="text-[#798576] text-xs">{s.location} · {s.program}</p>
                     </div>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export function ImpactPageClient() {
       </section>
 
       {/* Donation Impact Calculator */}
-      <section className="section-spacing bg-slate-900 text-white relative overflow-hidden">
+      <section className="section-spacing bg-[#23361D] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-orange-500/10 rounded-full blur-[100px]" />
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -226,7 +226,7 @@ export function ImpactPageClient() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom">
           <SectionHeader badge="What People Say" title="Trusted by Donors, Auditors & Volunteers" subtitle="Our credibility is not self-declared. It is earned through consistent action and verified by independent voices." align="center" className="mb-14" />
           <div className="grid md:grid-cols-3 gap-8">
@@ -236,14 +236,14 @@ export function ImpactPageClient() {
                 <div className="flex gap-1 mb-5">
                   {Array(5).fill(0).map((_, j) => <Star key={j} className="w-4 h-4 text-orange-400 fill-orange-400" />)}
                 </div>
-                <p className="text-slate-600 leading-relaxed italic text-sm mb-6">"{t.text}"</p>
+                <p className="text-[#798576] leading-relaxed italic text-sm mb-6">"{t.text}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">
+                  <div className="w-10 h-10 rounded-full bg-[#eef2eb] flex items-center justify-center text-[#1b2916] font-bold">
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900 text-sm">{t.name}</p>
-                    <p className="text-slate-500 text-xs">{t.role}</p>
+                    <p className="font-bold text-[#273029] text-sm">{t.name}</p>
+                    <p className="text-[#798576] text-xs">{t.role}</p>
                   </div>
                 </div>
               </motion.div>

@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   HandCoins,
-  Search,
   Phone,
   ChevronRight,
   Home,
@@ -21,11 +20,11 @@ import { GiCow } from "react-icons/gi"
 import { Button } from "@/components/ui/Button"
 
 const exploreLinks = [
-  { name: "Home", href: "/", icon: Home, hint: "Welcome & latest seva" },
+  { name: "Home", href: "/", icon: Home, hint: "Welcome & our work" },
   { name: "About", href: "/about", icon: Users, hint: "Our story & mission" },
-  { name: "Programs", href: "/programs", icon: Sparkles, hint: "Food, education & care" },
+  { name: "Programs", href: "/programs", icon: Sparkles, hint: "What we do on the ground" },
   { name: "Gallery", href: "/gallery", icon: Images, hint: "Moments from the field" },
-  { name: "Impact", href: "/impact", icon: TrendingUp, hint: "Lives we touch" },
+  { name: "Impact", href: "/impact", icon: TrendingUp, hint: "Progress we've made" },
   { name: "Contact", href: "/contact", icon: Mail, hint: "Reach our team" },
 ]
 
@@ -79,7 +78,7 @@ export function Header() {
   return (
     <>
       <motion.header
-        className="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 w-full bg-white/95 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-slate-200/60"
+        className="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 w-full bg-white/95 backdrop-blur-2xl shadow-[0_4px_30px_rgba(35,54,29,0.06)] border-b border-[#ddd9d0]/60"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -88,27 +87,27 @@ export function Header() {
           const el = document.querySelector("header")
           if (el) {
             el.style.transform = "translateZ(0)"
-            void el.offsetHeight // force reflow
+            void el.offsetHeight
           }
         }}
       >
-        {/* Top Bar (Hidden on Mobile) */}
+        {/* Top Bar — Parivartan Green */}
         <div
           className={`hidden md:flex w-full transition-all duration-500 ${
             isScrolled
               ? "h-0 opacity-0 py-0 overflow-hidden border-b-0"
-              : "bg-blue-600 text-white h-auto py-2 opacity-100"
+              : "bg-[#23361D] text-white h-auto py-2 opacity-100"
           }`}
         >
           <div className="w-full px-6 md:px-10 lg:px-12 xl:px-16 max-w-[1920px] mx-auto flex items-center justify-between text-[13px] font-medium tracking-wide">
             <div className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5" />
-              <span>Confidential Helpline — Available to guide you</span>
+              <Phone className="w-3.5 h-3.5 text-[#C37C24]" />
+              <span className="text-white/80">Empowering Change, Enriching Lives.</span>
             </div>
             <div className="flex items-center gap-6">
               <a
                 href="tel:+919315814894"
-                className="flex items-center gap-1.5 hover:text-blue-200 transition-colors font-bold"
+                className="flex items-center gap-1.5 hover:text-[#C37C24] transition-colors font-bold"
               >
                 <Phone className="w-3.5 h-3.5 fill-current" />
                 <span>Call Now</span>
@@ -160,12 +159,12 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   className={`relative shrink-0 text-[14px] xl:text-[15px] 2xl:text-base font-bold transition-colors py-2 group whitespace-nowrap ${
-                    active ? "text-slate-900" : "text-slate-900 hover:text-blue-600"
+                    active ? "text-[#23361D]" : "text-[#273029] hover:text-[#23361D]"
                   }`}
                 >
                   {link.name}
                   <span
-                    className={`absolute left-0 bottom-0 h-0.5 bg-blue-600 transition-all duration-300 rounded-full ${
+                    className={`absolute left-0 bottom-0 h-0.5 bg-[#C37C24] transition-all duration-300 rounded-full ${
                       active ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -175,29 +174,22 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4 xl:gap-5 shrink-0">
-            {/* <button
-              type="button"
-              aria-label="Search"
-              className="w-11 h-11 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-blue-600 hover:bg-white hover:shadow-md hover:border-blue-100 transition-all duration-300"
-            >
-              <Search className="w-4 h-4" />
-            </button> */}
             <Link href="/donate">
               <Button
                 variant="primary"
-                className="rounded-full shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300 px-6 xl:px-8 py-5 xl:py-6 h-11 text-sm font-bold"
+                className="rounded-full shadow-lg shadow-[rgba(35,54,29,0.25)] hover:shadow-[rgba(35,54,29,0.4)] hover:-translate-y-0.5 transition-all duration-300 px-6 xl:px-8 py-5 xl:py-6 h-11 text-sm font-bold"
               >
                 Donate Now
               </Button>
             </Link>
           </div>
 
-          {/* Premium mobile toggle */}
+          {/* Mobile toggle — Parivartan Green tones */}
           <button
             type="button"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className="lg:hidden relative z-[110] h-11 w-11 rounded-2xl bg-blue-50/90 border border-blue-200/70 text-blue-800 shadow-[0_8px_20px_-12px_rgba(58,100,170,0.55)] flex items-center justify-center active:scale-95 transition-all duration-300 hover:bg-blue-100 hover:border-blue-300"
+            className="lg:hidden relative z-[110] h-11 w-11 rounded-2xl bg-[#eef2eb] border border-[rgba(35,54,29,0.2)] text-[#23361D] shadow-[0_8px_20px_-12px_rgba(35,54,29,0.35)] flex items-center justify-center active:scale-95 transition-all duration-300 hover:bg-[#dde8d9] hover:border-[rgba(35,54,29,0.3)]"
             onClick={() => setMobileMenuOpen((open) => !open)}
           >
             <span className="sr-only">{mobileMenuOpen ? "Close" : "Menu"}</span>
@@ -236,7 +228,7 @@ export function Header() {
             <button
               type="button"
               aria-label="Close menu backdrop"
-              className="absolute inset-0 bg-blue-950/40 backdrop-blur-[2px]"
+              className="absolute inset-0 bg-[#23361D]/40 backdrop-blur-[2px]"
               onClick={() => setMobileMenuOpen(false)}
             />
 
@@ -245,30 +237,30 @@ export function Header() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 18, opacity: 0 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-x-0 top-0 bottom-0 flex flex-col overflow-hidden bg-[linear-gradient(180deg,#F7FAFF_0%,#FFFFFF_38%,#F3F8F5_100%)] pt-[calc(4.5rem+env(safe-area-inset-top))]"
+              className="absolute inset-x-0 top-0 bottom-0 flex flex-col overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F6F2E8_38%,#eef2eb_100%)] pt-[calc(4.5rem+env(safe-area-inset-top))]"
             >
               {/* Soft brand atmosphere */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute -top-16 right-[-20%] h-56 w-56 rounded-full bg-blue-400/15 blur-3xl"
+                className="pointer-events-none absolute -top-16 right-[-20%] h-56 w-56 rounded-full bg-[#23361D]/10 blur-3xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute bottom-24 left-[-15%] h-48 w-48 rounded-full bg-emerald-400/15 blur-3xl"
+                className="pointer-events-none absolute bottom-24 left-[-15%] h-48 w-48 rounded-full bg-[#C37C24]/10 blur-3xl"
               />
 
               <div className="relative flex-1 overflow-y-auto px-5 sm:px-6 pb-4">
                 <div className="mb-5">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-blue-600/80">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#23361D]">
                     Parivartan Welfare Society
                   </p>
-                  <p className="mt-1 text-sm text-slate-500">
-                    Seva that feeds, educates and protects.
+                  <p className="mt-1 text-sm text-[#798576]">
+                    Empowering Change, Enriching Lives.
                   </p>
                 </div>
 
                 <section className="mb-6">
-                  <p className="mb-2 px-1 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                  <p className="mb-2 px-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#798576]">
                     Explore
                   </p>
                   <nav className="space-y-1.5">
@@ -287,15 +279,15 @@ export function Header() {
                             onClick={() => setMobileMenuOpen(false)}
                             className={`group flex items-center gap-3 rounded-2xl px-3 py-3 transition-all duration-300 ${
                               active
-                                ? "bg-white shadow-[0_10px_28px_-16px_rgba(48,80,138,0.45)] ring-1 ring-blue-100"
+                                ? "bg-white shadow-[0_10px_28px_-16px_rgba(35,54,29,0.35)] ring-1 ring-[rgba(35,54,29,0.12)]"
                                 : "hover:bg-white/80"
                             }`}
                           >
                             <span
                               className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
                                 active
-                                  ? "bg-blue-600 text-white shadow-md shadow-blue-600/25"
-                                  : "bg-blue-50 text-blue-700 group-hover:bg-blue-100"
+                                  ? "bg-[#23361D] text-white shadow-md shadow-[rgba(35,54,29,0.3)]"
+                                  : "bg-[#eef2eb] text-[#23361D] group-hover:bg-[#dde8d9]"
                               }`}
                             >
                               <Icon className="h-4 w-4" />
@@ -303,16 +295,16 @@ export function Header() {
                             <span className="min-w-0 flex-1">
                               <span
                                 className={`block text-[15px] font-bold leading-tight ${
-                                  active ? "text-blue-800" : "text-slate-800"
+                                  active ? "text-[#23361D]" : "text-[#273029]"
                                 }`}
                               >
                                 {link.name}
                               </span>
-                              <span className="block truncate text-xs text-slate-500">{link.hint}</span>
+                              <span className="block truncate text-xs text-[#798576]">{link.hint}</span>
                             </span>
                             <ChevronRight
                               className={`h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 ${
-                                active ? "text-blue-500" : "text-slate-300"
+                                active ? "text-[#C37C24]" : "text-[#ddd9d0]"
                               }`}
                             />
                           </Link>
@@ -323,14 +315,13 @@ export function Header() {
                 </section>
 
                 <section className="mb-4">
-                  <p className="mb-2 px-1 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                  <p className="mb-2 px-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#798576]">
                     Give & Support
                   </p>
                   <nav className="space-y-1.5">
                     {supportLinks.map((link, i) => {
                       const Icon = link.icon
                       const active = isActivePath(pathname, link.href)
-                      const isCow = link.href === "/cow-donation"
                       return (
                         <motion.div
                           key={link.name}
@@ -347,46 +338,32 @@ export function Header() {
                             onClick={() => setMobileMenuOpen(false)}
                             className={`group flex items-center gap-3 rounded-2xl px-3 py-3 transition-all duration-300 ${
                               active
-                                ? isCow
-                                  ? "bg-white shadow-[0_10px_28px_-16px_rgba(43,114,86,0.45)] ring-1 ring-emerald-100"
-                                  : "bg-white shadow-[0_10px_28px_-16px_rgba(48,80,138,0.45)] ring-1 ring-blue-100"
+                                ? "bg-white shadow-[0_10px_28px_-16px_rgba(35,54,29,0.35)] ring-1 ring-[rgba(35,54,29,0.12)]"
                                 : "hover:bg-white/80"
                             }`}
                           >
                             <span
                               className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
                                 active
-                                  ? isCow
-                                    ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/25"
-                                    : "bg-blue-600 text-white shadow-md shadow-blue-600/25"
-                                  : isCow
-                                    ? "bg-emerald-50 text-emerald-700 group-hover:bg-emerald-100"
-                                    : "bg-blue-50 text-blue-700 group-hover:bg-blue-100"
+                                  ? "bg-[#23361D] text-white shadow-md shadow-[rgba(35,54,29,0.3)]"
+                                  : "bg-[#eef2eb] text-[#23361D] group-hover:bg-[#dde8d9]"
                               }`}
                             >
-                              <Icon className={`h-4 w-4 ${isCow ? "h-[18px] w-[18px]" : ""}`} />
+                              <Icon className={`h-4 w-4`} />
                             </span>
                             <span className="min-w-0 flex-1">
                               <span
                                 className={`block text-[15px] font-bold leading-tight ${
-                                  active
-                                    ? isCow
-                                      ? "text-emerald-800"
-                                      : "text-blue-800"
-                                    : "text-slate-800"
+                                  active ? "text-[#23361D]" : "text-[#273029]"
                                 }`}
                               >
                                 {link.name}
                               </span>
-                              <span className="block truncate text-xs text-slate-500">{link.hint}</span>
+                              <span className="block truncate text-xs text-[#798576]">{link.hint}</span>
                             </span>
                             <ChevronRight
                               className={`h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 ${
-                                active
-                                  ? isCow
-                                    ? "text-emerald-500"
-                                    : "text-blue-500"
-                                  : "text-slate-300"
+                                active ? "text-[#C37C24]" : "text-[#ddd9d0]"
                               }`}
                             />
                           </Link>
@@ -402,13 +379,13 @@ export function Header() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.18, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="relative shrink-0 border-t border-blue-100/70 bg-white/85 px-5 sm:px-6 pt-4 pb-[calc(5.5rem+env(safe-area-inset-bottom))] backdrop-blur-xl"
+                className="relative shrink-0 border-t border-[#ddd9d0]/70 bg-white/85 px-5 sm:px-6 pt-4 pb-[calc(5.5rem+env(safe-area-inset-bottom))] backdrop-blur-xl"
               >
                 <div className="grid grid-cols-2 gap-2.5">
                   <Link href="/cow-donation" onClick={() => setMobileMenuOpen(false)}>
                     <Button
                       size="lg"
-                      className="w-full rounded-2xl border-0 bg-emerald-600 text-white h-12 text-sm font-bold shadow-lg shadow-emerald-600/25 hover:bg-emerald-500"
+                      className="w-full rounded-2xl border-0 bg-[#798576] text-white h-12 text-sm font-bold shadow-lg shadow-[rgba(121,133,118,0.25)] hover:bg-[#5a6558]"
                     >
                       <GiCow className="mr-1.5 h-[18px] w-[18px]" />
                       Cow Seva
@@ -418,7 +395,7 @@ export function Header() {
                     <Button
                       variant="primary"
                       size="lg"
-                      className="w-full rounded-2xl border-0 bg-gradient-to-r from-blue-700 to-blue-500 text-white h-12 text-sm font-bold shadow-lg shadow-blue-600/25"
+                      className="w-full rounded-2xl border-0 bg-[#23361D] text-white h-12 text-sm font-bold shadow-lg shadow-[rgba(35,54,29,0.25)]"
                     >
                       Donate
                       <HandCoins className="ml-1.5 h-4 w-4" />
@@ -429,10 +406,10 @@ export function Header() {
                 <div className="mt-3.5 flex items-center justify-between gap-3">
                   <a
                     href="tel:+919315814894"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-full border border-slate-200 bg-slate-50 py-2.5 text-xs font-bold text-slate-600 transition-colors hover:border-blue-200 hover:bg-white hover:text-blue-700"
+                    className="flex flex-1 items-center justify-center gap-2 rounded-full border border-[#ddd9d0] bg-[#F6F2E8] py-2.5 text-xs font-bold text-[#273029] transition-colors hover:border-[rgba(35,54,29,0.3)] hover:bg-white hover:text-[#23361D]"
                   >
                     <Phone className="h-3.5 w-3.5" />
-                    Call Helpline
+                    Call Us
                   </a>
                   <a
                     href="https://wa.me/919315814894"

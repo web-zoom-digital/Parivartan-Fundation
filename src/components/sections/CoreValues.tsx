@@ -7,9 +7,9 @@ import { HeartHandshake, ShieldCheck, Zap, Globe } from "lucide-react"
 
 const values = [
   { title: "Compassion First", desc: "Every action is rooted in deep empathy and respect for the dignity of every individual we serve.", icon: HeartHandshake, color: "text-rose-500", bg: "bg-rose-50" },
-  { title: "Absolute Transparency", desc: "We maintain 100% open books. You will always know exactly how and where your donation is spent.", icon: ShieldCheck, color: "text-emerald-500", bg: "bg-emerald-50" },
-  { title: "Rapid Action", desc: "In emergencies, hours matter. Our agile volunteer network ensures help arrives quickly.", icon: Zap, color: "text-amber-500", bg: "bg-amber-50" },
-  { title: "Inclusive Reach", desc: "We serve unconditionally, irrespective of religion, caste, or background. Humanity is our only filter.", icon: Globe, color: "text-blue-500", bg: "bg-blue-50" }
+  { title: "Absolute Transparency", desc: "We maintain 100% open books. You will always know exactly how and where your donation is spent.", icon: ShieldCheck, color: "text-[#C37C24]", bg: "bg-[#f0f2ef]" },
+  { title: "Rapid Action", desc: "In emergencies, hours matter. Our agile volunteer network ensures help arrives quickly.", icon: Zap, color: "text-[#C37C24]", bg: "bg-amber-50" },
+  { title: "Inclusive Reach", desc: "We serve unconditionally, irrespective of religion, caste, or background. Humanity is our only filter.", icon: Globe, color: "text-[#2e4626]", bg: "bg-[#eef2eb]" }
 ]
 
 export function CoreValues() {
@@ -38,8 +38,8 @@ export function CoreValues() {
                 <div className={`w-14 h-14 rounded-2xl ${val.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className={`w-6 h-6 ${val.color}`} />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-3">{val.title}</h4>
-                <p className="text-slate-600 leading-relaxed text-sm">
+                <h4 className="text-xl font-bold text-[#273029] mb-3">{val.title}</h4>
+                <p className="text-[#798576] leading-relaxed text-sm">
                   {val.desc}
                 </p>
               </motion.div>

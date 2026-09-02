@@ -17,7 +17,7 @@ const stories = [
     description: "We care for cows and calves we meet on the street — hand-feeding, bottle care for weak calves, and daily compassion.",
     icon: Leaf,
     image: "/images/cow-donation/feeding-hero.png",
-    color: "bg-emerald-500",
+    color: "bg-[#798576]",
     gradient: "from-emerald-500/20 to-transparent",
   },
   {
@@ -25,7 +25,7 @@ const stories = [
     description: "School visits where we meet children, hand out learning kits when we can, and encourage them to stay in class.",
     icon: BookOpen,
     image: "/images/programs/program2.png",
-    color: "bg-blue-500",
+    color: "bg-[#2e4626]",
     gradient: "from-blue-500/20 to-transparent",
   },
   {
@@ -40,13 +40,13 @@ const stories = [
 
 export function ImpactStoryCards() {
   return (
-    <section className="py-24 bg-slate-50 border-y border-slate-100">
+    <section className="py-24 bg-[#F6F2E8] border-y border-slate-100">
       <div className="container-custom">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Stories Behind the <span className="text-blue-600">Impact</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#273029] mb-6 tracking-tight">
+            Stories Behind the <span className="text-[#23361D]">Impact</span>
           </h2>
-          <p className="text-slate-600 text-lg">
+          <p className="text-[#798576] text-lg">
             Every photograph in our gallery represents a real initiative and a real life changed.
           </p>
         </div>
@@ -74,8 +74,8 @@ export function ImpactStoryCards() {
                 <div className={`w-12 h-12 rounded-2xl ${story.color} flex items-center justify-center text-white mb-6 shadow-lg transform group-hover:-translate-y-1 transition-transform`}>
                   <story.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">{story.title}</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">
+                <h3 className="text-2xl font-bold text-[#273029] mb-3">{story.title}</h3>
+                <p className="text-[#798576] leading-relaxed mb-6">
                   {story.description}
                 </p>
                 <a href="/donate" className={`inline-flex items-center gap-2 font-bold ${story.color.replace('bg-', 'text-')} hover:opacity-80 transition-opacity`}>

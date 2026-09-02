@@ -38,24 +38,24 @@ export function ContactPageClient() {
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden gradient-hero">
-        <motion.div className="absolute top-20 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-blue-100 rounded-full blur-3xl opacity-40 translate-x-1/3"
+        <motion.div className="absolute top-20 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-[#eef2eb] rounded-full blur-3xl opacity-40 translate-x-1/3"
           animate={{ x: [0, 16, 0] }} transition={{ duration: 8, repeat: Infinity }} />
         <div className="container-custom relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm text-[#798576] mb-8">
+            <Link href="/" className="hover:text-[#23361D] transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-blue-600 font-semibold">Contact Us</span>
+            <span className="text-[#23361D] font-semibold">Contact Us</span>
           </nav>
           <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
-              <MessageSquare className="w-4 h-4 text-blue-600" />
-              <span className="text-sm font-semibold text-blue-800">We'd Love to Hear From You</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#eef2eb] border border-[rgba(35,54,29,0.15)] mb-6">
+              <MessageSquare className="w-4 h-4 text-[#23361D]" />
+              <span className="text-sm font-semibold text-[#23361D]">We'd Love to Hear From You</span>
             </div>
-            <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-5xl sm:text-6xl font-extrabold text-[#273029] leading-[1.1] mb-6 tracking-tight">
               Let's Build <span className="text-gradient-primary">Impact</span><br />
               Together
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-xl text-[#798576] leading-relaxed max-w-2xl">
               Whether you want to donate, volunteer, partner with us, or simply learn more — our team is here and ready to connect. Reach out in whatever way is most convenient for you.
             </p>
           </motion.div>
@@ -86,8 +86,8 @@ export function ContactPageClient() {
                   <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${c.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-bold text-slate-900 mb-2">{c.title}</h3>
-                  {c.lines.map((l, j) => <p key={j} className={j === 0 ? "text-slate-700 font-medium text-sm" : "text-slate-500 text-xs"}>{l}</p>)}
+                  <h3 className="font-bold text-[#273029] mb-2">{c.title}</h3>
+                  {c.lines.map((l, j) => <p key={j} className={j === 0 ? "text-[#273029] font-medium text-sm" : "text-[#798576] text-xs"}>{l}</p>)}
                 </motion.div>
               )
               return c.action ? <a key={i} href={c.action} target={c.action.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{card}</a> : card
@@ -97,55 +97,55 @@ export function ContactPageClient() {
       </section>
 
       {/* Main Content: Form + Info */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-14">
             {/* Contact Form */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-              <h2 className="text-3xl font-extrabold text-slate-900 mb-2">Send Us a Message</h2>
-              <p className="text-slate-500 mb-8">Fill out the form and a member of our team will get back to you within 24 hours.</p>
+              <h2 className="text-3xl font-extrabold text-[#273029] mb-2">Send Us a Message</h2>
+              <p className="text-[#798576] mb-8">Fill out the form and a member of our team will get back to you within 24 hours.</p>
 
               {submitted ? (
-                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
-                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-emerald-600" />
+                <div className="bg-[#f0f2ef] border border-emerald-200 rounded-2xl p-8 text-center">
+                  <div className="w-16 h-16 bg-[#eef2eb] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Send className="w-8 h-8 text-[#C37C24]" />
                   </div>
-                  <h3 className="text-xl font-bold text-emerald-800 mb-2">Message Sent!</h3>
-                  <p className="text-emerald-600">Thank you for reaching out. We will respond within 24 hours.</p>
+                  <h3 className="text-xl font-bold text-[#23361D] mb-2">Message Sent!</h3>
+                  <p className="text-[#C37C24]">Thank you for reaching out. We will respond within 24 hours.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="text-sm font-bold text-slate-700 block mb-2">Full Name *</label>
+                      <label className="text-sm font-bold text-[#273029] block mb-2">Full Name *</label>
                       <div className="relative">
                         <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                         <input required type="text" placeholder="Your full name" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
+                          className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-[#ddd9d0] bg-white text-[#273029] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                       </div>
                     </div>
                     <div>
-                      <label className="text-sm font-bold text-slate-700 block mb-2">Email Address *</label>
+                      <label className="text-sm font-bold text-[#273029] block mb-2">Email Address *</label>
                       <div className="relative">
                         <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                         <input required type="email" placeholder="your@email.com" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
+                          className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-[#ddd9d0] bg-white text-[#273029] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                       </div>
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="text-sm font-bold text-slate-700 block mb-2">Phone Number</label>
+                      <label className="text-sm font-bold text-[#273029] block mb-2">Phone Number</label>
                       <div className="relative">
                         <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                         <input type="tel" placeholder="+91 93158 14894" value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
+                          className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-[#ddd9d0] bg-white text-[#273029] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                       </div>
                     </div>
                     <div>
-                      <label className="text-sm font-bold text-slate-700 block mb-2">Subject</label>
+                      <label className="text-sm font-bold text-[#273029] block mb-2">Subject</label>
                       <select value={formData.subject} onChange={e => setFormData({ ...formData, subject: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                        className="w-full px-4 py-3.5 rounded-xl border border-[#ddd9d0] bg-white text-[#273029] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                         <option>General Enquiry</option>
                         <option>Donation Help</option>
                         <option>Volunteer Interest</option>
@@ -156,11 +156,11 @@ export function ContactPageClient() {
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm font-bold text-slate-700 block mb-2">Message *</label>
+                    <label className="text-sm font-bold text-[#273029] block mb-2">Message *</label>
                     <textarea required placeholder="Tell us how we can help you..." rows={5} value={formData.message} onChange={e => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none" />
+                      className="w-full px-4 py-3.5 rounded-xl border border-[#ddd9d0] bg-white text-[#273029] text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none" />
                   </div>
-                  <Button type="submit" variant="primary" className="w-full rounded-full h-14 font-bold text-base shadow-lg shadow-blue-500/20">
+                  <Button type="submit" variant="primary" className="w-full rounded-full h-14 font-bold text-base shadow-lg shadow-[rgba(35,54,29,0.2)]">
                     Send Message <Send className="w-4 h-4 ml-2" />
                   </Button>
                 </form>
@@ -172,10 +172,10 @@ export function ContactPageClient() {
               {/* Office Hours */}
               <div className="premium-card p-8 rounded-2xl">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#23361D] flex items-center justify-center">
                     <Clock className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="font-bold text-slate-900 text-lg">Office Hours</h3>
+                  <h3 className="font-bold text-[#273029] text-lg">Office Hours</h3>
                 </div>
                 <div className="space-y-3">
                   {[
@@ -184,8 +184,8 @@ export function ContactPageClient() {
                     { day: "Sunday", time: "Volunteer Activities Only" },
                   ].map((h, i) => (
                     <div key={i} className="flex justify-between items-center py-2 border-b border-slate-100 last:border-0">
-                      <span className="text-slate-600 font-medium text-sm">{h.day}</span>
-                      <span className="text-slate-900 font-bold text-sm">{h.time}</span>
+                      <span className="text-[#798576] font-medium text-sm">{h.day}</span>
+                      <span className="text-[#273029] font-bold text-sm">{h.time}</span>
                     </div>
                   ))}
                 </div>
@@ -205,16 +205,16 @@ export function ContactPageClient() {
 
               {/* Map Placeholder */}
               <div className="premium-card rounded-2xl overflow-hidden">
-                <div className="h-52 bg-slate-100 flex items-center justify-center relative">
+                <div className="h-52 bg-[#F6F2E8] flex items-center justify-center relative">
                   <div className="text-center">
-                    <MapPin className="w-10 h-10 text-blue-600 mx-auto mb-2" />
-                    <p className="font-bold text-slate-700">House Number - 242, Govindgarh</p>
-                    <p className="text-slate-500 text-sm">Gautam Buddha Nagar, Jewar, UP 203135</p>
+                    <MapPin className="w-10 h-10 text-[#23361D] mx-auto mb-2" />
+                    <p className="font-bold text-[#273029]">House Number - 242, Govindgarh</p>
+                    <p className="text-[#798576] text-sm">Gautam Buddha Nagar, Jewar, UP 203135</p>
                   </div>
                 </div>
                 <div className="p-5">
                   <a href="https://www.google.com/maps/place/Govindgarh+-+Jewar+Rd,+Uttar+Pradesh+203135/@28.1310266,77.5362629,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390ccaec8fc350bb:0x17e057e461b70854!8m2!3d28.1310266!4d77.5362629!16s%2Fg%2F11bbrn830l?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 border border-blue-200 text-blue-600 font-bold text-sm py-3 rounded-xl hover:bg-blue-50 transition-colors">
+                    className="w-full flex items-center justify-center gap-2 border border-[rgba(35,54,29,0.2)] text-[#23361D] font-bold text-sm py-3 rounded-xl hover:bg-[#eef2eb] transition-colors">
                     <MapPin className="w-4 h-4" /> Open in Google Maps
                   </a>
                 </div>
@@ -232,12 +232,12 @@ export function ContactPageClient() {
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
                 className="premium-card rounded-2xl overflow-hidden">
-                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                   {faq.q}
                   <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
                 </button>
-                {openFaq === i && <div className="px-6 pb-6 text-slate-600 leading-relaxed text-sm">{faq.a}</div>}
+                {openFaq === i && <div className="px-6 pb-6 text-[#798576] leading-relaxed text-sm">{faq.a}</div>}
               </motion.div>
             ))}
           </div>

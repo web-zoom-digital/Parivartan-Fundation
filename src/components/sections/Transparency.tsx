@@ -44,7 +44,7 @@ export function Transparency() {
   }, []);
 
   return (
-    <section className="section-spacing bg-slate-50 relative overflow-hidden">
+    <section className="section-spacing bg-[#F6F2E8] relative overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -62,30 +62,30 @@ export function Transparency() {
             <div className="flex flex-col gap-6 mb-8">
               <div className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-blue-500" />
-                  <span className="font-bold text-slate-700">
+                  <div className="w-3 h-3 rounded-full bg-[#2e4626]" />
+                  <span className="font-bold text-[#273029]">
                     Program Implementation
                   </span>
                 </div>
-                <span className="font-black text-xl text-slate-900">82%</span>
+                <span className="font-black text-xl text-[#273029]">82%</span>
               </div>
               <div className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="font-bold text-slate-700">
+                  <div className="w-3 h-3 rounded-full bg-[#798576]" />
+                  <span className="font-bold text-[#273029]">
                     Fundraising & Awareness
                   </span>
                 </div>
-                <span className="font-black text-xl text-slate-900">10%</span>
+                <span className="font-black text-xl text-[#273029]">10%</span>
               </div>
               <div className="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-amber-500" />
-                  <span className="font-bold text-slate-700">
+                  <span className="font-bold text-[#273029]">
                     Admin & Operations
                   </span>
                 </div>
-                <span className="font-black text-xl text-slate-900">8%</span>
+                <span className="font-black text-xl text-[#273029]">8%</span>
               </div>
             </div>
 
@@ -102,7 +102,7 @@ export function Transparency() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative w-full max-w-md aspect-square rounded-[3rem] bg-slate-100 flex items-center justify-center border-8 border-white shadow-2xl overflow-hidden group">
+            <div className="relative w-full max-w-md aspect-square rounded-[3rem] bg-[#F6F2E8] flex items-center justify-center border-8 border-white shadow-2xl overflow-hidden group">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -127,7 +127,7 @@ export function Transparency() {
               {/* Navigation Buttons */}
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-slate-800 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-[#273029] shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -135,7 +135,7 @@ export function Transparency() {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-slate-800 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center text-[#273029] shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -160,8 +160,8 @@ export function Transparency() {
               {/* Badge */}
               <div className="absolute top-6 right-6 z-20">
                 <div className="px-4 py-2 rounded-full bg-white/95 backdrop-blur-sm shadow-lg flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                  <span className="text-sm font-bold text-slate-800">
+                  <CheckCircle2 className="w-5 h-5 text-[#C37C24]" />
+                  <span className="text-sm font-bold text-[#273029]">
                     Verified Impact
                   </span>
                 </div>

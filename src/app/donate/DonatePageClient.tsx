@@ -129,7 +129,7 @@ export function DonatePageClient() {
         <motion.div className="absolute top-10 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-orange-400/20 rounded-full blur-[100px] translate-x-1/3"
           animate={{ x: [0, 16, 0] }} transition={{ duration: 10, repeat: Infinity }} />
         <div className="container-custom relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-blue-300 mb-8">
+          <nav className="flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-white font-semibold">Donate</span>
@@ -172,12 +172,12 @@ export function DonatePageClient() {
             {trustBadges.map((b, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
                 className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                  <b.icon className="w-5 h-5 text-blue-600" />
+                <div className="w-10 h-10 rounded-xl bg-[#eef2eb] flex items-center justify-center shrink-0">
+                  <b.icon className="w-5 h-5 text-[#23361D]" />
                 </div>
                 <div>
-                  <p className="font-bold text-slate-900 text-sm">{b.label}</p>
-                  <p className="text-slate-500 text-xs">{b.sub}</p>
+                  <p className="font-bold text-[#273029] text-sm">{b.label}</p>
+                  <p className="text-[#798576] text-xs">{b.sub}</p>
                 </div>
               </motion.div>
             ))}
@@ -186,16 +186,16 @@ export function DonatePageClient() {
       </section>
 
       {/* Donation Widget + Impact */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Donation Widget */}
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
               className="premium-card rounded-2xl sm:rounded-3xl p-5 sm:p-10">
-              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-2">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-[#273029] mb-2">
                 {cause === "cow" ? "Confirm Your Gau Seva Amount" : "Choose Your Donation Amount"}
               </h2>
-              <p className="text-slate-500 text-sm mb-8">
+              <p className="text-[#798576] text-sm mb-8">
                 {cause === "cow"
                   ? "Amounts follow common Indian gaushala seva options. You can still enter any custom amount."
                   : "All donations are secure, encrypted and 80G tax deductible."}
@@ -205,7 +205,7 @@ export function DonatePageClient() {
               <div className="flex gap-3 mb-8">
                 {(["one-time", "monthly"] as const).map(f => (
                   <button key={f} onClick={() => setFrequency(f)}
-                    className={`flex-1 py-3 rounded-full font-bold text-sm transition-all ${frequency === f ? "bg-blue-600 text-white shadow-lg shadow-blue-500/25" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}>
+                    className={`flex-1 py-3 rounded-full font-bold text-sm transition-all ${frequency === f ? "bg-[#23361D] text-white shadow-lg shadow-[rgba(35,54,29,0.25)]" : "bg-[#F6F2E8] text-[#798576] hover:bg-slate-200"}`}>
                     {f === "one-time" ? "One-Time" : "Monthly"}
                   </button>
                 ))}
@@ -225,8 +225,8 @@ export function DonatePageClient() {
                       }}
                       className={`py-4 rounded-2xl font-black text-sm sm:text-base transition-all border-2 ${
                         isActive
-                          ? "bg-blue-600 border-blue-600 shadow-lg shadow-blue-500/25 scale-105"
-                          : "bg-white border-slate-200 hover:border-blue-300"
+                          ? "bg-[#23361D] border-[#23361D] shadow-lg shadow-[rgba(35,54,29,0.25)] scale-105"
+                          : "bg-white border-[#ddd9d0] hover:border-blue-300"
                       }`}
                       style={{ color: isActive ? "#ffffff" : "#0f172a" }}
                     >
@@ -238,20 +238,20 @@ export function DonatePageClient() {
 
               {/* Custom Amount */}
               <div className="relative mb-8">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 font-bold text-lg">₹</span>
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#798576] font-bold text-lg">₹</span>
                 <input type="number" placeholder="Enter custom amount" value={custom}
                   onChange={e => { setCustom(e.target.value); setSelected(0) }}
-                  className="w-full pl-10 pr-4 py-4 rounded-2xl border-2 border-slate-200 bg-white text-slate-900 font-bold text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" />
+                  className="w-full pl-10 pr-4 py-4 rounded-2xl border-2 border-[#ddd9d0] bg-white text-[#273029] font-bold text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" />
               </div>
 
               {/* Impact preview */}
               {finalAmount > 0 && (
-                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 mb-6">
-                  <p className="text-emerald-700 font-bold text-sm">
+                <div className="bg-[#f0f2ef] border border-emerald-200 rounded-2xl p-5 mb-6">
+                  <p className="text-[#23361D] font-bold text-sm">
                     Your ₹{formatInr(finalAmount)}
                     {frequency === "monthly" ? " / month" : ""} will:
                   </p>
-                  <p className="text-emerald-600 text-sm mt-1">
+                  <p className="text-[#C37C24] text-sm mt-1">
                     {impactMap[finalAmount] ??
                       (cause === "cow"
                         ? "Support fodder, medicine or shelter needs at our gaushala"
@@ -283,15 +283,15 @@ export function DonatePageClient() {
               )}
 
               {paymentSuccess && (
-                <div className="bg-emerald-50 border border-emerald-300 rounded-2xl p-5 mb-6">
+                <div className="bg-[#f0f2ef] border border-emerald-300 rounded-2xl p-5 mb-6">
                   <p className="text-emerald-900 font-bold text-sm mb-1">Thank you</p>
-                  <p className="text-emerald-800 text-sm leading-relaxed">{paymentSuccess}</p>
+                  <p className="text-[#23361D] text-sm leading-relaxed">{paymentSuccess}</p>
                 </div>
               )}
 
               <Button 
                 variant="primary" 
-                className="w-full rounded-full h-14 font-black text-lg shadow-xl shadow-blue-500/25 mb-4"
+                className="w-full rounded-full h-14 font-black text-lg shadow-xl shadow-[rgba(35,54,29,0.25)] mb-4"
                 onClick={openDonorForm}
                 disabled={isProcessing || finalAmount <= 0}
               >
@@ -301,7 +301,7 @@ export function DonatePageClient() {
               <p className="text-center text-slate-400 text-xs">🔒 Secure payment · 80G receipt emailed instantly</p>
               <p className="text-center text-slate-400 text-xs mt-2">
                 Prefer manual transfer?{" "}
-                <Link href="/account-details" className="text-blue-600 font-semibold hover:underline">
+                <Link href="/account-details" className="text-[#23361D] font-semibold hover:underline">
                   View UPI & bank details
                 </Link>
               </p>
@@ -317,14 +317,14 @@ export function DonatePageClient() {
                 {[
                   { pct: "60%", label: "Food Distribution", color: "bg-orange-500" },
                   { pct: "20%", label: "Medical Support", color: "bg-rose-500" },
-                  { pct: "15%", label: "Education Support", color: "bg-blue-600" },
-                  { pct: "5%", label: "Emergency Relief", color: "bg-emerald-600" },
+                  { pct: "15%", label: "Education Support", color: "bg-[#23361D]" },
+                  { pct: "5%", label: "Emergency Relief", color: "bg-[#798576]" },
                 ].map((b, i) => (
                   <div key={i}>
-                    <div className="flex justify-between text-sm font-bold text-slate-700 mb-1.5">
+                    <div className="flex justify-between text-sm font-bold text-[#273029] mb-1.5">
                       <span>{b.label}</span><span>{b.pct}</span>
                     </div>
-                    <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-2.5 bg-[#F6F2E8] rounded-full overflow-hidden">
                       <motion.div className={`h-full rounded-full ${b.color}`} initial={{ width: 0 }} whileInView={{ width: b.pct }} transition={{ duration: 1, delay: i * 0.15 }} viewport={{ once: true }} />
                     </div>
                   </div>
@@ -332,7 +332,7 @@ export function DonatePageClient() {
               </div>
 
               <div className="premium-card rounded-2xl p-7">
-                <h3 className="font-extrabold text-slate-900 mb-5">Why Donate to PWS?</h3>
+                <h3 className="font-extrabold text-[#273029] mb-5">Why Donate to PWS?</h3>
                 <ul className="space-y-3">
                   {[
                     "80G tax certificate issued instantly via email",
@@ -343,8 +343,8 @@ export function DonatePageClient() {
                     "International donations accepted via wire transfer",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span className="text-slate-600 text-sm font-medium">{item}</span>
+                      <CheckCircle2 className="w-4 h-4 text-[#C37C24] shrink-0 mt-0.5" />
+                      <span className="text-[#798576] text-sm font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -372,8 +372,8 @@ export function DonatePageClient() {
         <div className="container-custom text-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
             className="max-w-2xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-slate-900 mb-4">Not Ready to Donate?</h2>
-            <p className="text-slate-500 text-lg mb-8">You can still make a difference by volunteering your time or spreading the word about our mission.</p>
+            <h2 className="text-4xl font-extrabold text-[#273029] mb-4">Not Ready to Donate?</h2>
+            <p className="text-[#798576] text-lg mb-8">You can still make a difference by volunteering your time or spreading the word about our mission.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
                 <Button variant="outline" className="rounded-full px-10 h-14 font-bold text-base">
@@ -381,7 +381,7 @@ export function DonatePageClient() {
                 </Button>
               </Link>
               <Link href="/programs">
-                <Button variant="primary" className="rounded-full px-10 h-14 font-bold text-base shadow-lg shadow-blue-500/20">
+                <Button variant="primary" className="rounded-full px-10 h-14 font-bold text-base shadow-lg shadow-[rgba(35,54,29,0.2)]">
                   See Our Programs <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

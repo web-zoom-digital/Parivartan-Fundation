@@ -69,7 +69,7 @@ export function DonorDetailsModal({
       <button
         type="button"
         aria-label="Close donor form"
-        className="absolute inset-0 bg-slate-900/55 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-[#23361D]/55 backdrop-blur-[2px]"
         onClick={onClose}
         disabled={isSubmitting}
       />
@@ -82,13 +82,13 @@ export function DonorDetailsModal({
       >
         <div className="sticky top-0 bg-white/95 backdrop-blur border-b border-slate-100 px-5 sm:px-6 py-4 flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#23361D] mb-1">
               Almost there
             </p>
-            <h2 id="donor-form-title" className="text-xl font-extrabold text-slate-900 leading-tight">
+            <h2 id="donor-form-title" className="text-xl font-extrabold text-[#273029] leading-tight">
               Donor details before payment
             </h2>
-            <p className="text-sm text-slate-500 mt-1">
+            <p className="text-sm text-[#798576] mt-1">
               {causeLabel} · ₹{amount > 0 ? amount.toLocaleString("en-IN") : "—"}
             </p>
           </div>
@@ -96,7 +96,7 @@ export function DonorDetailsModal({
             type="button"
             onClick={onClose}
             disabled={isSubmitting}
-            className="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200"
+            className="w-10 h-10 rounded-full bg-[#F6F2E8] text-[#798576] flex items-center justify-center hover:bg-slate-200"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -111,12 +111,12 @@ export function DonorDetailsModal({
           })}
         >
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1.5">
+            <label className="block text-sm font-bold text-[#273029] mb-1.5">
               Full Name <span className="text-rose-500">*</span>
             </label>
             <input
               {...register("name")}
-              className="w-full rounded-2xl border-2 border-slate-200 px-4 py-3 font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full rounded-2xl border-2 border-[#ddd9d0] px-4 py-3 font-medium text-[#273029] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Your full name"
               autoComplete="name"
             />
@@ -124,13 +124,13 @@ export function DonorDetailsModal({
           </div>
 
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1.5">
+            <label className="block text-sm font-bold text-[#273029] mb-1.5">
               Email <span className="text-rose-500">*</span>
             </label>
             <input
               {...register("email")}
               type="email"
-              className="w-full rounded-2xl border-2 border-slate-200 px-4 py-3 font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full rounded-2xl border-2 border-[#ddd9d0] px-4 py-3 font-medium text-[#273029] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="you@example.com"
               autoComplete="email"
             />
@@ -138,23 +138,23 @@ export function DonorDetailsModal({
           </div>
 
           <div>
-            <label className="block text-sm font-bold text-slate-700 mb-1.5">
+            <label className="block text-sm font-bold text-[#273029] mb-1.5">
               Mobile Number <span className="text-rose-500">*</span>
             </label>
             <input
               {...register("phone")}
               type="tel"
               inputMode="numeric"
-              className="w-full rounded-2xl border-2 border-slate-200 px-4 py-3 font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full rounded-2xl border-2 border-[#ddd9d0] px-4 py-3 font-medium text-[#273029] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="10-digit mobile number"
               autoComplete="tel"
             />
             {errors.phone && <p className="text-rose-600 text-xs mt-1">{errors.phone.message}</p>}
           </div>
 
-          <div className="rounded-2xl border-2 border-slate-200 p-4 bg-slate-50">
-            <p className="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <div className="rounded-2xl border-2 border-[#ddd9d0] p-4 bg-[#F6F2E8]">
+            <p className="text-sm font-bold text-[#273029] mb-3 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#C37C24]" />
               Want 80G Certificate? <span className="text-rose-500">*</span>
             </p>
             <div className="flex gap-3">
@@ -163,8 +163,8 @@ export function DonorDetailsModal({
                   key={value}
                   className={`flex-1 cursor-pointer rounded-xl border-2 px-4 py-3 text-center font-bold text-sm transition-all ${
                     want80G === value
-                      ? "border-blue-600 bg-blue-600 text-white"
-                      : "border-slate-200 bg-white text-slate-700"
+                      ? "border-[#23361D] bg-[#23361D] text-white"
+                      : "border-[#ddd9d0] bg-white text-[#273029]"
                   }`}
                 >
                   <input
@@ -180,14 +180,14 @@ export function DonorDetailsModal({
           </div>
 
           {want80G === "yes" && (
-            <div className="space-y-4 rounded-2xl border-2 border-emerald-100 bg-emerald-50/50 p-4">
+            <div className="space-y-4 rounded-2xl border-2 border-[rgba(121,133,118,0.2)] bg-[#f0f2ef]/50 p-4">
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-1.5">
+                <label className="block text-sm font-bold text-[#273029] mb-1.5">
                   PAN Number <span className="text-rose-500">*</span>
                 </label>
                 <input
                   {...register("pan")}
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 font-medium uppercase tracking-wider text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full rounded-2xl border-2 border-[#ddd9d0] bg-white px-4 py-3 font-medium uppercase tracking-wider text-[#273029] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="ABCDE1234F"
                   maxLength={10}
                   autoComplete="off"
@@ -195,13 +195,13 @@ export function DonorDetailsModal({
                 {errors.pan && <p className="text-rose-600 text-xs mt-1">{errors.pan.message}</p>}
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-1.5">
+                <label className="block text-sm font-bold text-[#273029] mb-1.5">
                   Address <span className="text-rose-500">*</span>
                 </label>
                 <textarea
                   {...register("address")}
                   rows={3}
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+                  className="w-full rounded-2xl border-2 border-[#ddd9d0] bg-white px-4 py-3 font-medium text-[#273029] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                   placeholder="Full postal address for 80G certificate"
                 />
                 {errors.address && (

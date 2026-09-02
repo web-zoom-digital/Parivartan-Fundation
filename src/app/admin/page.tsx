@@ -36,9 +36,9 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#1b2916] flex items-center justify-center p-4">
       {/* Background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#23361D]/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative w-full max-w-md">
         {/* Logo + Title */}
@@ -51,11 +51,11 @@ export default function AdminLoginPage() {
         </div>
 
         {/* Login Card */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl">
+        <div className="bg-[#23361D] border border-white/10 rounded-2xl p-8 shadow-2xl">
           <form onSubmit={handleLogin} className="space-y-5">
             <div>
               <label className="block text-sm font-semibold text-slate-300 mb-2">
-                <Lock className="w-4 h-4 inline mr-1.5 text-blue-400" />
+                <Lock className="w-4 h-4 inline mr-1.5 text-[#C37C24]" />
                 Admin Password
               </label>
               <div className="relative">
@@ -101,7 +101,7 @@ export default function AdminLoginPage() {
             </button>
           </form>
 
-          <p className="text-center text-slate-600 text-xs mt-6">
+          <p className="text-center text-[#798576] text-xs mt-6">
             Only authorized administrators can access this panel.
           </p>
         </div>

@@ -60,7 +60,7 @@ export default function DonatePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={<div className="min-h-screen bg-slate-50" />}>
+      <Suspense fallback={<div className="min-h-screen bg-[#F6F2E8]" />}>
         <DonatePageClient />
       </Suspense>
     </>

@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/Button"
 
 export function DonationBanner() {
   return (
-    <section className="py-20 relative overflow-hidden bg-blue-600">
+    <section className="py-20 relative overflow-hidden bg-[#23361D]">
       {/* Decorative background graphics */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-700 rounded-l-full blur-3xl opacity-50 mix-blend-multiply" />
-      <div className="absolute bottom-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-blue-500 rounded-full blur-3xl opacity-50 mix-blend-screen -translate-x-1/3 translate-y-1/4" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-[#1b2916] rounded-l-full blur-3xl opacity-50 mix-blend-multiply" />
+      <div className="absolute bottom-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-[#2e4626] rounded-full blur-3xl opacity-50 mix-blend-screen -translate-x-1/3 translate-y-1/4" />
       
       <div className="container-custom relative z-10">
         <motion.div 
@@ -33,10 +33,10 @@ export function DonationBanner() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size="lg" className="h-14 px-10 bg-white text-blue-600 hover:bg-slate-50 text-base font-bold">
+            <Button size="lg" className="h-14 px-10 bg-white text-[#23361D] hover:bg-[#F6F2E8] text-base font-bold">
               Donate Now <HandCoins className="w-4 h-4 ml-2 inline-block" />
             </Button>
-            <Button size="lg" className="h-14 px-10 bg-blue-700 text-white hover:bg-blue-800 text-base font-bold border-0">
+            <Button size="lg" className="h-14 px-10 bg-[#1b2916] text-white hover:bg-blue-800 text-base font-bold border-0">
               Become a Monthly Sponsor
             </Button>
           </div>

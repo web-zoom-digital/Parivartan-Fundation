@@ -23,18 +23,18 @@ export function ActivitySpotlight() {
   }
 
   return (
-    <section className="py-24 bg-slate-50 relative">
+    <section className="py-24 bg-[#F6F2E8] relative">
       <div className="container-custom">
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
-              Activity <span className="text-blue-600">Spotlight</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#273029] mb-4 tracking-tight">
+              Activity <span className="text-[#23361D]">Spotlight</span>
             </h2>
-            <p className="text-slate-600 text-lg">
+            <p className="text-[#798576] text-lg">
               A curated selection of our most impactful and emotionally resonant moments from recent activities.
             </p>
           </div>
-          <a href="#gallery" className="inline-flex items-center gap-2 font-bold text-blue-600 hover:text-blue-700 transition-colors">
+          <a href="#gallery" className="inline-flex items-center gap-2 font-bold text-[#23361D] hover:text-[#1b2916] transition-colors">
             View Full Gallery <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -73,7 +73,7 @@ export function ActivitySpotlight() {
                   </p>
                   
                   {index === 0 && (
-                    <button className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-full text-sm font-bold hover:bg-blue-50 transition-colors mt-2">
+                    <button className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#273029] rounded-full text-sm font-bold hover:bg-[#eef2eb] transition-colors mt-2">
                       <ImageIcon className="w-4 h-4" /> Open Gallery
                     </button>
                   )}

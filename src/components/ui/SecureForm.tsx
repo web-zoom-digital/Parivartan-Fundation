@@ -61,8 +61,8 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
   return (
     <div className="premium-card p-8 sm:p-10 relative overflow-hidden">
       <div className="mb-8">
-        <h3 className="text-2xl font-bold text-slate-900 mb-2">{title}</h3>
-        <p className="text-slate-600 text-sm">{subtitle}</p>
+        <h3 className="text-2xl font-bold text-[#273029] mb-2">{title}</h3>
+        <p className="text-[#798576] text-sm">{subtitle}</p>
       </div>
 
       <AnimatePresence>
@@ -71,10 +71,10 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3"
+            className="mb-6 p-4 bg-[#f0f2ef] border border-emerald-200 rounded-xl flex items-start gap-3"
           >
-            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-            <p className="text-sm font-medium text-emerald-800">
+            <CheckCircle2 className="w-5 h-5 text-[#C37C24] shrink-0 mt-0.5" />
+            <p className="text-sm font-medium text-[#23361D]">
               Message sent successfully! We will get back to you soon.
             </p>
           </motion.div>
@@ -106,12 +106,12 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
         />
 
         <div className="space-y-1">
-          <label className="text-sm font-bold text-slate-700">Full Name</label>
+          <label className="text-sm font-bold text-[#273029]">Full Name</label>
           <input 
             type="text" 
             {...register("name")}
-            className={`w-full h-12 px-4 rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 transition-all ${
-              errors.name ? 'border-red-300 focus:ring-red-500/30' : 'border-slate-200 focus:ring-blue-500/30'
+            className={`w-full h-12 px-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all ${
+              errors.name ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'
             }`}
             placeholder="John Doe"
           />
@@ -120,24 +120,24 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
 
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="space-y-1">
-            <label className="text-sm font-bold text-slate-700">Email Address</label>
+            <label className="text-sm font-bold text-[#273029]">Email Address</label>
             <input 
               type="email" 
               {...register("email")}
-              className={`w-full h-12 px-4 rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 transition-all ${
-                errors.email ? 'border-red-300 focus:ring-red-500/30' : 'border-slate-200 focus:ring-blue-500/30'
+              className={`w-full h-12 px-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all ${
+                errors.email ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'
               }`}
               placeholder="john@example.com"
             />
             {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>}
           </div>
           <div className="space-y-1">
-            <label className="text-sm font-bold text-slate-700">Phone Number</label>
+            <label className="text-sm font-bold text-[#273029]">Phone Number</label>
             <input 
               type="tel" 
               {...register("phone")}
-              className={`w-full h-12 px-4 rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 transition-all ${
-                errors.phone ? 'border-red-300 focus:ring-red-500/30' : 'border-slate-200 focus:ring-blue-500/30'
+              className={`w-full h-12 px-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all ${
+                errors.phone ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'
               }`}
               placeholder="+91 93158 14894"
             />
@@ -146,12 +146,12 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
         </div>
 
         <div className="space-y-1">
-          <label className="text-sm font-bold text-slate-700">How can we help?</label>
+          <label className="text-sm font-bold text-[#273029]">How can we help?</label>
           <textarea 
             {...register("message")}
             rows={4}
-            className={`w-full p-4 rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 transition-all resize-none ${
-              errors.message ? 'border-red-300 focus:ring-red-500/30' : 'border-slate-200 focus:ring-blue-500/30'
+            className={`w-full p-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all resize-none ${
+              errors.message ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'
             }`}
             placeholder="Tell us about your query or how you'd like to contribute..."
           />
@@ -173,7 +173,7 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
             "Send Message"
           )}
         </Button>
-        <p className="text-xs text-center text-slate-500 mt-4">
+        <p className="text-xs text-center text-[#798576] mt-4">
           Your information is secure and encrypted.
         </p>
       </form>

@@ -23,7 +23,7 @@ export function FAQ() {
           {homeFaqs.map((faq, idx) => (
             <motion.div
               key={faq.q}
-              className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${openIndex === idx ? "bg-blue-50/50 border-blue-200" : "bg-white border-slate-200"}`}
+              className={`border rounded-2xl overflow-hidden transition-colors duration-300 ${openIndex === idx ? "bg-[#eef2eb]/50 border-[rgba(35,54,29,0.2)]" : "bg-white border-[#ddd9d0]"}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -36,11 +36,11 @@ export function FAQ() {
                 aria-controls={`faq-panel-${idx}`}
                 id={`faq-button-${idx}`}
               >
-                <span className={`font-bold ${openIndex === idx ? "text-blue-700" : "text-slate-900"}`}>
+                <span className={`font-bold ${openIndex === idx ? "text-[#1b2916]" : "text-[#273029]"}`}>
                   {faq.q}
                 </span>
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === idx ? "bg-blue-600 text-white" : "bg-slate-100 text-slate-500"}`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === idx ? "bg-[#23361D] text-white" : "bg-[#F6F2E8] text-[#798576]"}`}
                 >
                   {openIndex === idx ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
@@ -58,7 +58,7 @@ export function FAQ() {
                       id={`faq-panel-${idx}`}
                       role="region"
                       aria-labelledby={`faq-button-${idx}`}
-                      className="px-6 pb-6 pt-0 text-slate-600 leading-relaxed text-sm"
+                      className="px-6 pb-6 pt-0 text-[#798576] leading-relaxed text-sm"
                     >
                       {faq.a}
                     </div>

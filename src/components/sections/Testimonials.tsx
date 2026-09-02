@@ -25,7 +25,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="section-spacing bg-slate-900 text-white relative overflow-hidden">
+    <section className="section-spacing bg-[#23361D] text-white relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 mix-blend-overlay" />
       

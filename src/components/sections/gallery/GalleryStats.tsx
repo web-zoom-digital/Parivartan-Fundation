@@ -4,9 +4,9 @@ import { useEffect, useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
 const stats = [
-  { label: "Images Shared", value: 15, suffix: "+", color: "text-blue-600" },
-  { label: "Volunteers", value: 450, suffix: "+", color: "text-emerald-600" },
-  { label: "Communities Served", value: 24, suffix: "", color: "text-orange-500" },
+  { label: "Images Shared", value: 15, suffix: "+", color: "text-[#23361D]" },
+  { label: "Volunteers", value: 450, suffix: "+", color: "text-[#C37C24]" },
+  { label: "Communities Served", value: 24, suffix: "", color: "text-[#C37C24]" },
   { label: "Programs Conducted", value: 120, suffix: "+", color: "text-rose-500" },
 ]
 
@@ -53,7 +53,7 @@ export function GalleryStats() {
                 <AnimatedCounter value={stat.value} />
                 {stat.suffix}
               </div>
-              <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest">{stat.label}</p>
+              <p className="text-sm font-semibold text-[#798576] uppercase tracking-widest">{stat.label}</p>
             </motion.div>
           ))}
         </div>

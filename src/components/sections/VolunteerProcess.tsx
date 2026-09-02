@@ -14,7 +14,7 @@ const steps = [
 
 export function VolunteerProcess() {
   return (
-    <section className="section-spacing bg-slate-50 relative overflow-hidden">
+    <section className="section-spacing bg-[#F6F2E8] relative overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -36,16 +36,16 @@ export function VolunteerProcess() {
                 return (
                   <div key={step.title} className="flex gap-4 group">
                     <div className="shrink-0 flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center border-4 border-white shadow-sm group-hover:bg-blue-600 transition-colors duration-300">
-                        <Icon className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                      <div className="w-12 h-12 rounded-full bg-[#eef2eb] flex items-center justify-center border-4 border-white shadow-sm group-hover:bg-[#23361D] transition-colors duration-300">
+                        <Icon className="w-5 h-5 text-[#23361D] group-hover:text-white transition-colors duration-300" />
                       </div>
                       {idx !== steps.length - 1 && (
                         <div className="w-0.5 h-full bg-slate-200 mt-2" />
                       )}
                     </div>
                     <div className="pb-8">
-                      <h4 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h4>
-                      <p className="text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                      <h4 className="text-lg font-bold text-[#273029] mb-2">{step.title}</h4>
+                      <p className="text-sm text-[#798576] leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 )
@@ -78,9 +78,9 @@ export function VolunteerProcess() {
             </div>
             
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-2xl">
-              <div className="w-24 h-24 rounded-full border-4 border-dashed border-blue-200 flex flex-col items-center justify-center">
-                <span className="text-2xl font-black text-blue-600">15k+</span>
-                <span className="text-[10px] font-bold text-slate-500 uppercase">Volunteers</span>
+              <div className="w-24 h-24 rounded-full border-4 border-dashed border-[rgba(35,54,29,0.2)] flex flex-col items-center justify-center">
+                <span className="text-2xl font-black text-[#23361D]">15k+</span>
+                <span className="text-[10px] font-bold text-[#798576] uppercase">Volunteers</span>
               </div>
             </div>
           </motion.div>

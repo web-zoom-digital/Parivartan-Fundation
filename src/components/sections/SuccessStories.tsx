@@ -34,14 +34,14 @@ export function SuccessStories() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-emerald-50/50">
+            <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-[#f0f2ef]/50">
               <Quote className="w-8 h-8 text-emerald-200 mb-4" />
-              <p className="text-slate-700 italic mb-4">
+              <p className="text-[#273029] italic mb-4">
                 &ldquo;The day the foundation gave me my first set of books and a bag, I ran home to show my mother. I still have that bag. I use it every day to school.&rdquo;
               </p>
               <div>
-                <p className="font-bold text-slate-900">Rahul, 11</p>
-                <p className="text-xs text-slate-500 font-medium">Education Beneficiary &mdash; Government School, Jewar</p>
+                <p className="font-bold text-[#273029]">Rahul, 11</p>
+                <p className="text-xs text-[#798576] font-medium">Education Beneficiary &mdash; Government School, Jewar</p>
               </div>
             </div>
           </motion.div>
@@ -64,12 +64,12 @@ export function SuccessStories() {
             </div>
             <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-orange-50/50">
               <Quote className="w-8 h-8 text-orange-200 mb-4" />
-              <p className="text-slate-700 italic mb-4">
+              <p className="text-[#273029] italic mb-4">
                 &ldquo;My daughter was embarrassed to come to school because her uniform was torn. After the foundation gave her a new set, she hasn&apos;t missed a single day.&rdquo;
               </p>
               <div>
-                <p className="font-bold text-slate-900">Sunita, Parent</p>
-                <p className="text-xs text-slate-500 font-medium">Clothing Drive Beneficiary &mdash; Jewar, Uttar Pradesh</p>
+                <p className="font-bold text-[#273029]">Sunita, Parent</p>
+                <p className="text-xs text-[#798576] font-medium">Clothing Drive Beneficiary &mdash; Jewar, Uttar Pradesh</p>
               </div>
             </div>
           </motion.div>

@@ -65,15 +65,15 @@ export function UpcomingEvents() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                 >
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-[#eef2eb] border border-[rgba(35,54,29,0.15)] flex items-center justify-center text-[#1b2916] group-hover:bg-[#23361D] group-hover:text-white transition-colors">
                     <Icon className="w-7 h-7" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-5">{item.desc}</p>
+                    <h3 className="text-xl font-bold text-[#273029] mb-2">{item.title}</h3>
+                    <p className="text-[#798576] text-sm leading-relaxed mb-5">{item.desc}</p>
                     <Button
                       variant="ghost"
-                      className="text-blue-600 font-bold p-0 h-auto hover:bg-transparent hover:text-blue-800"
+                      className="text-[#23361D] font-bold p-0 h-auto hover:bg-transparent hover:text-[#23361D]"
                       asChild
                     >
                       <Link href={item.href}>{item.cta} →</Link>

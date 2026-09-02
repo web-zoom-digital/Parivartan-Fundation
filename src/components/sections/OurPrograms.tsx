@@ -12,8 +12,8 @@ const programs = [
     title: "Food For Life Drive",
     desc: "Every day, our volunteers prepare and serve fresh hot meals from large community pots to daily wage workers, migrant labourers, and families struggling to make ends meet.",
     icon: Utensils,
-    color: "text-orange-500",
-    bg: "bg-orange-100",
+    color: "text-[#C37C24]",
+    bg: "bg-[#fdf3e3]",
     image: "/images/programs/program1.png",
     alt: "PWS founder serving hot food from a large cooking pot to a queue of beneficiaries during a community food drive"
   },
@@ -22,8 +22,8 @@ const programs = [
     title: "Free Medical Support",
     desc: "We help underserved families reach doctors, medicines and basic check-ups. Community sessions and team visits keep this healthcare mission moving until new medical-camp photos are published.",
     icon: Stethoscope,
-    color: "text-blue-500",
-    bg: "bg-blue-100",
+    color: "text-[#2e4626]",
+    bg: "bg-[#eef2eb]",
     image: "/images/programs/program3.png",
     alt: "Foundation representatives speaking with children during a community session supporting our healthcare mission"
   },
@@ -32,8 +32,8 @@ const programs = [
     title: "Education Support",
     desc: "We visit government schools to distribute stationery kits, books, and uniforms directly to children from families that cannot afford them.",
     icon: BookOpen,
-    color: "text-emerald-500",
-    bg: "bg-emerald-100",
+    color: "text-[#C37C24]",
+    bg: "bg-[#eef2eb]",
     image: "/images/programs/program2.png",
     alt: "PWS volunteer handing a school supply kit to a boy while uniformed classmates wait outside a school building"
   },
@@ -42,8 +42,8 @@ const programs = [
     title: "Community Outreach",
     desc: "From celebrating children at ashram events to organising neighbourhood drives, our outreach brings people together and builds lasting community bonds.",
     icon: Home,
-    color: "text-amber-500",
-    bg: "bg-amber-100",
+    color: "text-[#C37C24]",
+    bg: "bg-[#fdf3e3]",
     image: "/images/programs/community-event.png",
     alt: "PWS volunteers and children gathered at an ashram celebration event — community outreach and social welfare programme"
   }
@@ -51,7 +51,7 @@ const programs = [
 
 export function OurPrograms() {
   return (
-    <section className="section-spacing bg-slate-50">
+    <section className="section-spacing bg-[#F6F2E8]">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <SectionHeader 
@@ -93,11 +93,11 @@ export function OurPrograms() {
                   <div className={`w-12 h-12 rounded-xl ${prog.bg} flex items-center justify-center mb-5`}>
                     <Icon className={`w-6 h-6 ${prog.color}`} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{prog.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
+                  <h3 className="text-xl font-bold text-[#273029] mb-3">{prog.title}</h3>
+                  <p className="text-[#798576] text-sm leading-relaxed mb-6 flex-1">
                     {prog.desc}
                   </p>
-                  <a href={`/programs/${prog.id}`} className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 group/link">
+                  <a href={`/programs/${prog.id}`} className="inline-flex items-center text-sm font-bold text-[#23361D] hover:text-[#1b2916] group/link">
                     Explore Program
                     <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
                   </a>

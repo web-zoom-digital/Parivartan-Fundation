@@ -53,8 +53,8 @@ export function AboutFoundation() {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-100 rounded-full z-0 blur-2xl" />
-            <div className="absolute -top-6 -left-6 w-40 h-40 bg-blue-100 rounded-full z-0 blur-3xl" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#fdf3e3] rounded-full z-0 blur-2xl" />
+            <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#eef2eb] rounded-full z-0 blur-3xl" />
           </motion.div>
 
           {/* Content Side */}
@@ -78,15 +78,15 @@ export function AboutFoundation() {
                 "100% transparent and accountable operations"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <div className="w-6 h-6 rounded-full bg-[#eef2eb] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                    <CheckCircle2 className="w-4 h-4 text-[#C37C24]" />
                   </div>
-                  <span className="text-slate-700 font-semibold leading-relaxed">{item}</span>
+                  <span className="text-[#273029] font-semibold leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <Button variant="primary" size="lg" className="group rounded-full shadow-lg shadow-blue-500/20 px-8" asChild>
+            <Button variant="primary" size="lg" className="group rounded-full shadow-lg shadow-[rgba(35,54,29,0.2)] px-8" asChild>
               <Link href="/about">
               Read Our Full Story
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

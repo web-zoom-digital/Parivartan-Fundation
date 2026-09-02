@@ -10,7 +10,7 @@ import { GalleryCTA } from "@/components/sections/gallery/GalleryCTA"
 
 export function GalleryPageClient() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans w-full max-w-full overflow-x-clip">
+    <div className="min-h-screen bg-[#F6F2E8] flex flex-col font-sans w-full max-w-full overflow-x-clip">
       <main className="flex-1">
         <GalleryHero />
         <ActivitySpotlight />
@@ -29,7 +29,7 @@ export function GalleryPageClient() {
           category="Cow Welfare" 
           title="Cow Welfare Gallery" 
           description="Moments of care for calves and cows we meet on the street — feeding, comfort, and hands-on welfare."
-          bgColor="bg-slate-50"
+          bgColor="bg-[#F6F2E8]"
         />
         
         <CategorySubGallery 
@@ -43,7 +43,7 @@ export function GalleryPageClient() {
           category="Education Support" 
           title="Education Support Gallery" 
           description="School visits and classroom sessions where our team meets children, listens, and encourages learning."
-          bgColor="bg-slate-50"
+          bgColor="bg-[#F6F2E8]"
         />
         
         <CategorySubGallery 
@@ -57,7 +57,7 @@ export function GalleryPageClient() {
           category="NGO Team" 
           title="Leadership & Guests" 
           description="Honorable guests, leaders, and our core team working towards our mission."
-          bgColor="bg-slate-50"
+          bgColor="bg-[#F6F2E8]"
         />
         
         <GalleryCTA />

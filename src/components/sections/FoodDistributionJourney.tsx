@@ -10,24 +10,24 @@ const steps = [
     icon: ChefHat,
     title: "Sourcing & Preparation",
     desc: "Fresh, high-quality ingredients are sourced locally and cooked daily in our industrial-scale hygienic kitchens.",
-    color: "text-amber-500",
-    bg: "bg-amber-100",
+    color: "text-[#C37C24]",
+    bg: "bg-[#fdf3e3]",
     border: "border-amber-200"
   },
   {
     icon: Truck,
     title: "Rapid Distribution",
     desc: "Our fleet of dedicated food delivery vans transport the hot meals in insulated containers to target areas.",
-    color: "text-blue-500",
-    bg: "bg-blue-100",
-    border: "border-blue-200"
+    color: "text-[#2e4626]",
+    bg: "bg-[#eef2eb]",
+    border: "border-[rgba(35,54,29,0.2)]"
   },
   {
     icon: Smile,
     title: "Serving with Dignity",
     desc: "Volunteers serve the meals directly to the people in need, ensuring everyone is treated with respect.",
-    color: "text-emerald-500",
-    bg: "bg-emerald-100",
+    color: "text-[#C37C24]",
+    bg: "bg-[#eef2eb]",
     border: "border-emerald-200"
   }
 ]
@@ -45,7 +45,7 @@ export function FoodDistributionJourney() {
 
         <div className="relative mt-16 lg:mt-24">
           {/* Connecting Line */}
-          <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-1 bg-slate-100 rounded-full" />
+          <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-1 bg-[#F6F2E8] rounded-full" />
           
           <div className="grid lg:grid-cols-3 gap-10 lg:gap-8 relative z-10">
             {steps.map((step, idx) => {
@@ -63,13 +63,13 @@ export function FoodDistributionJourney() {
                     <Icon className={`w-12 h-12 ${step.color}`} />
                     
                     {/* Step Number Badge */}
-                    <div className={`absolute top-0 right-0 w-8 h-8 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center text-sm font-bold text-slate-700`}>
+                    <div className={`absolute top-0 right-0 w-8 h-8 rounded-full bg-white border border-[#ddd9d0] shadow-md flex items-center justify-center text-sm font-bold text-[#273029]`}>
                       {idx + 1}
                     </div>
                   </div>
                   
-                  <h4 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h4>
-                  <p className="text-slate-600 text-sm leading-relaxed max-w-sm">
+                  <h4 className="text-xl font-bold text-[#273029] mb-3">{step.title}</h4>
+                  <p className="text-[#798576] text-sm leading-relaxed max-w-sm">
                     {step.desc}
                   </p>
                 </motion.div>

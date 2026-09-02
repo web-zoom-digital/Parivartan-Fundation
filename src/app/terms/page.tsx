@@ -70,25 +70,25 @@ export default function TermsPage() {
 
       <div className="container-custom py-20 max-w-3xl">
         <div className="prose prose-slate max-w-none">
-          <p className="text-slate-600 text-lg leading-relaxed mb-12 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+          <p className="text-[#798576] text-lg leading-relaxed mb-12 p-6 bg-[#F6F2E8] rounded-2xl border border-[#ddd9d0]">
             Please read these Terms of Service carefully before using the Parivartan Welfare Society website or making a donation. These terms govern your relationship with us.
           </p>
 
           <div className="space-y-10">
             {sections.map((s, i) => (
               <div key={i}>
-                <h2 className="text-xl font-extrabold text-slate-900 mb-3 flex items-center gap-3">
+                <h2 className="text-xl font-extrabold text-[#273029] mb-3 flex items-center gap-3">
                   <span className="w-8 h-8 rounded-full bg-slate-800 text-white text-sm font-black flex items-center justify-center shrink-0">{i + 1}</span>
                   {s.title}
                 </h2>
-                <p className="text-slate-600 leading-relaxed pl-11">{s.content}</p>
+                <p className="text-[#798576] leading-relaxed pl-11">{s.content}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 p-8 bg-slate-50 rounded-2xl text-center">
-            <p className="text-slate-600 mb-4">Have questions about our terms?</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-slate-800 text-white font-bold px-8 py-3 rounded-full hover:bg-slate-900 transition-colors">
+          <div className="mt-16 p-8 bg-[#F6F2E8] rounded-2xl text-center">
+            <p className="text-[#798576] mb-4">Have questions about our terms?</p>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-slate-800 text-white font-bold px-8 py-3 rounded-full hover:bg-[#23361D] transition-colors">
               Contact Our Team
             </Link>
           </div>

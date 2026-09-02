@@ -14,9 +14,9 @@ const fadeUp = {
 
 const values = [
   { icon: Heart, title: "Compassion First", desc: "We plan programmes around real people in need — meals, school kits, medical help and cow care — not vanity metrics.", color: "text-rose-500 bg-rose-50" },
-  { icon: Shield, title: "Clear Accountability", desc: "We share bank/UPI channels publicly, issue donation acknowledgements, and respond to donor questions about where money was used.", color: "text-blue-600 bg-blue-50" },
-  { icon: Target, title: "Direct Field Work", desc: "Volunteers cook, pack, serve, rescue and distribute on the ground across Delhi NCR and Uttar Pradesh.", color: "text-emerald-600 bg-emerald-50" },
-  { icon: Users, title: "Community Partnership", desc: "Local volunteers and community trust help us reach the right people at the right time.", color: "text-orange-500 bg-orange-50" },
+  { icon: Shield, title: "Clear Accountability", desc: "We share bank/UPI channels publicly, issue donation acknowledgements, and respond to donor questions about where money was used.", color: "text-[#23361D] bg-[#eef2eb]" },
+  { icon: Target, title: "Direct Field Work", desc: "Volunteers cook, pack, serve, rescue and distribute on the ground across Delhi NCR and Uttar Pradesh.", color: "text-[#C37C24] bg-[#f0f2ef]" },
+  { icon: Users, title: "Community Partnership", desc: "Local volunteers and community trust help us reach the right people at the right time.", color: "text-[#C37C24] bg-orange-50" },
   { icon: Star, title: "Careful Delivery", desc: "We prioritise safe food handling, respectful distribution, and practical education/medical support.", color: "text-purple-600 bg-purple-50" },
   { icon: Eye, title: "Long-Term Seva", desc: "Beyond one-day drives, we sustain gaushala care, recurring food seva and education support where communities need continuity.", color: "text-teal-600 bg-teal-50" },
 ]
@@ -82,28 +82,28 @@ export function AboutPageClient() {
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden gradient-hero">
-        <motion.div className="absolute top-20 right-0 w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] bg-orange-100 rounded-full blur-3xl opacity-40 translate-x-1/3" animate={{ x: [0, 20, 0], scale: [1, 1.05, 1] }} transition={{ duration: 10, repeat: Infinity }} />
+        <motion.div className="absolute top-20 right-0 w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] bg-[#fdf3e3] rounded-full blur-3xl opacity-40 translate-x-1/3" animate={{ x: [0, 20, 0], scale: [1, 1.05, 1] }} transition={{ duration: 10, repeat: Infinity }} />
         <div className="container-custom relative z-10">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-500 mb-8">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 text-sm text-[#798576] mb-8">
+            <Link href="/" className="hover:text-[#23361D] transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-blue-600 font-semibold">About Us</span>
+            <span className="text-[#23361D] font-semibold">About Us</span>
           </nav>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div variants={fadeUp} initial="hidden" animate="show" className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
-                <Heart className="w-4 h-4 text-orange-500 fill-orange-500" />
-                <span className="text-sm font-semibold text-blue-800">Our Story</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#eef2eb] border border-[rgba(35,54,29,0.15)] mb-6">
+                <Heart className="w-4 h-4 text-[#C37C24] fill-orange-500" />
+                <span className="text-sm font-semibold text-[#23361D]">Our Story</span>
               </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-[#273029] leading-[1.1] mb-6 tracking-tight">
                 Born From <span className="text-gradient-warm">Compassion</span>,<br />
                 Built For <span className="text-gradient-primary">Seva</span>
               </h1>
-              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-4 max-w-2xl">
+              <p className="text-lg sm:text-xl text-[#798576] leading-relaxed mb-4 max-w-2xl">
                 <strong>Parivartan Welfare Society (PWS)</strong> is a registered NGO founded in 2015 and based in Jewar, Gautam Buddha Nagar, Uttar Pradesh. We run free food distribution, education support, cow rescue / Gau Seva, and medical outreach across Delhi NCR and Uttar Pradesh.
               </p>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-[#798576] leading-relaxed max-w-2xl">
                 The work began with a simple question: <em>&quot;Why should anyone go to sleep hungry in a world of abundance?&quot;</em> That question still guides our seva today.
               </p>
             </motion.div>
@@ -141,14 +141,14 @@ export function AboutPageClient() {
                   aria-label="Previous image"
                   className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/80 hover:bg-white shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                 >
-                  <ChevronLeft className="w-5 h-5 text-slate-700" />
+                  <ChevronLeft className="w-5 h-5 text-[#273029]" />
                 </button>
                 <button
                   onClick={goNext}
                   aria-label="Next image"
                   className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/80 hover:bg-white shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
                 >
-                  <ChevronRight className="w-5 h-5 text-slate-700" />
+                  <ChevronRight className="w-5 h-5 text-[#273029]" />
                 </button>
 
                 {/* Slide counter badge */}
@@ -178,7 +178,7 @@ export function AboutPageClient() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-blue-700 py-8">
+      <section className="bg-[#1b2916] py-8">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
             {[
@@ -202,18 +202,18 @@ export function AboutPageClient() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <SectionHeader badge="Our Foundation Story" title="It Started With One Hungry Family" subtitle="" />
-              <div className="space-y-5 text-slate-600 leading-relaxed text-[1.05rem]">
+              <div className="space-y-5 text-[#798576] leading-relaxed text-[1.05rem]">
                 <p>In 2015, our founder Parivartan was driving home through the streets of Guwahati when he saw a family — a mother and three small children — scavenging through garbage for food. He stopped his car, bought them a proper meal from a nearby dhaba, and sat with them to understand their story.</p>
                 <p>That family had been displaced by floods. The father had died of an illness they could not afford to treat. The eldest child had dropped out of school to work. In that one family's story, Parivartan saw the interconnected web of hunger, health and education that traps millions in a cycle of poverty.</p>
                 <p>He went home, called twelve friends, and within a week they had rented a small kitchen. Within a month, 200 families were receiving hot meals every day. Within a year, the government took notice. Within a decade, over five million meals had been served.</p>
-                <p className="font-semibold text-slate-800">This is not a story about one man. It is a story about what ordinary people can do when they refuse to look away.</p>
+                <p className="font-semibold text-[#273029]">This is not a story about one man. It is a story about what ordinary people can do when they refuse to look away.</p>
               </div>
             </motion.div>
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" custom={0.2} viewport={{ once: true }} className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border-8 border-white">
                 <img src="/images/hero-bg.png" alt="Parivartan Welfare Society volunteers" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl max-w-[200px]">
+              <div className="absolute -bottom-6 -left-6 bg-[#23361D] text-white p-6 rounded-2xl shadow-xl max-w-[200px]">
                 <p className="text-4xl font-black"> 9+ </p>
                 <p className="text-blue-200 text-sm font-medium">Years of Uninterrupted Service</p>
               </div>
@@ -248,7 +248,7 @@ export function AboutPageClient() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -268,9 +268,9 @@ export function AboutPageClient() {
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-6 shadow-lg`}>
                   <item.icon className="w-7 h-7 text-white" />
                 </div>
-                <span className="text-xs font-bold tracking-widest uppercase text-blue-600 mb-3 block">{item.badge}</span>
-                <h2 className="text-2xl font-extrabold text-slate-900 mb-4 leading-snug">{item.title}</h2>
-                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                <span className="text-xs font-bold tracking-widest uppercase text-[#23361D] mb-3 block">{item.badge}</span>
+                <h2 className="text-2xl font-extrabold text-[#273029] mb-4 leading-snug">{item.title}</h2>
+                <p className="text-[#798576] leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -304,8 +304,8 @@ export function AboutPageClient() {
                 <div className={`w-12 h-12 rounded-2xl ${v.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
                   <v.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-extrabold text-slate-900 mb-3">{v.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{v.desc}</p>
+                <h3 className="text-lg font-extrabold text-[#273029] mb-3">{v.title}</h3>
+                <p className="text-[#798576] text-sm leading-relaxed">{v.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -313,12 +313,12 @@ export function AboutPageClient() {
       </section>
 
       {/* Timeline */}
-      <section className="section-spacing bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-600/15 rounded-full blur-[100px]" />
+      <section className="section-spacing bg-[#23361D] text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#23361D]/15 rounded-full blur-[100px]" />
         <div className="container-custom relative z-10">
           <SectionHeader badge="Our Journey" title="A Decade of Determined Service" subtitle="Every milestone is a story of lives changed, hope restored and communities empowered." className="mb-16 text-center" lightText />
           <div className="relative">
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-blue-700/60 md:-translate-x-px" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-[#1b2916]/60 md:-translate-x-px" />
             <div className="flex flex-col gap-12">
               {timeline.map((item, i) => (
                 <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
@@ -353,8 +353,8 @@ export function AboutPageClient() {
                 ].map((item, i) => (
                   <motion.li key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.08} viewport={{ once: true }}
                     className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-slate-700 font-medium">{item}</span>
+                    <CheckCircle2 className="w-5 h-5 text-[#C37C24] shrink-0 mt-0.5" />
+                    <span className="text-[#273029] font-medium">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -365,12 +365,12 @@ export function AboutPageClient() {
                 <p className="text-blue-200 mb-8 leading-relaxed">Every act of generosity — however small — creates a ripple of change. Donate, volunteer, or simply share our work. Together, we can end hunger in our lifetime.</p>
                 <div className="flex flex-col gap-3">
                   <Link href="/donate">
-                    <Button className="w-full bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full h-12 shadow-lg border-0">
+                    <Button className="w-full bg-white text-[#1b2916] hover:bg-[#eef2eb] font-bold rounded-full h-12 shadow-lg border-0">
                       Donate Now <HandCoins className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button className="w-full bg-blue-500/20 text-white hover:bg-blue-500/30 font-bold rounded-full h-12 border border-white/20">
+                    <Button className="w-full bg-[#2e4626]/20 text-white hover:bg-[#2e4626]/30 font-bold rounded-full h-12 border border-white/20">
                       Become a Volunteer <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
@@ -382,19 +382,19 @@ export function AboutPageClient() {
       </section>
 
       {/* FAQ */}
-      <section className="section-spacing bg-slate-50">
+      <section className="section-spacing bg-[#F6F2E8]">
         <div className="container-custom max-w-3xl">
           <SectionHeader badge="FAQs" title="Frequently Asked Questions" subtitle="Answers to the questions we hear most often from donors, partners and well-wishers." className="mb-12 text-center" />
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
                 className="premium-card rounded-2xl overflow-hidden">
-                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                   {faq.q}
                   <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
                 </button>
-                {openFaq === i && <div className="px-6 pb-6 text-slate-600 leading-relaxed">{faq.a}</div>}
+                {openFaq === i && <div className="px-6 pb-6 text-[#798576] leading-relaxed">{faq.a}</div>}
               </motion.div>
             ))}
           </div>
