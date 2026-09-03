@@ -49,7 +49,7 @@ const sections = [
   },
   {
     title: "Contact",
-    content: "For questions about these terms, please contact us at hello@nabinchandrafoundation.org."
+    content: "For questions about these terms, please contact us at parivartanwelfaresociety31@gmail.com."
   },
 ]
 

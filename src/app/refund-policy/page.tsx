@@ -36,7 +36,7 @@ const sections = [
   {
     title: "How to Request a Refund",
     content:
-      "Email hello@nabinchandrafoundation.org or WhatsApp +91 93158 14894 within 7 days of the transaction. Include your full name, phone number, donation amount, date, order / transaction ID (Cashfree order ID, UPI reference, or bank UTR), and reason for the request. Incomplete requests may delay review.",
+      "Email parivartanwelfaresociety31@gmail.com or WhatsApp +91 82994 61699 within 7 days of the transaction. Include your full name, phone number, donation amount, date, order / transaction ID (Cashfree order ID, UPI reference, or bank UTR), and reason for the request. Incomplete requests may delay review.",
   },
   {
     title: "Processing Time",
@@ -61,7 +61,7 @@ const sections = [
   {
     title: "Contact",
     content:
-      "For refund or cancellation queries: hello@nabinchandrafoundation.org | +91 93158 14894 | House Number - 242, Govindgarh, Gautam Buddha Nagar, Jewar, Uttar Pradesh 203135, India.",
+      "For refund or cancellation queries: parivartanwelfaresociety31@gmail.com | +91 82994 61699 | House Number - 242, New Shivpuri Colony, Gorakhpur, Jewar, Uttar Pradesh 203135, India.",
   },
 ]
 

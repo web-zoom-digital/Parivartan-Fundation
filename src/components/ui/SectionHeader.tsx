@@ -39,13 +39,13 @@ export function SectionHeader({
       )}
       <h2 className={cn("section-title", lightText && "!text-white")}>
         {title.split(" ").map((word, i) => {
-          if (["Change", "Progress", "Lives", "Difference", "Action", "Together", "Society", "Parivartan", "Community", "Welfare", "People", "Nature"].includes(word)) {
-            return (
-              <span key={i} className="text-gradient-primary">
-                {word}{" "}
-              </span>
-            )
-          }
+            if (["Change", "Progress", "Lives", "Difference", "Action", "Together", "Society", "Parivartan", "Community", "Welfare", "People", "Nature"].includes(word)) {
+              return (
+                <span key={i} className={lightText ? "text-gradient-warm" : "text-gradient-primary"}>
+                  {word}{" "}
+                </span>
+              )
+            }
           return <span key={i}>{word} </span>
         })}
       </h2>

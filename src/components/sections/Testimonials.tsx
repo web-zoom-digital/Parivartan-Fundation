@@ -35,6 +35,7 @@ export function Testimonials() {
           badge="What People Say"
           title="Community Voices"
           subtitle="Don't just take our word for it. Hear from our donors, volunteers, and partners."
+          lightText={true}
         />
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">

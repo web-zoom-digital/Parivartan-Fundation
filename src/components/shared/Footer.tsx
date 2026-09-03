@@ -21,21 +21,21 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:hello@parivartanwelfare.org"
+                href="mailto:parivartanwelfaresociety31@gmail.com"
                 aria-label="Email Parivartan Welfare Society"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C37C24] hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
               </a>
               <a
-                href="tel:+919315814894"
+                href="tel:+918299461699"
                 aria-label="Call Parivartan Welfare Society"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C37C24] hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/919315814894"
+                href="https://wa.me/918299461699"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Parivartan Welfare Society"
@@ -97,16 +97,16 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C37C24] shrink-0 mt-0.5" />
                 <span className="text-sm leading-relaxed">
-                  House Number - 242, Govindgarh, <br /> Gautam Buddha Nagar, Jewar, UP 203135
+                  273-E, New Shivpuri Colony, <br /> South Betiahata, Rustampur, Gorakhpur, 273016
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#C37C24] shrink-0" />
-                <span className="text-sm">+91 93158 14894</span>
+                <span className="text-sm">+91 82994 61699</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#C37C24] shrink-0" />
-                <span className="text-sm">hello@parivartanwelfare.org</span>
+                <span className="text-sm">parivartanwelfaresociety31@gmail.com</span>
               </li>
             </ul>
           </div>

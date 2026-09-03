@@ -29,7 +29,7 @@ export function NewsletterContact() {
     const body = encodeURIComponent(
       `Please add me to the PWS newsletter.\n\nName: ${data.name}\nEmail: ${data.email}`
     )
-    window.location.href = `mailto:hello@nabinchandrafoundation.org?subject=${subject}&body=${body}`
+    window.location.href = `mailto:parivartanwelfaresociety31@gmail.com?subject=${subject}&body=${body}`
     setIsSuccess(true)
     reset()
     setTimeout(() => setIsSuccess(false), 5000)
@@ -124,7 +124,7 @@ export function NewsletterContact() {
                 <div>
                   <h5 className="font-bold text-[#273029] mb-1">Head Office</h5>
                   <p className="text-sm text-[#798576] leading-relaxed">
-                    House Number - 242, Govindgarh, <br /> Gautam Buddha Nagar, Jewar, UP 203135
+                    273-E, New Shivpuri Colony, <br /> South Betiahata, Rustampur, Gorakhpur, 273016
                   </p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export function NewsletterContact() {
                 <div>
                   <h5 className="font-bold text-[#273029] mb-1">Helpline Number</h5>
                   <p className="text-sm text-[#798576]">
-                    +91 93158 14894 (Toll Free)
+                    +91 82994 61699 (Toll Free)
                   </p>
                 </div>
               </div>
@@ -148,7 +148,7 @@ export function NewsletterContact() {
                 <div>
                   <h5 className="font-bold text-[#273029] mb-1">Email Us</h5>
                   <p className="text-sm text-[#798576]">
-                    hello@nabinchandrafoundation.org
+                    parivartanwelfaresociety31@gmail.com
                   </p>
                 </div>
               </div>

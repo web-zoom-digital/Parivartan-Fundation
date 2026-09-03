@@ -11,7 +11,7 @@ function getFromAddress() {
   return (
     process.env.DONOR_FROM_EMAIL?.trim() ||
     process.env.EMAIL_FROM?.trim() ||
-    "Parivartan Welfare Society <hello@nabinchandrafoundation.org>"
+    "Parivartan Welfare Society <parivartanwelfaresociety31@gmail.com>"
   )
 }
 
@@ -19,7 +19,7 @@ export function getAdminEmail() {
   return (
     process.env.ADMIN_EMAIL?.trim() ||
     process.env.DONATION_ADMIN_EMAIL?.trim() ||
-    "hello@nabinchandrafoundation.org"
+    "parivartanwelfaresociety31@gmail.com"
   )
 }
 

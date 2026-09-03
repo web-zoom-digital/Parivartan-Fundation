@@ -27,7 +27,7 @@ export function EntityAnswerBox() {
           <ul className="text-sm text-[#798576] space-y-1.5 mb-5 list-disc pl-5">
             <li>
               Phone:{" "}
-              <a className="text-[#1b2916] font-semibold hover:underline" href="tel:+919315814894">
+              <a className="text-[#1b2916] font-semibold hover:underline" href="tel:+918299461699">
                 {orgPlainSummary.phone}
               </a>
             </li>
@@ -44,11 +44,11 @@ export function EntityAnswerBox() {
               WhatsApp:{" "}
               <a
                 className="text-[#1b2916] font-semibold hover:underline"
-                href="https://wa.me/919315814894"
+                href="https://wa.me/918299461699"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +91 93158 14894
+                +91 82994 61699
               </a>
             </li>
           </ul>

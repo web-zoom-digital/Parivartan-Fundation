@@ -139,7 +139,7 @@ export function SecureForm({ onSubmit, title = "Get in Touch", subtitle = "We ty
               className={`w-full h-12 px-4 rounded-xl border bg-[#F6F2E8] focus:bg-white focus:outline-none focus:ring-2 transition-all ${
                 errors.phone ? 'border-red-300 focus:ring-red-500/30' : 'border-[#ddd9d0] focus:ring-blue-500/30'
               }`}
-              placeholder="+91 93158 14894"
+              placeholder="+91 82994 61699"
             />
             {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone.message}</p>}
           </div>

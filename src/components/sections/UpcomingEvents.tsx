@@ -46,7 +46,7 @@ export function UpcomingEvents() {
               Ways to join Parivartan Welfare Society seva
             </h2>
             <Button variant="outline" className="w-full sm:w-auto" asChild>
-              <a href="https://wa.me/919315814894" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/918299461699" target="_blank" rel="noopener noreferrer">
                 <Phone className="w-4 h-4 mr-2" />
                 WhatsApp the team
               </a>
