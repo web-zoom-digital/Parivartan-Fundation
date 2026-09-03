@@ -6,22 +6,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const heroImages = [
   {
-    src: "/images/about/home1.png",
-    alt: "PWS volunteer serving hot curry from a large pot to beneficiaries in a queue during a community food drive — banner reads: Just ₹250 can feed 10 hungry people",
-    width: 1983,
-    height: 793,
+    src: "/images/about/hero-1.jpg",
+    alt: "Parivartan Welfare Society - People and nature grow together, change becomes lasting.",
+    width: 1920,
+    height: 1080,
   },
   {
-    src: "/images/about/home2.png",
-    alt: "A young girl from an underserved family receiving a plate of food during an PWS meal distribution drive — Hindi text reads: Will you feed a hungry person today?",
-    width: 1500,
-    height: 600,
-  },
-  {
-    src: "/images/about/home3.png",
-    alt: "Malnourished children at a roadside settlement receiving hot meals directly from an PWS volunteer's hands during a community food outreach",
-    width: 1500,
-    height: 600,
+    src: "/images/about/hero-2.jpg",
+    alt: "Parivartan Welfare Society - Empowering lives. Strengthening communities. Protecting our planet.",
+    width: 1920,
+    height: 1080,
   },
 ];
 
