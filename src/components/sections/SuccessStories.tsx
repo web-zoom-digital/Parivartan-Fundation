@@ -31,7 +31,7 @@ export function SuccessStories() {
                 alt="Volunteers distributing warm meals to people"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full group-hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-[#f0f2ef]/50">
@@ -59,7 +59,7 @@ export function SuccessStories() {
                 alt="Blanket distribution drive during cold winter"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full group-hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-orange-50/50">

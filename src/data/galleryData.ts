@@ -48,6 +48,7 @@ export const galleryImages: GalleryImage[] = [
     title: "Nourishing Needy Families",
     description: "Ensuring nobody goes to bed on an empty stomach through daily community kitchen and street food drives.",
     categories: ["All", "Food Distribution", "Community Service"],
+    spotlight: true,
   },
   {
     id: "img-4",
@@ -180,7 +181,6 @@ export const galleryImages: GalleryImage[] = [
     title: "Tree Plantation Drive",
     description: "Volunteers planting green saplings in community grounds to build a healthier, greener environment.",
     categories: ["All", "Tree Plantation", "Community Service"],
-    spotlight: true,
   },
   {
     id: "img-20",

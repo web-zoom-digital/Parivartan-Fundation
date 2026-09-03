@@ -232,7 +232,7 @@ export function ContactPageClient() {
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
                 className="premium-card rounded-2xl overflow-hidden">
-                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors"
+                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors cursor-pointer"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                   {faq.q}
                   <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />

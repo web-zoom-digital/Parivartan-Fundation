@@ -565,7 +565,7 @@ export function CowDonationPageClient() {
                     key={currentSlide}
                     src={slide.src}
                     alt={slide.alt}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full"
                     initial={{ opacity: 0.4, scale: 1.04 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
@@ -607,11 +607,10 @@ export function CowDonationPageClient() {
                     type="button"
                     aria-label={`Go to slide ${idx + 1}`}
                     onClick={() => setCurrentSlide(idx)}
-                    className={`transition-all duration-300 rounded-full ${
-                      idx === currentSlide
+                    className={`transition-all duration-300 rounded-full ${idx === currentSlide
                         ? "w-8 h-2.5 bg-[#798576]"
                         : "w-2.5 h-2.5 bg-white/30 hover:bg-white/60"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
@@ -637,7 +636,7 @@ export function CowDonationPageClient() {
                   <img
                     src={selectedSeva.img}
                     alt={selectedSeva.imgAlt}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full"
                   />
                 </div>
                 <div className="p-5 sm:p-6">
@@ -674,11 +673,10 @@ export function CowDonationPageClient() {
                       key={f}
                       type="button"
                       onClick={() => setFrequency(f)}
-                      className={`flex-1 py-2.5 rounded-full text-sm font-bold transition-all ${
-                        frequency === f
+                      className={`flex-1 py-2.5 rounded-full text-sm font-bold transition-all ${frequency === f
                           ? "bg-green-700 text-white shadow-md"
                           : "text-[#273029] hover:text-[#273029]"
-                      }`}
+                        }`}
                       style={frequency !== f ? { color: "black" } : {}}
                     >
                       {f === "one-time" ? "One-Time" : "Monthly"}
@@ -697,11 +695,10 @@ export function CowDonationPageClient() {
                         key={amount}
                         type="button"
                         onClick={() => selectAmount(amount)}
-                        className={`relative py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-base transition-all border-2 ${
-                          active
+                        className={`relative py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-base transition-all border-2 ${active
                             ? "bg-green-700 text-white border-green-700 shadow-lg shadow-green-700/25 scale-[1.02]"
                             : "bg-white text-[#273029] border-[#ddd9d0] hover:border-[#798576]"
-                        }`}
+                          }`}
                         style={!active ? { color: "black" } : {}}
                       >
                         ₹{amount.toLocaleString("en-IN")}
@@ -937,11 +934,10 @@ export function CowDonationPageClient() {
                   whileInView="show"
                   custom={i * 0.06}
                   viewport={{ once: true }}
-                  className={`group rounded-2xl overflow-hidden border-2 transition-all duration-300 bg-white ${
-                    active
+                  className={`group rounded-2xl overflow-hidden border-2 transition-all duration-300 bg-white ${active
                       ? "border-green-600 shadow-xl shadow-green-600/15 ring-2 ring-green-600/20"
                       : "border-[rgba(35,54,29,0.1)] hover:border-[#798576] hover:-translate-y-1 hover:shadow-lg"
-                  }`}
+                    }`}
                 >
                   <button
                     type="button"
@@ -960,7 +956,7 @@ export function CowDonationPageClient() {
                       <img
                         src={item.img}
                         alt={item.imgAlt}
-                        className={`absolute inset-0 h-full w-full object-cover ${item.imgFocus || "object-center"} group-hover:scale-[1.03] transition-transform duration-500`}
+                        className={`absolute inset-0 h-full w-full ${item.imgFocus || "object-center"} group-hover:scale-[1.03] transition-transform duration-500`}
                       />
                       {item.popular && (
                         <span className="absolute top-3 left-3 z-10 bg-[#C37C24] text-white text-[10px] font-bold px-2 py-1 rounded-full">
@@ -1063,7 +1059,7 @@ export function CowDonationPageClient() {
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-44 sm:h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-44 sm:h-52 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
@@ -1210,7 +1206,7 @@ export function CowDonationPageClient() {
               <img
                 src="/images/blanket_distribution/blanket_distribution_8.jpeg"
                 alt="Volunteers handing out warm blankets to families on the ground"
-                className="w-full h-full object-cover"
+                className="w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
@@ -1284,13 +1280,12 @@ export function CowDonationPageClient() {
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-green-900 text-sm"
+                  className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-green-900 text-sm cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 shrink-0 text-green-700 transition-transform ${
-                      openFaq === i ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 shrink-0 text-green-700 transition-transform ${openFaq === i ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {openFaq === i && (

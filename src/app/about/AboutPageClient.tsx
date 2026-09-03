@@ -128,7 +128,7 @@ export function AboutPageClient() {
                     initial="enter"
                     animate="center"
                     exit="exit"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full"
                   />
                 </AnimatePresence>
 
@@ -211,7 +211,7 @@ export function AboutPageClient() {
             </motion.div>
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" custom={0.2} viewport={{ once: true }} className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border-8 border-white">
-                <img src="/images/food_distribution/food_distribution_1.jpeg" alt="Parivartan Welfare Society food distribution volunteers" className="w-full h-full object-cover" />
+                <img src="/images/food_distribution/food_distribution_1.jpeg" alt="Parivartan Welfare Society food distribution volunteers" className="w-full h-full" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-[#23361D] text-white p-6 rounded-2xl shadow-xl max-w-[200px]">
                 <p className="text-4xl font-black"> 9+ </p>
@@ -389,7 +389,7 @@ export function AboutPageClient() {
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
                 className="premium-card rounded-2xl overflow-hidden">
-                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors"
+                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors cursor-pointer"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}>
                   {faq.q}
                   <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
@@ -406,7 +406,7 @@ export function AboutPageClient() {
         <div className="container-custom text-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
             className="bg-gradient-to-r from-orange-500 to-amber-400 rounded-3xl p-14 text-white shadow-2xl shadow-orange-500/25">
-            <h2 className="text-4xl font-extrabold mb-4">Ready to Make a Difference?</h2>
+            <h2 className="text-4xl font-extrabold mb-4 text-white">Ready to Make a Difference?</h2>
             <p className="text-orange-100 text-lg max-w-2xl mx-auto mb-8">Whether you donate ₹100 or ₹1,00,000 — your contribution goes directly to a family in need. Start your impact journey today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/donate">

@@ -116,7 +116,7 @@ export function Transparency() {
                     src={carouselImages[currentIndex]}
                     alt={`Impact Image ${currentIndex + 1}`}
                     fill
-                    className="object-cover"
+                    className=""
                   />
                 </motion.div>
               </AnimatePresence>

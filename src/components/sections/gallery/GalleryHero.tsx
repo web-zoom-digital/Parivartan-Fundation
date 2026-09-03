@@ -42,14 +42,14 @@ export function GalleryHero() {
             key={heroImages[currentIdx]}
             src={heroImages[currentIdx]}
             alt="Parivartan Welfare Society Gallery"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full "
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
       </div>
 
       <div className="container-custom relative z-10 max-w-3xl">
@@ -77,12 +77,12 @@ export function GalleryHero() {
 
         <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="flex flex-wrap items-center gap-4">
           <Link href="/donate">
-            <Button variant="primary" size="lg" className="rounded-full h-14 px-8 font-bold text-base shadow-2xl shadow-[rgba(35,54,29,0.25)] hover:shadow-blue-500/40 hover:-translate-y-1 transition-all">
+            <Button variant="primary" size="lg" className="rounded-full cursor-pointer h-14 px-8 font-bold text-base shadow-2xl shadow-[rgba(35,54,29,0.25)] hover:shadow-blue-500/40 hover:-translate-y-1 transition-all">
               Donate Now <HandCoins className="w-4 h-4 ml-2" />
             </Button>
           </Link>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full h-14 px-8 font-bold text-base bg-white/10 border border-white/30 text-white hover:bg-white/20 backdrop-blur-sm transition-all">
+            <Button size="lg" className="rounded-full cursor-pointer h-14 px-8 font-bold text-base bg-white/10 border border-white/30 text-white hover:bg-white/20 backdrop-blur-sm transition-all">
               Become Volunteer
             </Button>
           </Link>

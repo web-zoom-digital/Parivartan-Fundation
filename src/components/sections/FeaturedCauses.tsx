@@ -27,7 +27,7 @@ const causes = [
     title: "Tree Plantation Seva",
     desc: "Planting saplings and caring for young trees in local areas to create cleaner air and a greener future for our children.",
     focus: "Tree Plantation",
-    image: "/images/plantation/plantation_image_2.jpeg",
+    image: "/images/plantation/plantation_image_3.jpeg",
     href: "/donate?amount=2501",
   },
 ]

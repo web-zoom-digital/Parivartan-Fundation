@@ -17,35 +17,35 @@ export function GalleryPageClient() {
         <GalleryStats />
         <MasonryGallery />
         <ImpactStoryCards />
-        
-        <CategorySubGallery 
-          category="Food Distribution" 
-          title="Food Distribution Gallery" 
+
+        <CategorySubGallery
+          category="Food Distribution"
+          title="Food Distribution Gallery"
           description="Hot meals served outdoors and indoors — freshly cooked food packets shared with care and dignity."
           bgColor="bg-white"
         />
-        
-        <CategorySubGallery 
-          category="Blanket Distribution" 
-          title="Winter Blanket Relief" 
+
+        <CategorySubGallery
+          category="Blanket Distribution"
+          title="Winter Blanket Relief"
           description="Providing warm blankets to elderly individuals and families sleeping outdoors in cold weather."
           bgColor="bg-[#F6F2E8]"
         />
-        
-        <CategorySubGallery 
-          category="Tree Plantation" 
-          title="Tree Plantation Seva" 
+
+        <CategorySubGallery
+          category="Tree Plantation"
+          title="Tree Plantation Seva"
           description="Planting native saplings and taking care of them to build cleaner, greener local communities."
           bgColor="bg-white"
         />
-        
-        <CategorySubGallery 
-          category="Community Service" 
-          title="Community Service & Outreach" 
+
+        <CategorySubGallery
+          category="Community Service"
+          title="Community Service & Outreach"
           description="Ground activities, volunteer drives, and neighbourhood outreach under the foundation banner."
           bgColor="bg-[#F6F2E8]"
         />
-        
+
         <GalleryCTA />
       </main>
     </div>

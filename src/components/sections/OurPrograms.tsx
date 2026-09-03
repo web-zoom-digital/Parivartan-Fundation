@@ -3,7 +3,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { SectionHeader } from "@/components/ui/SectionHeader"
-import { ArrowRight, Utensils, BookOpen, Stethoscope, Home } from "lucide-react"
+import { ArrowRight, Utensils, BookOpen, Stethoscope, Home, GraduationCap, Award } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 
 const programs = [
@@ -34,7 +34,7 @@ const programs = [
     icon: BookOpen,
     color: "text-[#C37C24]",
     bg: "bg-[#eef2eb]",
-    image: "/images/plantation/plantation_image_1.jpeg",
+    image: "/images/plantation/plantation_image_3.jpeg",
     alt: "Volunteers planting saplings during a tree plantation drive"
   },
   {
@@ -46,6 +46,26 @@ const programs = [
     bg: "bg-[#fdf3e3]",
     image: "/images/blanket_distribution/blanket_distribution_8.jpeg",
     alt: "Community outreach and blanket relief distribution by Parivartan Welfare Society"
+  },
+  {
+    id: "women-education",
+    title: "Women Education & Awareness",
+    desc: "Organizing community awareness sessions and educational workshops for women and young girls to foster self-reliance, health literacy, and knowledge.",
+    icon: GraduationCap,
+    color: "text-[#2e4626]",
+    bg: "bg-[#eef2eb]",
+    image: "/images/Women education and empowerment/WhatsApp Image 2026-09-03 at 12.31.14 PM.jpeg",
+    alt: "Women Education and Awareness Workshop by Parivartan Welfare Society"
+  },
+  {
+    id: "girl-child-empowerment",
+    title: "Girl Child & Skill Empowerment",
+    desc: "Providing books, study kits, and educational guidance directly to young girls to support their continuous education and independent future.",
+    icon: Award,
+    color: "text-[#C37C24]",
+    bg: "bg-[#fdf3e3]",
+    image: "/images/Women education and empowerment/WhatsApp Image 2026-09-03 at 12.31.15 PM.jpeg",
+    alt: "Girl Child Skill and Educational Support by Parivartan Welfare Society"
   }
 ]
 
@@ -65,39 +85,43 @@ export function OurPrograms() {
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {programs.map((prog, idx) => {
             const Icon = prog.icon
             return (
               <motion.div
                 key={prog.id}
-                className="premium-card overflow-hidden group flex flex-col sm:flex-row h-full"
+                className="premium-card rounded-2xl overflow-hidden group flex flex-col h-full shadow-sm hover:shadow-xl transition-all duration-500"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
                 {/* Image */}
-                <div className="w-full sm:w-2/5 relative shrink-0 min-h-[240px] sm:min-h-0">
+                <div className="w-full aspect-[16/10] relative overflow-hidden shrink-0 border-b border-slate-100">
                   <img 
                     src={prog.image} 
                     alt={prog.alt || prog.title}
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
+                  <div className="absolute top-4 left-4">
+                    <div className={`w-10 h-10 rounded-xl ${prog.bg} flex items-center justify-center shadow-md`}>
+                      <Icon className={`w-5 h-5 ${prog.color}`} />
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Content */}
-                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-center">
-                  <div className={`w-12 h-12 rounded-xl ${prog.bg} flex items-center justify-center mb-5`}>
-                    <Icon className={`w-6 h-6 ${prog.color}`} />
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-extrabold text-[#273029] mb-2">{prog.title}</h3>
+                    <p className="text-[#798576] text-sm leading-relaxed mb-4 line-clamp-3">
+                      {prog.desc}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-[#273029] mb-3">{prog.title}</h3>
-                  <p className="text-[#798576] text-sm leading-relaxed mb-6 flex-1">
-                    {prog.desc}
-                  </p>
-                  <a href={`/programs/${prog.id}`} className="inline-flex items-center text-sm font-bold text-[#23361D] hover:text-[#1b2916] group/link">
+                  <a href="/programs" className="inline-flex items-center text-sm font-bold text-[#23361D] hover:text-[#1b2916] group/link mt-auto pt-2">
                     Explore Program
                     <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
                   </a>
