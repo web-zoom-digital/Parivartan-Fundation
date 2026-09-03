@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   verification: {
     google:
       process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim() ||
-      "fvkWb_FgdcdffHgqcHP7prm4D8o3Pl1zNcfacPJ5msE",
+      "BtNOwiB7ty0P0sG67VQaY4F0-aCjCrGoQHO8RBQQyZs",
   },
 };
 
