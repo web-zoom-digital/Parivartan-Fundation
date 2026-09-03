@@ -38,10 +38,10 @@ const faqs = [
 ]
 
 const heroImages = [
-  { src: "/images/about/team-hero.jpg", alt: "Parivartan Welfare Society volunteers in PWS T-shirts standing in front of the Food For Life programme banner" },
-  { src: "/images/about/img1.png", alt: "PWS founder serving hot dal from a large pot to beneficiaries at an outdoor community food distribution drive" },
-  { src: "/images/about/img2.png", alt: "PWS team and a guest posing with packaged food containers and a bouquet ahead of a community meal distribution event" },
-  { src: "/images/about/img3.png", alt: "Children and young monks seated in rows on a carpet eating traditional meals at a Parivartan Welfare Society celebration at a temple" },
+  { src: "/images/food_distribution/food_distribution_1.jpeg", alt: "Parivartan Welfare Society volunteers serving cooked food to community members" },
+  { src: "/images/blanket_distribution/blanket_distribution_1.jpeg", alt: "Volunteers handing out warm winter blankets to elderly people" },
+  { src: "/images/plantation/plantation_image_1.jpeg", alt: "Volunteers planting saplings during a tree plantation drive" },
+  { src: "/images/food_distribution/food_distribution_4.jpeg", alt: "Volunteers handing fresh meal packets to families on the street" },
 ]
 
 export function AboutPageClient() {
@@ -211,7 +211,7 @@ export function AboutPageClient() {
             </motion.div>
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" custom={0.2} viewport={{ once: true }} className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border-8 border-white">
-                <img src="/images/hero-bg.png" alt="Parivartan Welfare Society volunteers" className="w-full h-full object-cover" />
+                <img src="/images/food_distribution/food_distribution_1.jpeg" alt="Parivartan Welfare Society food distribution volunteers" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-[#23361D] text-white p-6 rounded-2xl shadow-xl max-w-[200px]">
                 <p className="text-4xl font-black"> 9+ </p>

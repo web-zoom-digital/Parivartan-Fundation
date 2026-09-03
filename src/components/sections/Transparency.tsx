@@ -13,10 +13,10 @@ import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 const carouselImages = [
-  "/gallery/25.png",
-  "/gallery/26.png",
-  "/gallery/38.png",
-  "/gallery/39.png",
+  "/images/blanket_distribution/blanket_distribution_8.jpeg",
+  "/images/food_distribution/food_distribution_4.jpeg",
+  "/images/plantation/plantation_image_4.jpeg",
+  "/images/blanket_distribution/blanket_distribution_13.jpeg",
 ];
 
 export function Transparency() {

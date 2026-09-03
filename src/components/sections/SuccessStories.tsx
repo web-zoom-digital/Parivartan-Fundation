@@ -27,8 +27,8 @@ export function SuccessStories() {
           >
             <div className="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
               <img 
-                src="/images/programs/program2.png" 
-                alt="PWS volunteer handing a stationery kit to a school boy outside a government school while other uniformed children watch"
+                src="/images/food_distribution/food_distribution_3.jpeg" 
+                alt="Volunteers distributing warm meals to people"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -37,11 +37,11 @@ export function SuccessStories() {
             <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-[#f0f2ef]/50">
               <Quote className="w-8 h-8 text-emerald-200 mb-4" />
               <p className="text-[#273029] italic mb-4">
-                &ldquo;The day the foundation gave me my first set of books and a bag, I ran home to show my mother. I still have that bag. I use it every day to school.&rdquo;
+                &ldquo;Jab hamare paas khane ke paise nahi the, tab Parivartan Foundation ke volunteers ne hame garma garam khana diya. Har roz inka khana hamare liye ek sahara hai.&rdquo;
               </p>
               <div>
-                <p className="font-bold text-[#273029]">Rahul, 11</p>
-                <p className="text-xs text-[#798576] font-medium">Education Beneficiary &mdash; Government School, Jewar</p>
+                <p className="font-bold text-[#273029]">Ram Kishor</p>
+                <p className="text-xs text-[#798576] font-medium">Daily Wage Worker &mdash; Food Drive Beneficiary</p>
               </div>
             </div>
           </motion.div>
@@ -55,8 +55,8 @@ export function SuccessStories() {
           >
             <div className="w-full md:w-2/5 h-64 md:h-auto overflow-hidden">
               <img 
-                src="/images/programs/program4.png" 
-                alt="PWS volunteer handing folded clothing to a girl student outside a school as part of the clothing donation drive"
+                src="/images/blanket_distribution/blanket_distribution_11.jpeg" 
+                alt="Blanket distribution drive during cold winter"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -65,11 +65,11 @@ export function SuccessStories() {
             <div className="p-6 md:p-8 flex-1 flex flex-col justify-center bg-orange-50/50">
               <Quote className="w-8 h-8 text-orange-200 mb-4" />
               <p className="text-[#273029] italic mb-4">
-                &ldquo;My daughter was embarrassed to come to school because her uniform was torn. After the foundation gave her a new set, she hasn&apos;t missed a single day.&rdquo;
+                &ldquo;Kafati thand me hum sadak par sote the. Parivartan ki team ne hame mota kambal diya. Ab mere bachhe thand se bache rahte hain.&rdquo;
               </p>
               <div>
-                <p className="font-bold text-[#273029]">Sunita, Parent</p>
-                <p className="text-xs text-[#798576] font-medium">Clothing Drive Beneficiary &mdash; Jewar, Uttar Pradesh</p>
+                <p className="font-bold text-[#273029]">Sunita Devi</p>
+                <p className="text-xs text-[#798576] font-medium">Winter Blanket Drive Beneficiary</p>
               </div>
             </div>
           </motion.div>

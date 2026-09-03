@@ -9,11 +9,11 @@ import { Button } from "@/components/ui/Button"
 import { ArrowRight } from "lucide-react"
 
 const images = [
-  { src: "/gallery/41.png", alt: "Volunteers serving hundreds of individuals from large community pots during an PWS mega food drive" },
-  { src: "/gallery/10-1.png", alt: "PWS volunteer handing a foil-packaged hot meal to a beneficiary on the street" },
-  { src: "/gallery/21-1.png", alt: "Man distributing colourful toys to young boys lined up during an PWS children's outreach event" },
-  { src: "/gallery/44.png", alt: "Woman gently petting and comforting a resting calf as part of PWS's cow welfare programme" },
-  { src: "/gallery/cow-2.png", alt: "PWS volunteer carefully bottle-feeding a weak white calf lying on the ground" },
+  { src: "/images/food_distribution/food_distribution_1.jpeg", alt: "Volunteers serving hot meals to needy individuals" },
+  { src: "/images/blanket_distribution/blanket_distribution_2.jpeg", alt: "Volunteers distributing warm winter blankets" },
+  { src: "/images/plantation/plantation_image_2.jpeg", alt: "Tree plantation drive by volunteers" },
+  { src: "/images/blanket_distribution/blanket_distribution_7.jpeg", alt: "Community blanket distribution camp" },
+  { src: "/images/food_distribution/food_distribution_5.jpeg", alt: "Street food distribution by Parivartan Welfare Society" },
 ]
 
 export function GalleryPreview() {
@@ -22,9 +22,9 @@ export function GalleryPreview() {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <SectionHeader
-            badge="Moments in Time"
+            badge="Ground Work"
             title="Glimpses of Hope"
-            subtitle="Real photographs from our food drives, education outreach and cow welfare work."
+            subtitle="Real photographs from our daily food drives, winter blanket distribution, and tree plantation initiatives."
             className="mb-0"
           />
           <Button variant="outline" className="hidden md:flex" asChild>
