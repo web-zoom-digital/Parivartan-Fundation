@@ -123,7 +123,7 @@ export function ImpactPageClient() {
                   alt="Volunteers serving food during a community drive"
                   loading="eager"
                   decoding="async"
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-full transform hover:scale-105 transition-transform duration-700" 
                 />
               </div>
             </motion.div>

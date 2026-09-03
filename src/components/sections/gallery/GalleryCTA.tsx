@@ -7,13 +7,14 @@ import { Button } from "@/components/ui/Button"
 
 export function GalleryCTA() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative min-h-[750px] sm:min-h-[850px] lg:min-h-[80vh] flex items-center py-36 sm:py-48 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="/images/blanket_distribution/blanket_distribution_7.jpeg"
           alt="Parivartan Welfare Society community drive"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/50 backdrop-blur-[1px]" />
       </div>
 
       <div className="container-custom relative z-10 text-center text-white">

@@ -42,7 +42,7 @@ export function AboutFoundation() {
                   key={currentImage}
                   src={carouselImages[currentImage]}
                   alt="Parivartan Welfare Society Work" 
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full"
                   initial={{ opacity: 0, scale: 1.05 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}

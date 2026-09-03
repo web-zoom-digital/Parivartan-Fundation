@@ -67,12 +67,12 @@ export function VolunteerProcess() {
             <div className="grid grid-cols-2 gap-4">
               <img 
                 src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop" 
-                className="w-full h-[300px] object-cover rounded-3xl rounded-tr-none shadow-lg"
+                className="w-full h-[300px] rounded-3xl rounded-tr-none shadow-lg"
                 alt="Volunteers"
               />
               <img 
                 src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=600&auto=format&fit=crop" 
-                className="w-full h-[300px] object-cover rounded-3xl rounded-bl-none shadow-lg mt-8"
+                className="w-full h-[300px] rounded-3xl rounded-bl-none shadow-lg mt-8"
                 alt="Volunteers smiling"
               />
             </div>

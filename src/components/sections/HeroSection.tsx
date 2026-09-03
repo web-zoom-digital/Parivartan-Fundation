@@ -1,18 +1,17 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const heroImages = [
   {
-    src: "/images/about/hero-1.jpg",
+    src: "/images/about/hero-1.png",
     alt: "Parivartan Welfare Society - People and nature grow together, change becomes lasting.",
     width: 1920,
     height: 1080,
   },
   {
-    src: "/images/about/hero-2.jpg",
+    src: "/images/about/hero-3.png",
     alt: "Parivartan Welfare Society - Empowering lives. Strengthening communities. Protecting our planet.",
     width: 1920,
     height: 1080,
@@ -39,8 +38,6 @@ export function HeroSection() {
     return () => clearInterval(timer);
   }, [goNext, isPaused]);
 
-  const slide = heroImages[currentSlide];
-
   return (
     <section
       className="relative w-full bg-[#1b2916] overflow-hidden mt-[4.25rem] sm:mt-[5rem] md:mt-[7.25rem]"
@@ -54,21 +51,21 @@ export function HeroSection() {
         Parivartan Welfare Society — free food, education support, and cow welfare
         across Delhi NCR and Uttar Pradesh
       </h1>
-      <div className="relative w-full">
+      <div className="relative w-full h-[45vh] sm:h-[60vh] md:h-[72vh] lg:h-[82vh] min-h-[280px] max-h-[850px]">
         <img
           src={heroImages[currentSlide].src}
           alt={heroImages[currentSlide].alt}
-          className="w-full h-auto block max-h-[78vh] object-cover bg-[#1b2916] mx-auto"
+          className="w-full h-full object-center block"
           draggable={false}
         />
 
-        <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
 
         <button
           type="button"
           onClick={goPrev}
           aria-label="Previous image"
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/60 border border-white/30 flex items-center justify-center"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/60 border border-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </button>
@@ -76,22 +73,22 @@ export function HeroSection() {
           type="button"
           onClick={goNext}
           aria-label="Next image"
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/60 border border-white/30 flex items-center justify-center"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/60 border border-white/30 flex items-center justify-center backdrop-blur-sm transition-all"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </button>
 
-        <div className="absolute bottom-3 left-0 right-0 z-20 flex justify-center gap-2">
+        <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
           {heroImages.map((_, idx) => (
             <button
               key={idx}
               type="button"
               aria-label={`Go to slide ${idx + 1}`}
               onClick={() => setCurrentSlide(idx)}
-              className={`rounded-full transition-all ${
+              className={`rounded-full transition-all duration-300 ${
                 idx === currentSlide
-                  ? "w-6 h-2 bg-white"
-                  : "w-2 h-2 bg-white/55"
+                  ? "w-8 h-2.5 bg-white"
+                  : "w-2.5 h-2.5 bg-white/55 hover:bg-white/80"
               }`}
             />
           ))}

@@ -94,7 +94,7 @@ export function AccountDetailsPageClient() {
       {/* ── HERO ── */}
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center pt-24 sm:pt-36 lg:pt-56 pb-12 sm:pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/images/team/volunteers.png" alt="Parivartan Welfare Society team" className="w-full h-full object-cover" />
+          <img src="/images/food_distribution/food_distribution_1.jpeg" alt="Parivartan Welfare Society team" className="w-full h-full" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
         </div>
         {/* Decorative blobs */}
@@ -345,7 +345,7 @@ export function AccountDetailsPageClient() {
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.08} viewport={{ once: true }}
                 className="premium-card rounded-2xl overflow-hidden">
-                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors"
+                <button className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-[#273029] hover:text-[#23361D] transition-colors cursor-pointer"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i}>
                   {faq.q}
                   <ChevronDown className={`w-5 h-5 shrink-0 transition-transform ${openFaq === i ? "rotate-180 text-[#23361D]" : ""}`} />

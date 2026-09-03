@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
-import { Utensils, Heart, HandCoins, BookOpen, Shirt, Users, AlertTriangle, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react"
+import { Utensils, Heart, HandCoins, BookOpen, Shirt, Users, AlertTriangle, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight, GraduationCap, Award } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 
@@ -51,7 +51,7 @@ const programs = [
     tagline: "Nurturing Greenery for a Healthy Future",
     desc: "Trees give us clean air, shade, and life. We organise community plantation drives to plant native saplings and take care of them with regular watering and protection.",
     impact: "1,000+ saplings planted & cared for",
-    image: "/images/plantation/plantation_image_1.jpeg",
+    image: "/images/plantation/plantation_image_3.jpeg",
     who: ["Local neighbourhoods", "Parks & public grounds", "School grounds", "Community spaces"],
     highlights: ["Native shade and fruit saplings", "Community care and watering", "Eco-awareness drives", "Volunteer planting events"],
   },
@@ -68,6 +68,34 @@ const programs = [
     image: "/images/blanket_distribution/blanket_distribution_8.jpeg",
     who: ["Needy families", "Crisis-affected individuals", "Elderly citizens", "Local community members"],
     highlights: ["Immediate local response", "Hygienic relief distribution", "Volunteer network", "Transparent ground updates"],
+  },
+  {
+    id: "women-education",
+    icon: GraduationCap,
+    color: "from-pink-600 to-rose-400",
+    bgLight: "bg-rose-50",
+    textColor: "text-rose-600",
+    title: "Women Education & Awareness",
+    tagline: "Empowering Women & Girls Through Education",
+    desc: "Organizing community awareness sessions and educational workshops for women and young girls to foster self-reliance, health literacy, and knowledge.",
+    impact: "Empowering 500+ women & girls",
+    image: "/images/Women education and empowerment/WhatsApp Image 2026-09-03 at 12.31.14 PM.jpeg",
+    who: ["Underprivileged women", "Young girls", "Rural mothers", "Local community groups"],
+    highlights: ["Educational workshops", "Self-reliance awareness", "Community gathering sessions", "Learning materials support"],
+  },
+  {
+    id: "girl-child-empowerment",
+    icon: Award,
+    color: "from-indigo-600 to-cyan-400",
+    bgLight: "bg-indigo-50",
+    textColor: "text-indigo-600",
+    title: "Girl Child & Skill Empowerment",
+    tagline: "Nurturing Bright Futures for Every Girl",
+    desc: "Providing books, study kits, and educational guidance directly to young girls to support their continuous education and independent future.",
+    impact: "Supporting 300+ young students",
+    image: "/images/Women education and empowerment/WhatsApp Image 2026-09-03 at 12.31.15 PM.jpeg",
+    who: ["School-going girls", "Young female scholars", "Underprivileged students", "Girl child beneficiaries"],
+    highlights: ["Free study kits & books", "Direct educational support", "Mentorship & guidance", "Encouraging higher learning"],
   },
 ]
 
@@ -165,7 +193,7 @@ export function ProgramsPageClient() {
                     initial="enter"
                     animate="center"
                     exit="exit"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full"
                   />
                 </AnimatePresence>
 
@@ -275,7 +303,7 @@ export function ProgramsPageClient() {
 
             <div>
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/10 mb-6 border-4 border-white">
-                <img src={active.image} alt={active.title} className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+                <img src={active.image} alt={active.title} className="w-full h-full transform hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="premium-card rounded-2xl p-6">
                 <h3 className="font-bold text-[#273029] mb-4">Who We Serve</h3>
@@ -302,7 +330,7 @@ export function ProgramsPageClient() {
               <motion.div key={p.id} variants={fadeUp} initial="hidden" whileInView="show" custom={i * 0.1} viewport={{ once: true }}
                 className="premium-card rounded-2xl group cursor-pointer overflow-hidden flex flex-col" onClick={() => { setActiveProgram(p.id); window.scrollTo({ top: 0, behavior: "smooth" }) }}>
                 <div className="aspect-[16/9] w-full overflow-hidden relative border-b border-slate-100">
-                  <img src={p.image} alt={p.title} className="w-full h-full  group-hover:scale-105 transition-transform duration-700" />
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute top-4 left-4">
                     <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center shadow-lg`}>
                       <p.icon className="w-5 h-5 text-white" />
@@ -327,7 +355,7 @@ export function ProgramsPageClient() {
         <div className="container-custom text-center">
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
             className="bg-gradient-to-br from-blue-700 to-blue-900 rounded-3xl p-14 text-white shadow-2xl shadow-blue-900/25">
-            <h2 className="text-4xl font-extrabold mb-4">Your Support Keeps These Programs Running</h2>
+            <h2 className="text-4xl font-extrabold mb-4 text-white">Your Support Keeps These Programs Running</h2>
             <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8">Behind every hot meal, every medical consultation and every scholarship is a donor who chose to care. Be that person today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/donate">

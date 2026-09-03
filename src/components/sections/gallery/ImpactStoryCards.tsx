@@ -59,26 +59,28 @@ export function ImpactStoryCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col sm:flex-row"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col sm:flex-row sm:h-[280px]"
             >
-              <div className="w-full sm:w-2/5 aspect-[8/3] sm:aspect-auto relative overflow-hidden">
+              <div className="w-full sm:w-[45%] h-56 sm:h-full relative overflow-hidden shrink-0">
                 <img
                   src={story.image}
                   alt={story.title}
-                  className="w-full h-full transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r ${story.gradient}`} />
               </div>
               
-              <div className="w-full sm:w-3/5 p-8 flex flex-col justify-center">
-                <div className={`w-12 h-12 rounded-2xl ${story.color} flex items-center justify-center text-white mb-6 shadow-lg transform group-hover:-translate-y-1 transition-transform`}>
-                  <story.icon className="w-6 h-6" />
+              <div className="w-full sm:w-[55%] p-6 sm:p-7 flex flex-col justify-between">
+                <div>
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-2xl ${story.color} flex items-center justify-center text-white mb-4 shadow-lg transform group-hover:-translate-y-1 transition-transform`}>
+                    <story.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#273029] mb-2">{story.title}</h3>
+                  <p className="text-[#798576] text-sm sm:text-base leading-relaxed line-clamp-3">
+                    {story.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-[#273029] mb-3">{story.title}</h3>
-                <p className="text-[#798576] leading-relaxed mb-6">
-                  {story.description}
-                </p>
-                <a href="/donate" className={`inline-flex items-center gap-2 font-bold ${story.color.replace('bg-', 'text-')} hover:opacity-80 transition-opacity`}>
+                <a href="/donate" className={`inline-flex items-center gap-2 font-bold text-sm sm:text-base mt-4 ${story.color.replace('bg-', 'text-')} hover:opacity-80 transition-opacity`}>
                   Read More <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

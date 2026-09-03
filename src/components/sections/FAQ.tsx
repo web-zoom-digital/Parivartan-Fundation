@@ -30,7 +30,7 @@ export function FAQ() {
               transition={{ duration: 0.4, delay: idx * 0.1 }}
             >
               <button
-                className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 cursor-pointer"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
                 aria-controls={`faq-panel-${idx}`}

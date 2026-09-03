@@ -61,7 +61,7 @@ export function WhyChooseNCF() {
               <img 
                 src="/images/blanket_distribution/blanket_distribution_12.jpeg" 
                 alt="Parivartan Welfare Society volunteers distributing supplies"
-                className="w-full h-full object-cover"
+                className="w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />
             </div>

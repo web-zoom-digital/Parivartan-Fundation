@@ -101,7 +101,7 @@ export function MasonryGallery() {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  className="w-full h-auto transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
                   loading="lazy"
                 />
                 {/* Hover Overlay */}
