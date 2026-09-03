@@ -85,7 +85,7 @@ export function ImpactPageClient() {
   return (
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden gradient-hero">
+      <section className="relative min-h-[50vh] flex items-center pt-20 sm:pt-28 lg:pt-36 pb-16 overflow-hidden gradient-hero">
         <motion.div className="absolute top-10 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-[#eef2eb] rounded-full blur-3xl opacity-40 translate-x-1/3"
           animate={{ x: [0, 30, 0], scale: [1, 1.1, 1] }} transition={{ duration: 10, repeat: Infinity }} />
         <div className="container-custom relative z-10">

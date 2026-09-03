@@ -125,7 +125,7 @@ export function DonatePageClient() {
   return (
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+      <section className="relative min-h-[45vh] flex items-center pt-20 sm:pt-28 lg:pt-36 pb-16 overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
         <motion.div className="absolute top-10 right-0 w-[260px] sm:w-[500px] h-[260px] sm:h-[500px] bg-orange-400/20 rounded-full blur-[100px] translate-x-1/3"
           animate={{ x: [0, 16, 0] }} transition={{ duration: 10, repeat: Infinity }} />
         <div className="container-custom relative z-10">

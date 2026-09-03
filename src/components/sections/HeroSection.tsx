@@ -40,7 +40,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative w-full bg-[#1b2916] overflow-hidden mt-[4.25rem] sm:mt-[5rem] md:mt-[7.25rem]"
+      className="relative w-full bg-[#1b2916] overflow-hidden mt-[54px] md:mt-[98px]"
       aria-label="Parivartan Welfare Society hero"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
