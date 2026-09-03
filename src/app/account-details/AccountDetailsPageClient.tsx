@@ -18,12 +18,12 @@ const fadeUp = {
 /* ── Bank details (replace placeholders with real data) ── */
 const bankDetails = [
   { label: "Account Name", value: "Parivartan Welfare Society", icon: Building2 },
-  { label: "Bank Name", value: "AU Small Finance Bank", icon: Building2 },
-  { label: "Account Number", value: "2602248510917596", icon: CreditCard },
-  { label: "IFSC Code", value: "AUBL0002485", icon: CreditCard },
+  { label: "Bank Name", value: "Bank of India", icon: Building2 },
+  { label: "Account Number", value: "718220110000451", icon: CreditCard },
+  { label: "IFSC Code", value: "BKID0007182", icon: CreditCard },
   { label: "Branch", value: "Sector 63, Plot No. 13, Block H-1 A, Sector 63, Gautam Budh Nagar, Noida - 201301, Uttar Pradesh, India", icon: MapPin },
   { label: "Account Type", value: "Current Account (AU Institution Current Account)", icon: CreditCard },
-  { label: "UPI ID", value: "nabinchandrafoundation2506@aubank", icon: Smartphone },
+  { label: "UPI ID", value: "boim-718216990451@boi", icon: Smartphone },
 ]
 
 const paymentMethods = [
@@ -234,19 +234,19 @@ export function AccountDetailsPageClient() {
                 <div className="mx-auto mb-5 w-full max-w-[220px] sm:max-w-[240px] rounded-2xl border border-[#ddd9d0] bg-white p-2.5 shadow-sm overflow-hidden">
                   <img
                     src="/images/upi-qr.png"
-                    alt="Parivartan Welfare Society UPI QR Code — nabinchandrafoundation2506@aubank"
+                    alt="Parivartan Welfare Society UPI QR Code — boim-718216990451@boi"
                     width={317}
                     height={368}
                     className="block w-full h-auto max-w-full object-contain"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
-                        "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=nabinchandrafoundation2506@aubank%26pn=Nabin%20Chandra%20Foundation%26cu=INR"
+                        "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=boim-718216990451@boi%26pn=Nabin%20Chandra%20Foundation%26cu=INR"
                     }}
                   />
                 </div>
                 <p className="font-bold text-[#273029] text-sm mb-1">Scan with any UPI app</p>
                 <p className="text-[#798576] text-xs mb-1 break-all px-1">
-                  UPI ID: nabinchandrafoundation2506@aubank
+                  UPI ID: boim-718216990451@boi
                 </p>
                 <p className="text-slate-400 text-[11px] sm:text-xs">PhonePe · Google Pay · Paytm · BHIM</p>
                 <div className="mt-4 flex flex-wrap gap-2 justify-center">
