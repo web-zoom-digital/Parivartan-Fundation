@@ -37,7 +37,7 @@ export function ContactPageClient() {
   return (
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden gradient-hero">
+      <section className="relative min-h-[45vh] flex items-center pt-20 sm:pt-28 lg:pt-36 pb-16 overflow-hidden gradient-hero">
         <motion.div className="absolute top-20 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-[#eef2eb] rounded-full blur-3xl opacity-40 translate-x-1/3"
           animate={{ x: [0, 16, 0] }} transition={{ duration: 8, repeat: Infinity }} />
         <div className="container-custom relative z-10">

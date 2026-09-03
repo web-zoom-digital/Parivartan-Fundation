@@ -34,7 +34,7 @@ export function GalleryHero() {
   }, [])
 
   return (
-    <section className="relative min-h-[75vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden">
+    <section className="relative min-h-[65vh] sm:min-h-[75vh] flex items-center pt-20 sm:pt-28 lg:pt-36 pb-16 sm:pb-20 overflow-hidden">
       {/* Background Image Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="popLayout">

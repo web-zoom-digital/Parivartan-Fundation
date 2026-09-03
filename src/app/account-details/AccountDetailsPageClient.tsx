@@ -92,7 +92,7 @@ export function AccountDetailsPageClient() {
     <div className="bg-white w-full max-w-full overflow-x-clip">
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center pt-24 sm:pt-36 lg:pt-56 pb-12 sm:pb-20 overflow-hidden">
+      <section className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center pt-20 sm:pt-28 lg:pt-36 pb-12 sm:pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="/images/food_distribution/food_distribution_1.jpeg" alt="Parivartan Welfare Society team" className="w-full h-full" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
