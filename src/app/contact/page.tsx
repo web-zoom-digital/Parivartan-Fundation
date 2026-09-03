@@ -30,7 +30,7 @@ export default function ContactPage() {
               "@type": "NGO",
               "name": "Parivartan Welfare Society",
               "telephone": "+91-93158-14894",
-              "email": "hello@nabinchandrafoundation.org",
+              "email": "parivartanwelfaresociety31@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "House Number - 242, Govindgarh",

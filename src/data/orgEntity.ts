@@ -13,7 +13,7 @@ export const orgEntity = {
     url: `${SITE_URL}/images/logo.png`,
   },
   image: `${SITE_URL}/og-image.jpg`,
-  email: "hello@parivartanwelfare.org",
+  email: "parivartanwelfaresociety31@gmail.com",
   telephone: "+91-93158-14894",
   foundingDate: "2015",
   description:
@@ -58,15 +58,15 @@ export const orgEntity = {
       availableLanguage: ["English", "Hindi"],
     },
   ],
-  sameAs: ["https://wa.me/919315814894"],
+  sameAs: ["https://wa.me/918299461699"],
 }
 
 export const orgPlainSummary = {
   name: "Parivartan Welfare Society",
   founded: "2015",
-  location: "House Number - 242, Govindgarh, Gautam Buddha Nagar, Jewar, Uttar Pradesh 203135, India",
-  phone: "+91 93158 14894",
-  email: "hello@parivartanwelfare.org",
+  location: "House Number - 242, New Shivpuri Colony, Gorakhpur, Jewar, Uttar Pradesh 203135, India",
+  phone: "+91 82994 61699",
+  email: "parivartanwelfaresociety31@gmail.com",
   what: "A registered Indian NGO working on human wellbeing, community progress, and environmental responsibility.",
   howToHelp:
     "Donate online at /donate, support Gau Seva at /cow-donation, transfer via UPI or bank on /account-details, or volunteer via /contact.",

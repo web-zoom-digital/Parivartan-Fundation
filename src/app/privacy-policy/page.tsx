@@ -33,7 +33,7 @@ const sections = [
   },
   {
     title: "Your Rights",
-    content: "You have the right to access, correct or delete your personal information held by us. To exercise these rights, please contact us at hello@nabinchandrafoundation.org. We will respond within 30 days."
+    content: "You have the right to access, correct or delete your personal information held by us. To exercise these rights, please contact us at parivartanwelfaresociety31@gmail.com. We will respond within 30 days."
   },
   {
     title: "Third-Party Links",
@@ -45,7 +45,7 @@ const sections = [
   },
   {
     title: "Contact Us",
-    content: "For any questions about this Privacy Policy, please contact us at: hello@nabinchandrafoundation.org or write to us at House Number - 242, Govindgarh, Gautam Buddha Nagar, Jewar, Uttar Pradesh 203135, India."
+    content: "For any questions about this Privacy Policy, please contact us at: parivartanwelfaresociety31@gmail.com or write to us at House Number - 242, New Shivpuri Colony, Gorakhpur, Jewar, Uttar Pradesh 203135, India."
   },
 ]
 

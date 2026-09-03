@@ -238,9 +238,9 @@ const whyCards = [
   },
   {
     icon: Siren,
-    color: "text-orange-600 bg-orange-50",
-    title: "Rapid Emergency Response",
-    desc: "When sudden severe cold or hunger crises hit, our team mobilises relief packages on short notice.",
+    color: "text-[#C37C24] bg-[#fdf3e3]",
+    title: "Accidents Happen on Highways",
+    desc: "Overturned cattle trucks leave animals stunned on asphalt. Emergency rescue means rope, transport, and immediate medical attention.",
   },
   {
     icon: Users,
@@ -489,7 +489,7 @@ export function CowDonationPageClient() {
   return (
     <div className="bg-white w-full max-w-full overflow-x-clip">
       {/* ── HERO ── */}
-      <section className="min-h-0 lg:min-h-[88vh] flex items-center bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-24 sm:pt-28 lg:pt-32 pb-8 sm:pb-10 overflow-hidden">
+      <section className="min-h-0 lg:min-h-[88vh] flex items-center bg-gradient-to-br from-[#23361D] via-[#1b2916] to-[#2e4626] pt-24 sm:pt-28 lg:pt-32 pb-8 sm:pb-10 overflow-hidden">
         <div className="container-custom w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left z-10 order-2 lg:order-1">
@@ -502,9 +502,9 @@ export function CowDonationPageClient() {
               </nav>
 
               <div className="w-full min-h-0 sm:min-h-[200px] flex flex-col items-center lg:items-start">
-                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 border border-emerald-400/40 mb-4 sm:mb-5">
+                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 border border-[#798576]/40 mb-4 sm:mb-5">
                   <span className="text-base">🐄</span>
-                  <span className="text-xs sm:text-sm font-semibold text-emerald-300">
+                  <span className="text-xs sm:text-sm font-semibold text-[#C37C24]">
                     {slide.badge}
                   </span>
                 </div>
@@ -513,7 +513,7 @@ export function CowDonationPageClient() {
                   <br />
                   <span className="text-[#C37C24]">{slide.highlight}</span>
                 </h1>
-                <p className="text-sm sm:text-base md:text-lg text-blue-100/85 mb-6 sm:mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base md:text-lg text-white/85 mb-6 sm:mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0">
                   {slide.desc}
                 </p>
               </div>
@@ -523,7 +523,7 @@ export function CowDonationPageClient() {
                   (badge) => (
                     <span
                       key={badge}
-                      className="inline-flex items-center gap-1.5 bg-white/10 border border-blue-400/30 text-white text-xs font-bold px-3 py-1.5 rounded-full"
+                      className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full"
                     >
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#C37C24]" />
                       {badge}
@@ -536,13 +536,13 @@ export function CowDonationPageClient() {
                 <a href="#donate-widget" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto rounded-full h-14 px-8 text-base font-bold bg-[#798576] hover:bg-[#798576] border-0 shadow-2xl shadow-emerald-600/40 text-white"
+                    className="w-full sm:w-auto rounded-full h-14 px-8 text-base font-bold bg-[#798576] hover:bg-[#798576] border-0 shadow-2xl shadow-[#23361D]/40 text-white"
                   >
                     Support Cow Care <HandCoins className="w-4 h-4 ml-2" />
                   </Button>
                 </a>
                 <a
-                  href="https://wa.me/919315814894"
+                  href="https://wa.me/918299461699"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"
@@ -559,7 +559,7 @@ export function CowDonationPageClient() {
             </div>
 
             <div className="relative flex flex-col items-center order-1 lg:order-2">
-              <div className="relative w-full aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border-2 sm:border-4 border-blue-700/50 bg-blue-950">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border-2 sm:border-4 border-[#23361D]/50 bg-[#1b2916]">
                 <AnimatePresence mode="sync">
                   <motion.img
                     key={currentSlide}
@@ -609,7 +609,7 @@ export function CowDonationPageClient() {
                     onClick={() => setCurrentSlide(idx)}
                     className={`transition-all duration-300 rounded-full ${
                       idx === currentSlide
-                        ? "w-8 h-2.5 bg-emerald-400"
+                        ? "w-8 h-2.5 bg-[#798576]"
                         : "w-2.5 h-2.5 bg-white/30 hover:bg-white/60"
                     }`}
                   />
@@ -628,12 +628,12 @@ export function CowDonationPageClient() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl shadow-green-900/10 border-2 border-green-100 overflow-hidden"
+            className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl shadow-green-900/10 border-2 border-[rgba(35,54,29,0.1)] overflow-hidden"
           >
             <div className="grid lg:grid-cols-5">
               {/* Left: original photo + Selected Seva below (no green overlay) */}
-              <div className="lg:col-span-2 flex flex-col bg-[#F6F2E8] border-b lg:border-b-0 lg:border-r border-green-100">
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-200">
+              <div className="lg:col-span-2 flex flex-col bg-[#F6F2E8] border-b lg:border-b-0 lg:border-r border-[rgba(35,54,29,0.1)]">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#eef2eb]">
                   <img
                     src={selectedSeva.img}
                     alt={selectedSeva.imgAlt}
@@ -700,13 +700,13 @@ export function CowDonationPageClient() {
                         className={`relative py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl font-black text-[11px] sm:text-base transition-all border-2 ${
                           active
                             ? "bg-green-700 text-white border-green-700 shadow-lg shadow-green-700/25 scale-[1.02]"
-                            : "bg-white text-[#273029] border-[#ddd9d0] hover:border-green-400"
+                            : "bg-white text-[#273029] border-[#ddd9d0] hover:border-[#798576]"
                         }`}
                         style={!active ? { color: "black" } : {}}
                       >
                         ₹{amount.toLocaleString("en-IN")}
                         {pkg?.popular && (
-                          <span className="absolute -top-2.5 inset-x-0 mx-auto w-fit text-[8px] sm:text-[9px] font-bold bg-orange-500 text-white px-1 sm:px-1.5 py-0.5 rounded-full whitespace-nowrap">
+                          <span className="absolute -top-2.5 inset-x-0 mx-auto w-fit text-[8px] sm:text-[9px] font-bold bg-[#C37C24] text-white px-1 sm:px-1.5 py-0.5 rounded-full whitespace-nowrap">
                             Popular
                           </span>
                         )}
@@ -763,10 +763,10 @@ export function CowDonationPageClient() {
                 </div>
 
                 {/* Impact preview */}
-                <div className="bg-[#f0f2ef] border border-emerald-200 rounded-2xl p-4 mb-6 flex gap-3 items-start">
+                <div className="bg-[#f0f2ef] border border-[rgba(121,133,118,0.2)] rounded-2xl p-4 mb-6 flex gap-3 items-start">
                   <div className="text-2xl shrink-0">{selectedSeva.icon}</div>
                   <div>
-                    <p className="text-emerald-900 font-bold text-sm">
+                    <p className="text-[#23361D] font-bold text-sm">
                       Your ₹
                       {finalAmount > 0
                         ? finalAmount.toLocaleString("en-IN")
@@ -782,27 +782,27 @@ export function CowDonationPageClient() {
                 {paymentError && (
                   <div className="relative rounded-2xl overflow-hidden mb-4 shadow-lg">
                     {/* Warm saffron gradient background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-amber-50 to-red-50" />
-                    <div className="absolute inset-0 border-2 border-orange-200 rounded-2xl" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#fdf3e3] via-[#F6F2E8] to-[#fdf3e3]" />
+                    <div className="absolute inset-0 border-2 border-[rgba(195,124,36,0.2)] rounded-2xl" />
 
                     <div className="relative p-5 sm:p-6">
                       {/* Icon + Title row */}
                       <div className="flex items-start gap-3 mb-4">
-                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-400 to-red-400 flex items-center justify-center shrink-0 shadow-md">
+                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#C37C24] to-[#a3651a] flex items-center justify-center shrink-0 shadow-md">
                           <span className="text-xl">💔</span>
                         </div>
                         <div>
-                          <p className="text-orange-900 font-extrabold text-base leading-tight">
+                          <p className="text-[#23361D] font-extrabold text-base leading-tight">
                             Your Donation Was Not Completed
                           </p>
-                          <p className="text-orange-600 text-xs mt-0.5 font-medium">
+                          <p className="text-[#C37C24] text-xs mt-0.5 font-medium">
                             Payment failed or cancelled
                           </p>
                         </div>
                         <button
                           type="button"
                           onClick={clearPaymentError}
-                          className="ml-auto text-orange-400 hover:text-orange-600 text-lg leading-none shrink-0"
+                          className="ml-auto text-[#C37C24] hover:text-[#C37C24] text-lg leading-none shrink-0"
                           aria-label="Dismiss"
                         >
                           ✕
@@ -810,16 +810,16 @@ export function CowDonationPageClient() {
                       </div>
 
                       {/* Hindi emotional message */}
-                      <div className="bg-white/70 rounded-xl p-4 mb-4 border border-orange-100">
-                        <p className="text-orange-800 text-sm font-medium leading-relaxed mb-2">
+                      <div className="bg-white/70 rounded-xl p-4 mb-4 border border-[rgba(195,124,36,0.1)]">
+                        <p className="text-[#273029] text-sm font-medium leading-relaxed mb-2">
                           आप Donation पेज तक आए, ये आपके{" "}
-                          <span className="font-extrabold text-orange-600">दयालु दिल</span> को दर्शाता है।
+                          <span className="font-extrabold text-[#C37C24]">दयालु दिल</span> को दर्शाता है।
                         </p>
                         <p className="text-[#273029] text-sm leading-relaxed mb-3">
                           शायद दान पूरा नहीं हो पाया, लेकिन देर नहीं हुई है। तो आइए,{" "}
                           <span className="font-bold text-green-700">इस बार बिना रुके</span> मदद का हाथ बढ़ाइए।
                         </p>
-                        <p className="text-orange-900 font-extrabold text-sm border-t border-orange-100 pt-3">
+                        <p className="text-[#23361D] font-extrabold text-sm border-t border-[rgba(195,124,36,0.1)] pt-3">
                           🙏 इस बार रुकिए मत —{" "}
                           <span className="text-green-700">आपका छोटा सा योगदान भी महत्वपूर्ण है।</span>
                         </p>
@@ -831,7 +831,7 @@ export function CowDonationPageClient() {
                           type="button"
                           onClick={() => { clearPaymentError(); goDonate() }}
                           disabled={finalAmount <= 0}
-                          className="flex-1 rounded-full h-12 font-bold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 border-0 text-white shadow-md shadow-green-600/25"
+                          className="flex-1 rounded-full h-12 font-bold bg-gradient-to-r from-[#23361D] to-[#2e4626] hover:from-[#1b2916] hover:to-[#23361D] border-0 text-white shadow-md shadow-[rgba(35,54,29,0.25)]"
                         >
                           🐄 दान करें — ₹{finalAmount > 0 ? finalAmount.toLocaleString("en-IN") : "—"}
                         </Button>
@@ -839,7 +839,7 @@ export function CowDonationPageClient() {
                           <Button
                             type="button"
                             variant="outline"
-                            className="w-full rounded-full h-12 font-bold border-2 border-orange-300 text-orange-700 hover:bg-orange-50"
+                            className="w-full rounded-full h-12 font-bold border-2 border-[#C37C24] text-[#23361D] hover:bg-[#fdf3e3]"
                           >
                             UPI / Bank Transfer
                           </Button>
@@ -851,8 +851,8 @@ export function CowDonationPageClient() {
 
 
                 {paymentSuccess && (
-                  <div className="bg-[#f0f2ef] border border-emerald-300 rounded-2xl p-4 mb-4">
-                    <p className="text-emerald-900 font-bold text-sm mb-1">
+                  <div className="bg-[#f0f2ef] border border-[rgba(121,133,118,0.3)] rounded-2xl p-4 mb-4">
+                    <p className="text-[#23361D] font-bold text-sm mb-1">
                       Thank you
                     </p>
                     <p className="text-[#23361D] text-sm leading-relaxed">
@@ -874,7 +874,7 @@ export function CowDonationPageClient() {
                     <Heart className="w-5 h-5 ml-2 fill-white" />
                   )}
                 </Button>
-                <p className="text-center text-slate-400 text-xs mt-3">
+                <p className="text-center text-[#798576] text-xs mt-3">
                   🔒 Secure checkout · 80G receipt by email · UPI, cards & net
                   banking
                 </p>
@@ -885,7 +885,7 @@ export function CowDonationPageClient() {
       </section>
 
       {/* ── IMPACT ── */}
-      <section className="bg-[#f0f7f0] py-14 border-y border-green-100 mt-8">
+      <section className="bg-[#f0f7f0] py-14 border-y border-[rgba(35,54,29,0.1)] mt-8">
         <div className="container-custom">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-green-800 mb-8">
             Our cow care milestones
@@ -940,7 +940,7 @@ export function CowDonationPageClient() {
                   className={`group rounded-2xl overflow-hidden border-2 transition-all duration-300 bg-white ${
                     active
                       ? "border-green-600 shadow-xl shadow-green-600/15 ring-2 ring-green-600/20"
-                      : "border-green-100 hover:border-green-400 hover:-translate-y-1 hover:shadow-lg"
+                      : "border-[rgba(35,54,29,0.1)] hover:border-[#798576] hover:-translate-y-1 hover:shadow-lg"
                   }`}
                 >
                   <button
@@ -963,7 +963,7 @@ export function CowDonationPageClient() {
                         className={`absolute inset-0 h-full w-full object-cover ${item.imgFocus || "object-center"} group-hover:scale-[1.03] transition-transform duration-500`}
                       />
                       {item.popular && (
-                        <span className="absolute top-3 left-3 z-10 bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded-full">
+                        <span className="absolute top-3 left-3 z-10 bg-[#C37C24] text-white text-[10px] font-bold px-2 py-1 rounded-full">
                           Most Chosen
                         </span>
                       )}
@@ -985,7 +985,7 @@ export function CowDonationPageClient() {
                       type="button"
                       onClick={() => donateSevaDirect(item)}
                       disabled={isProcessing}
-                      className="w-full rounded-xl h-11 font-bold bg-[#798576] hover:bg-[#798576] text-white border-0 shadow-md shadow-emerald-600/20"
+                      className="w-full rounded-xl h-11 font-bold bg-[#798576] hover:bg-[#798576] text-white border-0 shadow-md shadow-[rgba(121,133,118,0.2)]"
                     >
                       {isProcessing && selectedSeva.id === item.id
                         ? "Processing..."
@@ -1018,7 +1018,7 @@ export function CowDonationPageClient() {
                 whileInView="show"
                 custom={i * 0.08}
                 viewport={{ once: true }}
-                className="bg-white border-2 border-green-100 rounded-2xl p-7 hover:border-green-300 transition-colors"
+                className="bg-white border-2 border-[rgba(35,54,29,0.1)] rounded-2xl p-7 hover:border-green-300 transition-colors"
               >
                 <div
                   className={`w-11 h-11 rounded-xl ${card.color} flex items-center justify-center mb-4`}
@@ -1057,7 +1057,7 @@ export function CowDonationPageClient() {
                 whileInView="show"
                 custom={i * 0.05}
                 viewport={{ once: true }}
-                className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-md border border-green-100 text-left"
+                className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-md border border-[rgba(35,54,29,0.1)] text-left"
                 onClick={() => setLightbox(img)}
               >
                 <img
@@ -1101,7 +1101,7 @@ export function CowDonationPageClient() {
               </p>
               <button
                 type="button"
-                className="mt-4 text-sm font-semibold text-emerald-300 hover:text-white"
+                className="mt-4 text-sm font-semibold text-[#C37C24] hover:text-white"
                 onClick={() => setLightbox(null)}
               >
                 Close
@@ -1130,7 +1130,7 @@ export function CowDonationPageClient() {
                 whileInView="show"
                 custom={i * 0.08}
                 viewport={{ once: true }}
-                className="bg-white border-2 border-green-100 rounded-2xl overflow-hidden hover:border-green-300 transition-colors"
+                className="bg-white border-2 border-[rgba(35,54,29,0.1)] rounded-2xl overflow-hidden hover:border-green-300 transition-colors"
               >
                 <div className="relative h-42">
                   <img src={step.img} alt="" className="w-full h-full " />
@@ -1248,7 +1248,7 @@ export function CowDonationPageClient() {
                 whileInView="show"
                 custom={i * 0.08}
                 viewport={{ once: true }}
-                className="bg-white border-2 border-green-100 rounded-2xl p-6 text-center"
+                className="bg-white border-2 border-[rgba(35,54,29,0.1)] rounded-2xl p-6 text-center"
               >
                 <div className="w-12 h-12 rounded-full bg-green-700 text-white font-black flex items-center justify-center mx-auto mb-4">
                   {step.num}
@@ -1279,7 +1279,7 @@ export function CowDonationPageClient() {
             {faqs.map((faq, i) => (
               <div
                 key={faq.q}
-                className="bg-[#f0f7f0] border-2 border-green-100 rounded-2xl overflow-hidden"
+                className="bg-[#f0f7f0] border-2 border-[rgba(35,54,29,0.1)] rounded-2xl overflow-hidden"
               >
                 <button
                   type="button"
@@ -1294,7 +1294,7 @@ export function CowDonationPageClient() {
                   />
                 </button>
                 {openFaq === i && (
-                  <div className="px-5 pb-5 text-[#798576] leading-relaxed text-sm border-t border-green-100 pt-3">
+                  <div className="px-5 pb-5 text-[#798576] leading-relaxed text-sm border-t border-[rgba(35,54,29,0.1)] pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -1323,7 +1323,7 @@ export function CowDonationPageClient() {
                   Choose a Seva Amount <HandCoins className="w-4 h-4 ml-2" />
                 </Button>
               </a>
-              <a href="tel:+919315814894">
+              <a href="tel:+918299461699">
                 <Button className="bg-green-900/30 text-white hover:bg-green-900/40 font-bold rounded-full px-8 h-12 border border-white/25">
                   <Phone className="w-4 h-4 mr-2" /> Call Us
                 </Button>
@@ -1345,13 +1345,13 @@ export function CowDonationPageClient() {
             {[
               {
                 title: "Call Us",
-                sub: "+91 93158 14894",
-                href: "tel:+919315814894",
+                sub: "+91 82994 61699",
+                href: "tel:+918299461699",
               },
               {
                 title: "WhatsApp",
                 sub: "Chat with the care team",
-                href: "https://wa.me/919315814894",
+                href: "https://wa.me/918299461699",
               },
               {
                 title: "Email",
@@ -1365,7 +1365,7 @@ export function CowDonationPageClient() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="border-2 border-green-100 rounded-2xl p-5 hover:border-green-400 hover:bg-green-50/50 transition-all"
+                className="border-2 border-[rgba(35,54,29,0.1)] rounded-2xl p-5 hover:border-[#798576] hover:bg-green-50/50 transition-all"
               >
                 <p className="font-extrabold text-green-900 text-sm">
                   {item.title}
@@ -1399,7 +1399,7 @@ export function CowDonationPageClient() {
               <Button
                 onClick={goDonate}
                 disabled={finalAmount <= 0 || isProcessing}
-                className="rounded-xl h-11 px-5 font-bold bg-[#798576] hover:bg-emerald-400 text-white border-0 shrink-0"
+                className="rounded-xl h-11 px-5 font-bold bg-[#798576] hover:bg-[#798576] text-white border-0 shrink-0"
               >
                 {isProcessing ? "Processing..." : "Donate Now"}
               </Button>

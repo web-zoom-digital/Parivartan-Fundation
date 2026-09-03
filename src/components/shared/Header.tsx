@@ -106,14 +106,14 @@ export function Header() {
             </div>
             <div className="flex items-center gap-6">
               <a
-                href="tel:+919315814894"
+                href="tel:+918299461699"
                 className="flex items-center gap-1.5 hover:text-[#C37C24] transition-colors font-bold"
               >
                 <Phone className="w-3.5 h-3.5 fill-current" />
                 <span>Call Now</span>
               </a>
               <a
-                href="https://wa.me/919315814894"
+                href="https://wa.me/918299461699"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 hover:opacity-80 transition-opacity font-bold"
@@ -405,14 +405,14 @@ export function Header() {
 
                 <div className="mt-3.5 flex items-center justify-between gap-3">
                   <a
-                    href="tel:+919315814894"
+                    href="tel:+918299461699"
                     className="flex flex-1 items-center justify-center gap-2 rounded-full border border-[#ddd9d0] bg-[#F6F2E8] py-2.5 text-xs font-bold text-[#273029] transition-colors hover:border-[rgba(35,54,29,0.3)] hover:bg-white hover:text-[#23361D]"
                   >
                     <Phone className="h-3.5 w-3.5" />
                     Call Us
                   </a>
                   <a
-                    href="https://wa.me/919315814894"
+                    href="https://wa.me/918299461699"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-1 items-center justify-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 py-2.5 text-xs font-bold text-emerald-700 transition-colors hover:bg-white"

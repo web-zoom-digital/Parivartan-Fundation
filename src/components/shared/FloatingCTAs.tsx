@@ -33,7 +33,7 @@ export function FloatingCTAs() {
         >
           {/* WhatsApp */}
           <a
-            href="https://wa.me/919315814894"
+            href="https://wa.me/918299461699"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:flex w-12 h-12 rounded-full bg-[#25D366] text-white shadow-xl items-center justify-center hover:scale-110 transition-transform hover:shadow-2xl hover:shadow-[#25D366]/40"
@@ -50,7 +50,7 @@ export function FloatingCTAs() {
           
           {/* Phone Call (Hidden on mobile where bottom nav handles it) */}
           <a
-            href="tel:+919315814894"
+            href="tel:+918299461699"
             className="hidden lg:flex w-12 h-12 rounded-full bg-[#23361D] text-white shadow-xl items-center justify-center hover:scale-110 transition-transform hover:shadow-2xl hover:shadow-blue-600/40"
             aria-label="Call Us"
           >

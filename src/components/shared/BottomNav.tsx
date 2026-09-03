@@ -9,8 +9,8 @@ const bottomLinks = [
   { name: "Home", href: "/", icon: "home" as const },
   { name: "Programs", href: "/programs", icon: "programs" as const },
   { name: "Cow Donate", href: "/cow-donation", icon: "cow" as const, highlight: true },
-  { name: "WhatsApp", href: "https://wa.me/919315814894", icon: "whatsapp" as const, color: "text-[#25D366]" },
-  { name: "Call", href: "tel:+919315814894", icon: "call" as const },
+  { name: "WhatsApp", href: "https://wa.me/918299461699", icon: "whatsapp" as const, color: "text-[#25D366]" },
+  { name: "Call", href: "tel:+918299461699", icon: "call" as const },
 ]
 
 function NavIcon({ type, className }: { type: (typeof bottomLinks)[number]["icon"]; className?: string }) {

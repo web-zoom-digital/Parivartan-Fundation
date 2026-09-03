@@ -229,22 +229,22 @@ export function DonationCausesSection() {
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
             <Link href="/donate">
-              <Button variant="primary" className="w-full sm:w-auto text-black rounded-full px-10 h-12 sm:h-13 font-bold text-sm sm:text-base shadow-lg shadow-[rgba(35,54,29,0.25)]">
+              <Button variant="primary" className="w-full sm:w-auto text-white rounded-full px-10 h-12 sm:h-13 font-bold text-sm sm:text-base shadow-lg shadow-[rgba(35,54,29,0.25)]">
                 ❤️ Donate Now
               </Button>
             </Link>
-            <a href="https://wa.me/919315814894" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="w-full text-[#273029] sm:w-auto rounded-full px-8 h-12 sm:h-13 font-bold text-sm sm:text-base">
+            <a href="https://wa.me/918299461699" target="_blank" rel="noopener noreferrer">
+              <Button variant="primary" className="w-full text-white sm:w-auto rounded-full px-8 h-12 sm:h-13 font-bold text-sm sm:text-base">
                 💬 WhatsApp Us
               </Button>
             </a>
-            <a href="tel:+919315814894">
-              <Button variant="primary" className="w-full sm:w-auto rounded-full px-8 h-12 sm:h-13 font-bold text-sm sm:text-base">
+            <a href="tel:+918299461699">
+              <Button variant="primary" className="w-full sm:w-auto text-white rounded-full px-8 h-12 sm:h-13 font-bold text-sm sm:text-base">
                 📞 Call Us
               </Button>
             </a>
             <Link href="/contact">
-              <Button variant="primary" className="w-full sm:w-auto rounded-full px-8 h-12 sm:h-13 font-bold text-sm sm:text-base">
+              <Button variant="primary" className="w-full sm:w-auto text-white rounded-full px-8 h-12 sm:h-13 font-bold text-sm sm:text-base">
                 🤝 Volunteer
               </Button>
             </Link>
