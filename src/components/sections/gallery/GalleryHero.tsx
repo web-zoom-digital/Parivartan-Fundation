@@ -1,9 +1,19 @@
 "use client"
 
-import { motion } from "framer-motion"
+import * as React from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { Heart, HandCoins, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+
+const heroImages = [
+  "/images/blanket_distribution/blanket_distribution_1.jpeg",
+  "/images/food_distribution/food_distribution_1.jpeg",
+  "/images/plantation/plantation_image_1.jpeg",
+  "/images/food_distribution/food_distribution_3.jpeg",
+  "/images/blanket_distribution/blanket_distribution_7.jpeg",
+  "/images/plantation/plantation_image_3.jpeg",
+]
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,16 +24,32 @@ const fadeUp = {
 }
 
 export function GalleryHero() {
+  const [currentIdx, setCurrentIdx] = React.useState(0)
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % heroImages.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section className="relative min-h-[75vh] flex items-center pt-28 sm:pt-36 lg:pt-56 pb-20 overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero-bg.png"
-          alt="Parivartan Welfare Society Gallery"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={heroImages[currentIdx]}
+            src={heroImages[currentIdx]}
+            alt="Parivartan Welfare Society Gallery"
+            className="absolute inset-0 w-full h-full object-cover"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
       </div>
 
       <div className="container-custom relative z-10 max-w-3xl">
@@ -64,6 +90,20 @@ export function GalleryHero() {
             View Impact <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>
+
+        {/* Carousel Indicators */}
+        <div className="flex items-center gap-2 mt-8">
+          {heroImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIdx(idx)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentIdx === idx ? "w-8 bg-emerald-400" : "w-2 bg-white/40 hover:bg-white/60"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

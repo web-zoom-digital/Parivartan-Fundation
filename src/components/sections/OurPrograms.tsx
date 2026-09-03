@@ -9,43 +9,43 @@ import { Button } from "@/components/ui/Button"
 const programs = [
   {
     id: "food",
-    title: "Food For Life Drive",
-    desc: "Every day, our volunteers prepare and serve fresh hot meals from large community pots to daily wage workers, migrant labourers, and families struggling to make ends meet.",
+    title: "Daily Food Distribution Drive",
+    desc: "Every day, our volunteers prepare and distribute fresh, warm meals to daily wage labourers, elderly individuals, and families in need on the streets.",
     icon: Utensils,
     color: "text-[#C37C24]",
     bg: "bg-[#fdf3e3]",
-    image: "/images/programs/program1.png",
-    alt: "PWS founder serving hot food from a large cooking pot to a queue of beneficiaries during a community food drive"
+    image: "/images/food_distribution/food_distribution_1.jpeg",
+    alt: "Parivartan Welfare Society volunteers distributing hot meals to people"
   },
   {
-    id: "medical",
-    title: "Free Medical Support",
-    desc: "We help underserved families reach doctors, medicines and basic check-ups. Community sessions and team visits keep this healthcare mission moving until new medical-camp photos are published.",
-    icon: Stethoscope,
+    id: "blankets",
+    title: "Winter Blanket Distribution",
+    desc: "During cold winter nights, our team delivers thick, protective blankets to people sleeping outdoors and elderly citizens in vulnerable areas.",
+    icon: Home,
     color: "text-[#2e4626]",
     bg: "bg-[#eef2eb]",
-    image: "/images/programs/program3.png",
-    alt: "Foundation representatives speaking with children during a community session supporting our healthcare mission"
+    image: "/images/blanket_distribution/blanket_distribution_1.jpeg",
+    alt: "Volunteers distributing warm blankets to needy families"
   },
   {
-    id: "education",
-    title: "Education Support",
-    desc: "We visit government schools to distribute stationery kits, books, and uniforms directly to children from families that cannot afford them.",
+    id: "plantation",
+    title: "Tree Plantation Drive",
+    desc: "We organize local tree plantation drives to plant native saplings, water them regularly, and create green, healthy spaces in our neighbourhoods.",
     icon: BookOpen,
     color: "text-[#C37C24]",
     bg: "bg-[#eef2eb]",
-    image: "/images/programs/program2.png",
-    alt: "PWS volunteer handing a school supply kit to a boy while uniformed classmates wait outside a school building"
+    image: "/images/plantation/plantation_image_1.jpeg",
+    alt: "Volunteers planting saplings during a tree plantation drive"
   },
   {
     id: "community",
-    title: "Community Outreach",
-    desc: "From celebrating children at ashram events to organising neighbourhood drives, our outreach brings people together and builds lasting community bonds.",
-    icon: Home,
+    title: "Community Relief & Outreach",
+    desc: "From emergency meal distribution to helping struggling families during hardship, our volunteers work hand-in-hand with local communities.",
+    icon: Stethoscope,
     color: "text-[#C37C24]",
     bg: "bg-[#fdf3e3]",
-    image: "/images/programs/community-event.png",
-    alt: "PWS volunteers and children gathered at an ashram celebration event — community outreach and social welfare programme"
+    image: "/images/blanket_distribution/blanket_distribution_8.jpeg",
+    alt: "Community outreach and blanket relief distribution by Parivartan Welfare Society"
   }
 ]
 

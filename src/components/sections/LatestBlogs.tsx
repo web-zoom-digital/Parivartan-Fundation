@@ -9,31 +9,31 @@ import { ArrowRight } from "lucide-react"
 
 const stories = [
   {
-    title: "Hot meals on the street, every day we can",
+    title: "Serving hot meals on the street every single day",
     summary:
-      "Volunteers cook and serve foil-packed meals to people waiting in line — not a staged shoot, just the work we do across Delhi NCR and UP.",
-    category: "Food Seva",
-    image: "/images/programs/meal-distribution.png",
+      "Our volunteers cook and distribute warm food packets directly to daily wage earners and families in need on the streets.",
+    category: "Food Drive",
+    image: "/images/food_distribution/food_distribution_1.jpeg",
     href: "/programs",
-    cta: "See food programmes",
+    cta: "See food drives",
   },
   {
-    title: "School kits for children who need a fair start",
+    title: "Warm blankets for families sleeping in winter cold",
     summary:
-      "Bags, notebooks and stationery reach government-school children through our education support drives — so learning is not paused for want of basic supplies.",
-    category: "Education",
-    image: "/images/programs/program2.png",
-    href: "/impact",
-    cta: "View education impact",
+      "When temperatures drop, our ground team hands out thick winter blankets to elders and children outdoors.",
+    category: "Winter Relief",
+    image: "/images/blanket_distribution/blanket_distribution_3.jpeg",
+    href: "/programs",
+    cta: "View blanket drives",
   },
   {
-    title: "Rescue, fodder and shelter for abandoned cows",
+    title: "Planting native trees for a greener tomorrow",
     summary:
-      "Injured or abandoned cows are brought in for treatment, daily feeding and safe shelter at our gaushala — supported by Gau Seva donations.",
-    category: "Cow Welfare",
-    image: "/images/cow-donation/feeding-1.png",
-    href: "/cow-donation",
-    cta: "Support Gau Seva",
+      "Joining hands with local communities to plant saplings and ensure regular watering for healthier neighborhood green cover.",
+    category: "Tree Plantation",
+    image: "/images/plantation/plantation_image_3.jpeg",
+    href: "/programs",
+    cta: "Support tree plantation",
   },
 ]
 

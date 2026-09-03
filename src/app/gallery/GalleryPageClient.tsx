@@ -19,44 +19,30 @@ export function GalleryPageClient() {
         <ImpactStoryCards />
         
         <CategorySubGallery 
-          category="Volunteer Activities" 
-          title="Volunteer Moments" 
-          description="Glimpses of our incredible volunteers working on the ground to bring real change."
-          bgColor="bg-white"
-        />
-        
-        <CategorySubGallery 
-          category="Cow Welfare" 
-          title="Cow Welfare Gallery" 
-          description="Moments of care for calves and cows we meet on the street — feeding, comfort, and hands-on welfare."
-          bgColor="bg-[#F6F2E8]"
-        />
-        
-        <CategorySubGallery 
           category="Food Distribution" 
           title="Food Distribution Gallery" 
-          description="Hot meals served outdoors and indoors — foil packs, community pots, and plates shared with dignity."
+          description="Hot meals served outdoors and indoors — freshly cooked food packets shared with care and dignity."
           bgColor="bg-white"
         />
         
         <CategorySubGallery 
-          category="Education Support" 
-          title="Education Support Gallery" 
-          description="School visits and classroom sessions where our team meets children, listens, and encourages learning."
+          category="Blanket Distribution" 
+          title="Winter Blanket Relief" 
+          description="Providing warm blankets to elderly individuals and families sleeping outdoors in cold weather."
           bgColor="bg-[#F6F2E8]"
         />
         
         <CategorySubGallery 
-          category="Events" 
-          title="Special Events" 
-          description="Outdoor drives, guest welcomes, and community gatherings under the foundation banner."
+          category="Tree Plantation" 
+          title="Tree Plantation Seva" 
+          description="Planting native saplings and taking care of them to build cleaner, greener local communities."
           bgColor="bg-white"
         />
         
         <CategorySubGallery 
-          category="NGO Team" 
-          title="Leadership & Guests" 
-          description="Honorable guests, leaders, and our core team working towards our mission."
+          category="Community Service" 
+          title="Community Service & Outreach" 
+          description="Ground activities, volunteer drives, and neighbourhood outreach under the foundation banner."
           bgColor="bg-[#F6F2E8]"
         />
         

@@ -10,8 +10,8 @@ export function GalleryCTA() {
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-bg.png"
-          alt="Background"
+          src="/images/blanket_distribution/blanket_distribution_7.jpeg"
+          alt="Parivartan Welfare Society community drive"
           className="w-full h-full object-cover"
         />
       </div>

@@ -119,8 +119,8 @@ export function ImpactPageClient() {
             >
               <div className="aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white/50">
                 <img 
-                  src="/images/programs/program2.png" 
-                  alt="Children receiving school support materials during an PWS education drive"
+                  src="/images/food_distribution/food_distribution_1.jpeg" 
+                  alt="Volunteers serving food during a community drive"
                   loading="eager"
                   decoding="async"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 

@@ -59,8 +59,8 @@ export function WhyChooseNCF() {
           >
             <div className="aspect-square sm:aspect-auto sm:h-[600px] rounded-[3rem] overflow-hidden border border-white/10">
               <img 
-                src="./images/about/team-hero.jpg" 
-                alt="Volunteers showing transparency"
+                src="/images/blanket_distribution/blanket_distribution_12.jpeg" 
+                alt="Parivartan Welfare Society volunteers distributing supplies"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />

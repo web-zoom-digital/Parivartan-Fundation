@@ -8,9 +8,9 @@ import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Button } from "@/components/ui/Button"
 
 const carouselImages = [
-  "/images/about/img1.png",
-  "/images/about/img2.png",
-  "/images/about/img3.png"
+  "/images/food_distribution/food_distribution_1.jpeg",
+  "/images/blanket_distribution/blanket_distribution_2.jpeg",
+  "/images/plantation/plantation_image_2.jpeg"
 ]
 
 export function AboutFoundation() {
@@ -66,16 +66,16 @@ export function AboutFoundation() {
           >
             <SectionHeader 
               badge="About Us"
-              title="Dedicated to Making a Real Difference"
-              subtitle="Since our inception, Parivartan Welfare Society has been on a relentless mission to eradicate hunger and provide essential support to vulnerable communities."
+              title="Serving Needy Families with Love & Respect"
+              subtitle="Parivartan Welfare Society is a grassroots NGO dedicated to serving hot food, distributing warm blankets in winter, and planting trees across local communities."
             />
 
             <ul className="flex flex-col gap-5 mb-10">
               {[
-                "Providing nutritious hot meals daily",
-                "Supporting medical emergencies and treatments",
-                "Empowering children through quality education",
-                "100% transparent and accountable operations"
+                "Distributing hot, freshly cooked meals on the ground",
+                "Providing thick blankets to elders and families in winter",
+                "Organizing community tree plantation drives",
+                "Complete ground transparency and direct volunteer work"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <div className="w-6 h-6 rounded-full bg-[#eef2eb] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
