@@ -112,7 +112,7 @@ export function DonationImpactTimeline() {
         />
 
         {/* ── DESKTOP: Horizontal timeline ── */}
-        <div className="hidden lg:flex relative mb-20 w-full px-2">
+        <div className="hidden lg:flex items-stretch relative mb-20 w-full px-2">
           {/* Continuous line behind the cards */}
           <div className="absolute top-[48px] left-[10%] right-[10%] h-[3px] bg-[#F6F2E8] z-0 rounded-full overflow-hidden">
              <motion.div 
@@ -132,10 +132,10 @@ export function DonationImpactTimeline() {
               whileInView="show"
               custom={i * 0.15}
               viewport={{ once: true }}
-              className="flex-1 flex flex-col items-center relative z-10 px-2 lg:px-3 h-full group"
+              className="flex-1 flex flex-col relative z-10 px-2 lg:px-3 group"
             >
               {/* Card */}
-              <div className={`w-full bg-white rounded-[32px] border-2 ${step.border} p-6 lg:p-8 text-center relative overflow-hidden shadow-lg shadow-slate-100 hover:shadow-2xl hover:shadow-${step.border.split('-')[1]}-100 hover:-translate-y-2 transition-all duration-500 flex flex-col items-center h-full`}>
+              <div className={`w-full bg-white rounded-[32px] border-2 ${step.border} p-6 lg:p-8 text-center relative overflow-hidden shadow-lg shadow-slate-100 hover:shadow-2xl hover:shadow-${step.border.split('-')[1]}-100 hover:-translate-y-2 transition-all duration-500 flex flex-col items-center flex-1 min-h-[360px]`}>
                 
                 {/* Number Watermark */}
                 <span className="absolute -top-2 right-4 text-7xl font-black text-slate-50 group-hover:text-slate-100 transition-colors z-0 select-none pointer-events-none">
@@ -148,12 +148,14 @@ export function DonationImpactTimeline() {
                 </div>
 
                 {/* Text */}
-                <h3 className="font-extrabold text-[#273029] text-base lg:text-lg mb-3 relative z-10 leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-[#798576] text-xs lg:text-sm leading-relaxed relative z-10">
-                  {step.desc}
-                </p>
+                <div className="flex flex-col flex-1 justify-start w-full mt-2">
+                  <h3 className="font-extrabold text-[#273029] text-base lg:text-lg mb-3 relative z-10 leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="text-[#798576] text-xs lg:text-sm leading-relaxed relative z-10">
+                    {step.desc}
+                  </p>
+                </div>
                 
                 {/* Subtle bottom gradient accent inside card */}
                 <div className={`absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r ${step.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />

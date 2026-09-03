@@ -71,20 +71,20 @@ export function OurPrograms() {
             return (
               <motion.div
                 key={prog.id}
-                className="premium-card overflow-hidden group flex flex-col sm:flex-row"
+                className="premium-card overflow-hidden group flex flex-col sm:flex-row h-full"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
                 {/* Image */}
-                <div className="w-full sm:w-2/5 aspect-[4/3] sm:aspect-auto relative overflow-hidden">
+                <div className="w-full sm:w-2/5 relative shrink-0 min-h-[240px] sm:min-h-0">
                   <img 
                     src={prog.image} 
                     alt={prog.alt || prog.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
                 
